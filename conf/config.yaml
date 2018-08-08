@@ -1,0 +1,5 @@
+runmode: debug
+addr: :3000
+name: ROP
+url: http://rop.dev.zjuqsc.com:3000
+max_ping_count: 10
