@@ -1,6 +1,7 @@
 .idea/
-dist/
 .vscode
+
+
 
 # Binaries for programs and plugins
 *.exe

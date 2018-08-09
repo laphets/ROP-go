@@ -5,15 +5,11 @@ import (
 	"rop/router/middleware"
 	"net/http"
 	"rop/handler/sd"
-	"github.com/spf13/pflag"
+	"rop/handler/user"
 )
 
-var (
-	cfg = pflag.StringP("config", "c", "", "ROP config path.")
-)
 
 func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
-	pflag.Parse()
 
 	g.Use(gin.Recovery())
 	g.Use(middleware.NoCache)
@@ -25,6 +21,16 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	g.NoRoute(func(c *gin.Context) {
 		c.String(http.StatusNotFound, "The incorrect API route.")
 	})
+
+	auth := g.Group("/v1/auth")
+	{
+		auth.POST("/login", user.Login)
+	}
+
+	u := g.Group("/v1/user")
+	{
+		u.POST("/info", user.Create)
+	}
 
 	svcd := g.Group("/sd")
 	{

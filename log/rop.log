@@ -1,0 +1,192 @@
+{"level":"INFO","timestamp":"2018-08-08 21:53:58.630","file":"rop/main.go:54","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-08 21:53:58.631","file":"rop/main.go:51","msg":"The router has been deployed successfully."}
+{"level":"ERROR","timestamp":"2018-08-08 22:37:33.922","file":"model/init.go:37","msg":"Database: rop connection failed.","data":{"error":"sql: unknown driver \"mysql\" (forgotten import?)"}}
+{"level":"ERROR","timestamp":"2018-08-08 22:38:39.174","file":"model/init.go:38","msg":"Database: rop connection failed.","data":{"error":"Error 1049: Unknown database 'rop'"}}
+{"level":"INFO","timestamp":"2018-08-08 22:38:39.174","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-08 22:38:39.175","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"ERROR","timestamp":"2018-08-08 23:56:24.058","file":"model/init.go:38","msg":"Database: rop connection failed.","data":{"error":"Error 1049: Unknown database 'rop'"}}
+{"level":"INFO","timestamp":"2018-08-08 23:56:24.059","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-08 23:56:24.060","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-08 23:57:36.205","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-08 23:57:36.207","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-08 23:59:06.907","file":"user/create.go:22","msg":"username is: [], password is []"}
+{"level":"ERROR","timestamp":"2018-08-08 23:59:06.908","file":"user/create.go:25","msg":"Get an error","data":{"error":"Err - code: 20102, message: The user was not found. This is add message., error: username can not found in db: xx.xx.xx.xx"}}
+{"level":"DEBUG","timestamp":"2018-08-08 23:59:06.908","file":"user/create.go:28","msg":"err type is ErrUserNotFound"}
+{"level":"DEBUG","timestamp":"2018-08-08 23:59:42.743","file":"user/create.go:22","msg":"username is: [], password is []"}
+{"level":"ERROR","timestamp":"2018-08-08 23:59:42.743","file":"user/create.go:25","msg":"Get an error","data":{"error":"Err - code: 20102, message: The user was not found. This is add message., error: username can not found in db: xx.xx.xx.xx"}}
+{"level":"DEBUG","timestamp":"2018-08-08 23:59:42.744","file":"user/create.go:28","msg":"err type is ErrUserNotFound"}
+{"level":"INFO","timestamp":"2018-08-09 00:30:09.193","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 00:30:09.193","file":"rop/main.go:26","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-09 00:30:10.196","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-09 00:30:36.851","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 00:30:36.852","file":"rop/main.go:59","msg":"listen tcp :3000: bind: address already in use"}
+{"level":"INFO","timestamp":"2018-08-09 00:30:43.406","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 00:30:43.407","file":"rop/main.go:59","msg":"listen tcp :3000: bind: address already in use"}
+{"level":"INFO","timestamp":"2018-08-09 00:32:41.100","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 00:32:41.101","file":"rop/main.go:59","msg":"listen tcp :3000: bind: address already in use"}
+{"level":"INFO","timestamp":"2018-08-09 00:32:51.700","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 00:32:51.701","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-09 00:34:01.683","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 00:34:01.684","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 00:36:55.141","file":"user/create.go:22","msg":"username is: [], password is []"}
+{"level":"ERROR","timestamp":"2018-08-09 00:36:55.141","file":"user/create.go:25","msg":"Get an error","data":{"error":"Err - code: 20102, message: The user was not found. This is add message., error: username can not found in db: xx.xx.xx.xx"}}
+{"level":"DEBUG","timestamp":"2018-08-09 00:36:55.141","file":"user/create.go:28","msg":"err type is ErrUserNotFound"}
+{"level":"INFO","timestamp":"2018-08-09 00:37:12.988","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 00:37:12.989","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 00:37:15.985","file":"user/create.go:22","msg":"username is: [], password is []"}
+{"level":"INFO","timestamp":"2018-08-09 10:54:41.327","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 10:54:41.328","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-09 11:01:15.456","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 11:01:15.458","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-09 11:11:47.087","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 11:11:47.087","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-09 11:11:48.095","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-09 11:12:49.530","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 11:12:49.531","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-09 11:12:50.535","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-09 11:36:57.781","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 11:36:57.781","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-09 11:36:58.783","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-09 11:39:07.418","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 11:39:07.419","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-09 11:39:08.423","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-09 11:42:05.925","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 11:42:05.926","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-09 11:47:20.265","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 11:47:20.266","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 11:47:24.689","file":"user/login.go:18","msg":"http: named cookie not present"}
+{"level":"INFO","timestamp":"2018-08-09 11:49:19.407","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 11:49:19.408","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 11:49:24.111","file":"user/login.go:21","msg":"p_3170111705_942af7887d5f32ae11a39049547286705b5c"}
+{"level":"INFO","timestamp":"2018-08-09 11:50:52.027","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 11:50:52.031","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 11:50:54.488","file":"user/login.go:21","msg":"p_3170111705_942af7887d5f32ae11a39049547286705b5c"}
+{"level":"INFO","timestamp":"2018-08-09 11:52:15.446","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 11:52:15.448","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 11:52:19.580","file":"user/login.go:33","msg":"{\"err\":500,\"msg\":\"no result\",\"hint\":\"check level failed, please check appid, appsecret, app-level \u0026 api-level\"}"}
+{"level":"INFO","timestamp":"2018-08-09 11:53:08.635","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 11:53:08.637","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 11:53:11.212","file":"user/login.go:34","msg":"{\"err\":500,\"msg\":\"no result\",\"hint\":\"check level failed, please check appid, appsecret, app-level \u0026 api-level\"}"}
+{"level":"INFO","timestamp":"2018-08-09 11:53:32.211","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 11:53:32.214","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 11:53:34.766","file":"user/login.go:34","msg":"{\"err\":500,\"msg\":\"no result\",\"hint\":\"check level failed, please check appid, appsecret, app-level \u0026 api-level\"}"}
+{"level":"INFO","timestamp":"2018-08-09 11:54:02.175","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 11:54:02.177","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 11:54:05.130","file":"user/login.go:34","msg":"{\"err\":500,\"msg\":\"no result\",\"hint\":\"check level failed, please check appid, appsecret, app-level \u0026 api-level\"}"}
+{"level":"INFO","timestamp":"2018-08-09 11:56:32.083","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 11:56:32.084","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 11:56:37.193","file":"user/login.go:41","msg":"{\"err\":500,\"msg\":\"no result\",\"hint\":\"check level failed, please check appid, appsecret, app-level \u0026 api-level\"}"}
+{"level":"INFO","timestamp":"2018-08-09 11:59:49.520","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 11:59:49.523","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-09 12:05:46.938","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 12:05:46.939","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-09 12:05:47.945","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 12:05:50.046","file":"user/login.go:41","msg":"{\"err\":500,\"msg\":\"no result\",\"hint\":\"check level failed, please check appid, appsecret, app-level \u0026 api-level\"}"}
+{"level":"INFO","timestamp":"2018-08-09 12:06:18.550","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 12:06:18.551","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-09 12:06:19.560","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 12:06:20.733","file":"user/login.go:42","msg":"{\"err\":500,\"msg\":\"no result\",\"hint\":\"check level failed, please check appid, appsecret, app-level \u0026 api-level\"}"}
+{"level":"INFO","timestamp":"2018-08-09 12:07:33.976","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 12:07:33.978","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-09 12:07:48.069","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 12:07:48.070","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 12:07:50.371","file":"user/login.go:44","msg":"{\"err\":500,\"msg\":\"no result\",\"hint\":\"check level failed, please check appid, appsecret, app-level \u0026 api-level\"}"}
+{"level":"INFO","timestamp":"2018-08-09 12:09:50.785","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 12:09:50.786","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 12:09:55.140","file":"user/login.go:44","msg":"{\"err\":500,\"msg\":\"no result\",\"hint\":\"check level failed, please check appid, appsecret, app-level \u0026 api-level\"}"}
+{"level":"INFO","timestamp":"2018-08-09 12:11:32.169","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 12:11:32.170","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 12:11:40.836","file":"user/login.go:44","msg":"{\"err\":500,\"msg\":\"no result\",\"hint\":\"check level failed, please check appid, appsecret, app-level \u0026 api-level\"}"}
+{"level":"INFO","timestamp":"2018-08-09 12:12:15.859","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 12:12:15.860","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 12:12:20.229","file":"user/login.go:44","msg":"{\"err\":500,\"msg\":\"no result\",\"hint\":\"check level failed, please check appid, appsecret, app-level \u0026 api-level\"}"}
+{"level":"INFO","timestamp":"2018-08-09 12:13:08.530","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 12:13:08.531","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 12:13:12.408","file":"user/login.go:47","msg":"{\"err\":500,\"msg\":\"no result\",\"hint\":\"check level failed, please check appid, appsecret, app-level \u0026 api-level\"}"}
+{"level":"INFO","timestamp":"2018-08-09 12:14:04.825","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 12:14:04.826","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 12:14:09.074","file":"user/login.go:47","msg":"{\"err\":500,\"msg\":\"no result\",\"hint\":\"check level failed, please check appid, appsecret, app-level \u0026 api-level\"}"}
+{"level":"INFO","timestamp":"2018-08-09 12:15:04.182","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 12:15:04.183","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 12:15:06.317","file":"user/login.go:34","msg":"你好：name\t 我23岁了，我帅？"}
+{"level":"DEBUG","timestamp":"2018-08-09 12:15:06.344","file":"user/login.go:47","msg":"{\"err\":500,\"msg\":\"no result\",\"hint\":\"check level failed, please check appid, appsecret, app-level \u0026 api-level\"}"}
+{"level":"INFO","timestamp":"2018-08-09 12:18:16.378","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 12:18:16.379","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 12:19:50.197","file":"user/login.go:47","msg":"{\"err\":500,\"msg\":\"no result\",\"hint\":\"check level failed, please check appid, appsecret, app-level \u0026 api-level\"}"}
+{"level":"INFO","timestamp":"2018-08-09 12:23:36.067","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 12:23:36.068","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 12:23:40.707","file":"user/login.go:46","msg":"{\"err\":500,\"msg\":\"no result\",\"hint\":\"check level failed, please check appid, appsecret, app-level \u0026 api-level\"}"}
+{"level":"INFO","timestamp":"2018-08-09 12:26:48.666","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 12:26:48.668","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 12:26:51.137","file":"user/login.go:34","msg":"{\"err\":0,\"uid\":53360,\"username\":\"3170111705\",\"email\":\"\",\"stuid\":\"3170111705\",\"name\":\"罗文卿\",\"birthday\":null,\"phone\":null,\"profession\":null}"}
+{"level":"INFO","timestamp":"2018-08-09 12:37:00.753","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 12:37:00.754","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-09 12:37:01.760","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 12:37:10.826","file":"user/login.go:48","msg":"{err:0 uid:0 username: stuid: name:}\n"}
+{"level":"DEBUG","timestamp":"2018-08-09 12:37:10.826","file":"user/login.go:51","msg":"{\"err\":0,\"uid\":53360,\"username\":\"3170111705\",\"email\":\"\",\"stuid\":\"3170111705\",\"name\":\"罗文卿\",\"birthday\":null,\"phone\":null,\"profession\":null}"}
+{"level":"INFO","timestamp":"2018-08-09 12:38:19.183","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 12:38:19.184","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-09 12:39:14.902","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 12:39:14.903","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-09 12:39:15.908","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-09 12:40:20.565","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 12:40:20.566","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-09 12:40:21.573","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-09 12:52:42.530","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 12:52:42.531","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-09 12:52:43.537","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-09 12:55:09.569","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 12:55:09.571","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-09 12:57:29.163","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 12:57:29.165","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-09 13:07:01.689","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 13:07:01.690","file":"rop/main.go:59","msg":"listen tcp :3000: bind: address already in use"}
+{"level":"INFO","timestamp":"2018-08-09 13:07:06.722","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 13:07:06.722","file":"rop/main.go:59","msg":"listen tcp :3000: bind: address already in use"}
+{"level":"INFO","timestamp":"2018-08-09 13:07:13.870","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 13:07:13.870","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-09 13:07:14.877","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 13:07:19.106","file":"user/login.go:36","msg":""}
+{"level":"INFO","timestamp":"2018-08-09 13:07:47.570","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 13:07:47.571","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 13:07:53.142","file":"user/login.go:37","msg":"Key path not found"}
+{"level":"DEBUG","timestamp":"2018-08-09 13:07:53.142","file":"user/login.go:39","msg":""}
+{"level":"DEBUG","timestamp":"2018-08-09 13:08:02.230","file":"user/login.go:37","msg":"Key path not found"}
+{"level":"DEBUG","timestamp":"2018-08-09 13:08:02.230","file":"user/login.go:39","msg":""}
+{"level":"INFO","timestamp":"2018-08-09 13:08:19.417","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 13:08:19.418","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 13:08:21.736","file":"user/login.go:39","msg":"3170111705"}
+{"level":"INFO","timestamp":"2018-08-09 13:13:07.228","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 13:13:07.229","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-09 13:52:34.199","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 13:52:34.200","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-09 16:19:37.047","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 16:19:37.048","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-09 16:19:38.053","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-09 16:21:35.791","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 16:21:35.792","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-09 16:21:36.799","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-09 16:24:32.496","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 16:24:32.497","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-09 16:28:11.937","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 16:28:11.938","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-09 16:28:30.962","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 16:28:30.963","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-09 16:29:47.019","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 16:29:47.022","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 16:29:51.200","file":"user/login.go:72","msg":"Error 1146: Table 'rop.user_models' doesn't exist"}
+{"level":"INFO","timestamp":"2018-08-09 16:30:43.570","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 16:30:43.571","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-09 16:30:44.576","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 16:30:49.378","file":"user/login.go:72","msg":"Error 1146: Table 'rop.tb_users' doesn't exist"}
+{"level":"INFO","timestamp":"2018-08-09 16:39:49.655","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 16:39:49.657","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 16:41:07.246","file":"user/login.go:72","msg":"Error 1062: Duplicate entry '3170111705' for key 'uix_tb_users_zj_uid'"}
+{"level":"DEBUG","timestamp":"2018-08-09 16:41:12.001","file":"user/login.go:72","msg":"Error 1062: Duplicate entry '3170111705' for key 'uix_tb_users_zj_uid'"}
+{"level":"DEBUG","timestamp":"2018-08-09 16:41:13.128","file":"user/login.go:72","msg":"Error 1062: Duplicate entry '3170111705' for key 'uix_tb_users_zj_uid'"}
+{"level":"DEBUG","timestamp":"2018-08-09 16:41:13.993","file":"user/login.go:72","msg":"Error 1062: Duplicate entry '3170111705' for key 'uix_tb_users_zj_uid'"}
+{"level":"INFO","timestamp":"2018-08-09 16:44:02.264","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-09 16:44:02.264","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-09 16:44:03.267","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-09 16:44:09.718","file":"user/login.go:72","msg":"Error 1062: Duplicate entry '3170111705' for key 'uix_tb_users_zj_uid'"}
+{"level":"DEBUG","timestamp":"2018-08-09 16:44:11.085","file":"user/login.go:72","msg":"Error 1062: Duplicate entry '3170111705' for key 'uix_tb_users_zj_uid'"}
