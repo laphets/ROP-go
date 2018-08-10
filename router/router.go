@@ -38,6 +38,7 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	ins.Use(middleware.AuthMiddleware())
 	{
 		ins.POST("", instance.Create)
+		ins.GET("", instance.List)
 	}
 
 	svcd := g.Group("/sd")

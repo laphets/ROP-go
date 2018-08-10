@@ -22,3 +22,8 @@ func GetInstanceByName(name string) (*InstanceModel, error) {
 	d := DB.Local.Where("name = ?", name).First(&ins)
 	return ins, d.Error
 }
+func ListInstance() ([]*InstanceModel, error) {
+	ins := make([]*InstanceModel, 0)
+	d := DB.Local.Find(&ins)
+	return ins, d.Error
+}

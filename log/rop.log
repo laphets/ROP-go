@@ -254,3 +254,9 @@
 {"level":"DEBUG","timestamp":"2018-08-11 00:32:02.831","file":"instance/create.go:17","msg":"{Name:test1 Remark:test Association:qsc StartTime:testtime1 EndTime:testtime2 FormId:12312}"}
 {"level":"DEBUG","timestamp":"2018-08-11 00:32:41.734","file":"instance/create.go:17","msg":"{Name:test2 Remark: Association:qsc StartTime:testtime1 EndTime:testtime2 FormId:12312}"}
 {"level":"DEBUG","timestamp":"2018-08-11 00:32:45.807","file":"instance/create.go:17","msg":"{Name:test2 Remark:11 Association:qsc StartTime:testtime1 EndTime:testtime2 FormId:12312}"}
+{"level":"INFO","timestamp":"2018-08-11 01:16:33.730","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-11 01:16:33.730","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-11 01:16:34.737","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-11 01:17:36.621","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-11 01:17:36.621","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-11 01:17:37.624","file":"rop/main.go:55","msg":"The router has been deployed successfully."}

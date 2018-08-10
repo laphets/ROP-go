@@ -5,7 +5,6 @@ import (
 	. "rop/handler"
 	"rop/pkg/errno"
 	"rop/model"
-	"github.com/lexkong/log"
 )
 
 func Create(c *gin.Context) {
@@ -14,7 +13,7 @@ func Create(c *gin.Context) {
 		SendResponse(c, errno.ErrBind, err.Error())
 		return
 	}
-	log.Debugf("%+v",req)
+	//log.Debugf("%+v",req)
 	if _, err := model.GetInstanceByName(req.Name); err == nil {
 		SendResponse(c, errno.DuplicateKey, nil)
 		return
