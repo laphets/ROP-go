@@ -11,6 +11,7 @@ import (
 	"github.com/lexkong/log"
 	"github.com/buger/jsonparser"
 	"rop/model"
+	"rop/pkg/token"
 )
 
 
@@ -39,7 +40,7 @@ func Login(c *gin.Context) {
 		ZJUid = value
 	}
 	if ZJUid == "" {
-		SendResponse(c, errno.InternalServerError, nil)
+		SendResponse(c, errno.ErrUserNotFound, nil)
 		return
 	}
 
@@ -61,18 +62,36 @@ func Login(c *gin.Context) {
 	department, err := jsonparser.GetString(body, "info", "department")
 	position, err := jsonparser.GetString(body, "info", "position")
 
-	u := model.UserModel{
-		ZJUid:ZJUid,
-		InnerId:innerId,
-		Name:name,
-		Department:department,
-		Position:position,
+	existing, err := model.GetUserByZJUid(ZJUid)
+
+	if err != nil {
+		u := model.UserModel{
+			ZJUid:ZJUid,
+			InnerId:innerId,
+			Name:name,
+			Department:department,
+			Position:position,
+		}
+		if err := u.Create(); err != nil {
+			log.Debugf(err.Error())
+			SendResponse(c, errno.DBError, nil)
+			return
+		}
+	} else {
+		existing.InnerId = innerId
+		existing.Name = name
+		existing.Department = department
+		existing.Position = position
+		if err := existing.Update(); err != nil {
+			log.Debugf(err.Error())
+			SendResponse(c, errno.DBError, nil)
+			return
+		}
 	}
-	if err := u.Update(); err != nil {
-		log.Debugf(err.Error())
-		SendResponse(c, errno.DBError, nil)
+	JWT, err := token.Sign(token.Context{ZJUid:ZJUid}, "")
+	if err != nil {
+		SendResponse(c, errno.ErrToken, nil)
 		return
 	}
-	//json, err := json.Marshal(u)
-	SendResponse(c, nil, nil)
+	SendResponse(c, nil, JWT)
 }

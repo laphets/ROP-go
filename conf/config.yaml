@@ -12,6 +12,7 @@ log:
   log_rotate_date: 1
   log_rotate_size: 1
   log_backup_count: 7
+jwt_secret: XQiOjE1MjgwMTY5MjIsImlkIjowL
 passport:
   appid: rop
   appsecret: Wnhb5XAWv7c1ck8hA8t0sWiXA6iIgPOJ1

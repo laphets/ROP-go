@@ -4,7 +4,7 @@ import "github.com/jinzhu/gorm"
 
 type UserModel struct {
 	gorm.Model
-	ZJUid string	`gorm:"unique_index"`
+	ZJUid string	`gorm:"unique_index;column:ZJUid"`
 	Name string
 	Department string
 	Gender string
@@ -27,9 +27,9 @@ func Delete(ZJUid string) error {
 	user.ZJUid = ZJUid
 	return DB.Local.Delete(&user).Error
 }
-func GetUser(ZJUid string) (*UserModel, error) {
+func GetUserByZJUid(ZJUid string) (*UserModel, error) {
 	user := &UserModel{}
-	d := DB.Local.Where(&UserModel{ZJUid:ZJUid}).First(&user)
+	d := DB.Local.Where("ZJUid = ?", ZJUid).First(&user)
 	return user, d.Error
 }
 func ListUser() ([]*UserModel, error) {
