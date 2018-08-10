@@ -9,12 +9,13 @@ import (
 
 func AuthMiddleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
-		if _, err := token.ParseRequest(c); err != nil {
+		JWTpayload, err := token.ParseRequest(c)
+		if err != nil {
 			handler.SendResponse(c, errno.ErrTokenInvalid, nil)
 			c.Abort()
 			return
 		}
-
+		c.Set("ZJUid", JWTpayload.ZJUid)
 		c.Next()
 	}
 }

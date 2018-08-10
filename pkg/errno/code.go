@@ -12,8 +12,8 @@ var (
 	DBError				= &Errno{Code: 20001, Message: "Error occurred when processing database."}
 	ErrToken      		= &Errno{Code: 20002, Message: "Error occurred while signing the JSON web token."}
 	ErrMissingHeader	= &Errno{Code: 20003, Message: "The length of the `Authorization` header is zero."}
-	ErrTokenInvalid     = &Errno{Code: 20104, Message: "The token was invalid."}
-
+	ErrTokenInvalid     = &Errno{Code: 20004, Message: "The token was invalid."}
+	DuplicateKey		= &Errno{Code: 20005, Message: "Duplicate key for database."}
 
 		// user errors
 	ErrUserNotFound 	= &Errno{Code: 20102, Message: "The user was not found."}
