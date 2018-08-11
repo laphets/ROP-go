@@ -12,10 +12,6 @@ type UserModel struct {
 	Position string
 }
 
-func (c *UserModel) TableName() string {
-	return "tb_users"
-}
-
 func (x *UserModel) Create() error {
 	return DB.Local.Create(&x).Error
 }

@@ -6,5 +6,5 @@ type CreateRequest struct {
 	Association string `json:"association" binding:"required"`
 	StartTime string `json:"start_time" binding:"required"`
 	EndTime string `json:"end_time" binding:"required"`
-	FormId string `json:"form_id" binding:"required"`
+	FormId uint `json:"form_id" binding:"required"`
 }

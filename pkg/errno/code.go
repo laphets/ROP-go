@@ -7,6 +7,7 @@ var (
 	ErrBind             = &Errno{Code: 10002, Message: "Error occurred while binding the request body to the struct."}
 	NoEnoughAuth		= &Errno{Code: 10003, Message: "You have not enough auth to access this resource."}
 	RemoteError			= &Errno{Code: 10004, Message: "Error occurred when requesting remoter server."}
+	ErrParam            = &Errno{Code: 10005, Message: "The param has some error."}
 
 
 	DBError				= &Errno{Code: 20001, Message: "Error occurred when processing database."}
@@ -17,4 +18,6 @@ var (
 
 		// user errors
 	ErrUserNotFound 	= &Errno{Code: 20102, Message: "The user was not found."}
+	ErrInstanceNotFound = &Errno{Code: 20302, Message: "The instance was not found."}
+	ErrFormCantEdit		= &Errno{Code: 20201, Message: "This form can't be edited."}
 )

@@ -7,6 +7,8 @@ import (
 	"rop/handler/sd"
 	"rop/handler/user"
 	"rop/handler/instance"
+	"rop/handler/form"
+	"rop/handler/freshman"
 )
 
 
@@ -23,22 +25,36 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 		c.String(http.StatusNotFound, "The incorrect API route.")
 	})
 
+
 	auth := g.Group("/v1/auth")
 	{
 		auth.POST("/login", user.Login)
 	}
 
-	u := g.Group("/v1/user")
-	u.Use(middleware.AuthMiddleware())
+	userGroup := g.Group("/v1/user")
+	userGroup.Use(middleware.AuthMiddleware())
 	{
-		u.GET("/info", user.Info)
+		userGroup.GET("/info", user.Info)
 	}
 
-	ins := g.Group("/v1/instance")
-	ins.Use(middleware.AuthMiddleware())
+	insGroup := g.Group("/v1/instance")
+	insGroup.Use(middleware.AuthMiddleware())
 	{
-		ins.POST("", instance.Create)
-		ins.GET("", instance.List)
+		insGroup.POST("", instance.Create)
+		insGroup.GET("", instance.List)
+		insGroup.PUT("/:id", instance.Update)
+	}
+
+	formGroup := g.Group("/v1/form")
+	insGroup.Use(middleware.AuthMiddleware())
+	{
+		formGroup.POST("/:id", form.Create)
+	}
+
+	freGroup := g.Group("/v1/freshman")
+	freGroup.Use(middleware.AuthMiddleware())
+	{
+		freGroup.POST("/submit/:instanceId", freshman.Submit)
 	}
 
 	svcd := g.Group("/sd")
