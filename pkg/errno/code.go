@@ -15,8 +15,10 @@ var (
 	ErrMissingHeader	= &Errno{Code: 20003, Message: "The length of the `Authorization` header is zero."}
 	ErrTokenInvalid     = &Errno{Code: 20004, Message: "The token was invalid."}
 	DuplicateKey		= &Errno{Code: 20005, Message: "Duplicate key for database."}
+	ErrSMS				= &Errno{Code: 20006, Message: "Error occurred when sending SMS."}
 
-		// user errors
+
+	// user errors
 	ErrUserNotFound 	= &Errno{Code: 20102, Message: "The user was not found."}
 	ErrInstanceNotFound = &Errno{Code: 20302, Message: "The instance was not found."}
 	ErrFormCantEdit		= &Errno{Code: 20201, Message: "This form can't be edited."}

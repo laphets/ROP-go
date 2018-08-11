@@ -12,6 +12,9 @@ log:
   log_rotate_date: 1
   log_rotate_size: 1
   log_backup_count: 7
+yunpian:
+  apikey: a167cfafc6e2d99668fcaaae0a3ba887
+  url_send_sms: https://sms.yunpian.com/v2/sms/single_send.json
 jwt_secret: XQiOjE1MjgwMTY5MjIsImlkIjowL
 passport:
   appid: rop

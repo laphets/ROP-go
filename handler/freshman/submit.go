@@ -6,6 +6,7 @@ import (
 	. "rop/handler"
 	"strconv"
 	"github.com/lexkong/log"
+	"rop/service"
 )
 
 func Submit(c *gin.Context) {
@@ -20,5 +21,17 @@ func Submit(c *gin.Context) {
 		SendResponse(c, errno.ErrBind, err.Error())
 		return
 	}
-	SendResponse(c, nil, req)
+
+	_, err = service.SendRecruitTime("18888922004", "罗文卿", "一面", "求是潮2018秋纳测试", "https://rop.zjuqsc.com/7643ghrydst63teayd7")
+	if err != nil {
+		SendResponse(c, errno.ErrSMS, err.Error())
+		return
+	}
+
+	res1, err1 := service.SendRejectNotice("18888922004", "罗文卿", "求是潮2018秋纳", "求是潮")
+	if err1 != nil {
+		SendResponse(c, errno.ErrSMS, err.Error())
+		return
+	}
+	SendResponse(c, nil, res1)
 }
