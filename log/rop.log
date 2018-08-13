@@ -364,3 +364,186 @@
 {"level":"INFO","timestamp":"2018-08-11 21:48:05.278","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
 {"level":"INFO","timestamp":"2018-08-11 21:48:05.279","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
 {"level":"DEBUG","timestamp":"2018-08-11 21:48:09.234","file":"freshman/submit.go:18","msg":"11"}
+{"level":"INFO","timestamp":"2018-08-11 23:26:07.755","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-11 23:26:07.756","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-11 23:26:08.761","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-11 23:26:21.663","file":"user/info.go:13","msg":"3170111705"}
+{"level":"INFO","timestamp":"2018-08-11 23:37:23.526","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-11 23:37:23.526","file":"rop/main.go:59","msg":"listen tcp :3000: bind: address already in use"}
+{"level":"INFO","timestamp":"2018-08-11 23:37:38.678","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-11 23:37:38.678","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-11 23:37:39.685","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-11 23:37:59.258","file":"user/info.go:13","msg":"3170111705"}
+{"level":"INFO","timestamp":"2018-08-11 23:40:29.085","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-11 23:40:29.086","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-11 23:40:39.026","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-12 01:02:36.656","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-12 01:04:39.820","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-12 01:06:03.778","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-12 01:06:18.130","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-12 01:19:27.696","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-12 01:19:45.503","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-12 01:21:05.130","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-12 01:21:09.295","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-12 01:21:49.607","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-12 01:22:19.083","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-12 01:23:10.056","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-12 01:23:12.465","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-12 01:23:29.010","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-12 01:23:29.138","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-12 01:23:43.191","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-12 01:24:32.456","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-12 01:24:58.830","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-12 01:25:30.779","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-12 01:26:05.427","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-12 01:26:14.052","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-12 01:26:43.868","file":"user/info.go:13","msg":"3170111705"}
+{"level":"INFO","timestamp":"2018-08-13 09:36:53.362","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 09:36:53.362","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-13 09:36:54.366","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-13 09:38:26.358","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:38:44.547","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:44:44.851","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:00.544","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:08.543","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:09.573","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:10.532","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:11.493","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:12.518","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:13.450","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:14.415","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:15.344","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:16.281","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:17.231","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:18.146","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:19.078","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:20.052","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:20.986","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:21.947","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:22.868","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:23.815","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:24.833","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:25.884","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:26.610","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:27.171","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:27.511","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:27.845","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:28.224","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:28.585","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:28.938","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:29.320","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:29.661","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:30.468","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:31.159","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:31.434","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:31.906","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:32.444","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:33.024","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:33.536","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:34.251","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:35.229","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:35.750","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:36.081","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:36.456","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:37.021","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:37.611","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:38.142","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:38.908","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:39.703","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:40.240","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:40.833","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:41.345","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:41.894","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:42.351","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:42.893","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:43.519","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:44.081","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:45.613","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:45:46.215","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:46:27.592","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:46:45.021","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:49:02.894","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:10.498","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:21.103","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:27.792","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:29.069","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:30.080","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:31.134","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:32.203","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:33.245","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:34.441","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:35.781","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:36.991","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:38.184","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:39.427","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:40.700","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:41.930","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:43.043","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:44.171","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:45.175","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:46.304","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:47.515","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:48.565","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:49.582","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:50.634","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:52.006","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:53.062","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:54.080","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:55.109","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:56.141","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:57.164","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:58.213","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:52:59.263","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:53:00.303","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:53:01.278","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:53:02.351","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:53:03.373","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:53:04.326","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:53:05.304","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:53:06.329","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:53:08.021","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:53:09.000","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:53:09.926","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"DEBUG","timestamp":"2018-08-13 09:53:10.866","file":"user/login.go:22","msg":"http: named cookie not present"}
+{"level":"INFO","timestamp":"2018-08-13 09:53:23.826","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 09:53:23.827","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-13 09:53:24.828","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-13 09:55:38.394","file":"user/info.go:13","msg":"3170111705"}
+{"level":"INFO","timestamp":"2018-08-13 09:56:29.340","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 09:56:29.342","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-13 09:58:57.626","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 10:08:49.297","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 10:45:10.656","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 10:47:42.123","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 10:53:02.347","file":"user/info.go:13","msg":"3170111705"}
+{"level":"INFO","timestamp":"2018-08-13 10:56:13.147","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 10:56:13.148","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-13 10:56:45.906","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 10:56:45.907","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-13 10:59:38.659","file":"user/info.go:13","msg":"3170111705"}
+{"level":"INFO","timestamp":"2018-08-13 11:00:11.415","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 11:00:11.416","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-13 11:00:36.415","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 11:02:39.375","file":"user/info.go:13","msg":"3170111705"}
+{"level":"INFO","timestamp":"2018-08-13 11:03:29.653","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 11:03:29.653","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-13 11:03:30.658","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-13 11:04:06.217","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 11:04:08.801","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 11:04:15.106","file":"user/info.go:13","msg":"3170111705"}
+{"level":"INFO","timestamp":"2018-08-13 11:05:23.672","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 11:05:23.673","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-13 11:05:27.459","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 11:07:22.177","file":"user/info.go:13","msg":"3170111705"}
+{"level":"INFO","timestamp":"2018-08-13 11:07:34.350","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 11:07:34.352","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-13 11:07:37.786","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 11:07:50.972","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 11:19:18.942","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 11:21:42.529","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 11:30:46.895","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 11:31:06.822","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 11:34:28.425","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 11:40:20.306","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 11:46:46.892","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 11:50:21.380","file":"user/info.go:13","msg":"3170111705"}

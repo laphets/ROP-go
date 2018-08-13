@@ -8,7 +8,7 @@ var (
 	NoEnoughAuth		= &Errno{Code: 10003, Message: "You have not enough auth to access this resource."}
 	RemoteError			= &Errno{Code: 10004, Message: "Error occurred when requesting remoter server."}
 	ErrParam            = &Errno{Code: 10005, Message: "The param has some error."}
-
+	NoCookie			= &Errno{Code: 10006, Message: "There is no cookie in the request."}
 
 	DBError				= &Errno{Code: 20001, Message: "Error occurred when processing database."}
 	ErrToken      		= &Errno{Code: 20002, Message: "Error occurred while signing the JSON web token."}

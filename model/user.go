@@ -5,11 +5,11 @@ import "github.com/jinzhu/gorm"
 type UserModel struct {
 	gorm.Model
 	ZJUid string	`gorm:"unique_index;column:ZJUid"`
-	Name string
-	Department string
-	Gender string
-	InnerId string
-	Position string
+	Name string		`json:"name"`
+	Department string	`json:"department"`
+	Gender string	`json:"gender"`
+	InnerId string	`json:"inner_id"`
+	Position string	`json:"position"`
 }
 
 func (x *UserModel) Create() error {

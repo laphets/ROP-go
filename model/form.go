@@ -4,8 +4,8 @@ import "github.com/jinzhu/gorm"
 
 type FormModel struct {
 	gorm.Model
-	Name string
-	data string
+	Name string `json:"name"`
+	Data string `json:"data"`
 }
 
 func (x *FormModel) Create() error {

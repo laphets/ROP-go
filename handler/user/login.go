@@ -18,8 +18,7 @@ import (
 func Login(c *gin.Context) {
 	qscCookie, err := c.Cookie("qp2gl_sesstok")
 	if err != nil {
-		SendResponse(c, errno.NoEnoughAuth, nil)
-		log.Debugf(err.Error())
+		SendResponse(c, errno.NoCookie, err.Error())
 		return
 	}
 	//fmt.Print("https://api.zjuqsc.com/passport/get_member_by_token?appid=%s&appsecret=%s&token=%s",viper.GetString("passport.appid"), viper.GetString("passport.appsecret"), qscCookie)

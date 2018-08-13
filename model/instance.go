@@ -2,16 +2,17 @@ package model
 
 import (
 	"github.com/jinzhu/gorm"
+	"time"
 )
 
 type InstanceModel struct {
 	gorm.Model
-	Name string `gorm:"unique_index"`
-	Remark string
-	Association string
-	StartTime string
-	EndTime string
-	FormId uint
+	Name string `gorm:"unique_index" json:"name"`
+	Remark string `json:"remark"`
+	Association string `json:"association"`
+	StartTime time.Time `json:"start_time"`
+	EndTime time.Time `json:"end_time"`
+	FormId uint `json:"form_id"`
 }
 
 func (x *InstanceModel) Create() error {

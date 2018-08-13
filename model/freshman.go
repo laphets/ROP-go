@@ -7,12 +7,12 @@ import (
 
 type FreshmanModel struct {
 	gorm.Model
-	ZJUid string `gorm:"unique_index"`
-	Mobile string
-	MainStage string
-	SubStage string
-	Intent []string
-	OtherInfo string
+	ZJUid string `gorm:"unique_index;column:ZJUid" json:"ZJUid"`
+	Mobile string `json:"mobile"`
+	MainStage string `json:"main_stage"`
+	SubStage string `json:"sub_stage"`
+	Intent []string `json:"intent"`
+	OtherInfo string `json:"other_info"`
 }
 
 func getTableName(instanceId uint) string {
