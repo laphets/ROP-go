@@ -18,7 +18,7 @@ func (db *Database) Init() {
 	DB = &Database{
 		Local: GetLocalDB(),
 	}
-	DB.Local.AutoMigrate(&UserModel{}, &InstanceModel{})
+	DB.Local.AutoMigrate(&UserModel{}, &InstanceModel{}, &FreshmanModel{}, &FormModel{})
 }
 func (db *Database) Close() {
 	DB.Local.Close()

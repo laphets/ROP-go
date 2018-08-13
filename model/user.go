@@ -4,7 +4,7 @@ import "github.com/jinzhu/gorm"
 
 type UserModel struct {
 	gorm.Model
-	ZJUid string	`gorm:"unique_index;column:ZJUid"`
+	ZJUid string	`gorm:"not null;unique_index;column:ZJUid"`
 	Name string		`json:"name"`
 	Department string	`json:"department"`
 	Gender string	`json:"gender"`

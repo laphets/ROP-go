@@ -22,4 +22,6 @@ var (
 	ErrUserNotFound 	= &Errno{Code: 20102, Message: "The user was not found."}
 	ErrInstanceNotFound = &Errno{Code: 20302, Message: "The instance was not found."}
 	ErrFormCantEdit		= &Errno{Code: 20201, Message: "This form can't be edited."}
+	ErrFormNotFound		= &Errno{Code: 20202, Message: "The form was not found."}
+
 )

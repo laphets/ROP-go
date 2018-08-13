@@ -1,6 +1,9 @@
 package instance
 
-import "time"
+import (
+	"time"
+	"rop/model"
+)
 
 type CreateRequest struct {
 	Name string `json:"name" binding:"required"`
@@ -9,4 +12,11 @@ type CreateRequest struct {
 	StartTime time.Time `json:"start_time" binding:"required"`
 	EndTime time.Time `json:"end_time" binding:"required"`
 	FormId uint `json:"form_id" binding:"required"`
+}
+
+type ListResponse struct {
+	*model.InstanceModel
+	Status string `json:"status"`
+	FreshmanCount int `json:"freshman_count"`
+	FormName string `json:"form_name"`
 }

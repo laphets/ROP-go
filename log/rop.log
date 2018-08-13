@@ -547,3 +547,225 @@
 {"level":"DEBUG","timestamp":"2018-08-13 11:40:20.306","file":"user/info.go:13","msg":"3170111705"}
 {"level":"DEBUG","timestamp":"2018-08-13 11:46:46.892","file":"user/info.go:13","msg":"3170111705"}
 {"level":"DEBUG","timestamp":"2018-08-13 11:50:21.380","file":"user/info.go:13","msg":"3170111705"}
+{"level":"INFO","timestamp":"2018-08-13 12:00:09.274","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 12:00:09.274","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-13 12:00:10.282","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-13 12:02:46.778","file":"freshman/submit.go:18","msg":"11"}
+{"level":"INFO","timestamp":"2018-08-13 12:10:40.210","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 12:10:40.211","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-13 12:10:50.935","file":"freshman/submit.go:18","msg":"11"}
+{"level":"INFO","timestamp":"2018-08-13 12:11:25.669","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 12:11:25.670","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-13 12:11:28.809","file":"freshman/submit.go:18","msg":"11"}
+{"level":"INFO","timestamp":"2018-08-13 13:30:26.258","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 13:30:26.258","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-13 13:30:27.265","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-13 13:30:31.243","file":"freshman/submit.go:18","msg":"11"}
+{"level":"INFO","timestamp":"2018-08-13 13:31:57.812","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 13:31:57.813","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-13 13:32:02.168","file":"freshman/submit.go:18","msg":"11"}
+{"level":"DEBUG","timestamp":"2018-08-13 13:44:51.167","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 13:50:21.718","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 13:50:25.207","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 13:50:29.896","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 13:50:32.246","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 13:51:37.402","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 13:55:56.298","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 13:55:59.495","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 13:56:02.760","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 13:56:05.527","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 13:56:35.975","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 13:56:39.041","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 13:56:40.878","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 13:57:10.856","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 13:57:14.953","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 13:57:32.020","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 13:57:34.788","file":"user/info.go:13","msg":"3170111705"}
+{"level":"INFO","timestamp":"2018-08-13 14:01:03.968","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 14:01:03.968","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-13 14:01:04.976","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-13 14:01:12.319","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 14:03:31.987","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 14:03:51.477","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 14:03:57.200","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 14:04:07.522","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 14:09:50.035","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 14:11:36.279","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 14:11:39.788","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 14:11:56.879","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 14:12:06.378","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 14:12:09.705","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 14:15:35.980","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 14:16:53.724","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 14:16:58.840","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 14:17:04.684","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 14:17:11.421","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 14:19:07.436","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 14:37:41.416","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 14:37:52.440","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 14:38:10.248","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 14:39:03.198","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 14:41:24.233","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 14:42:20.282","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 14:43:03.654","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 14:45:29.114","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 15:12:04.132","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 15:12:12.706","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 15:12:18.564","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 15:12:32.970","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 15:12:38.528","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 15:12:41.525","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 15:12:47.334","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 15:12:54.664","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 15:12:58.711","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 15:16:10.214","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 15:18:56.392","file":"user/info.go:13","msg":"3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-13 15:21:47.480","file":"user/info.go:13","msg":"3170111705"}
+{"level":"INFO","timestamp":"2018-08-13 17:51:04.378","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 17:51:04.378","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-13 17:51:05.385","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-13 17:53:49.251","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 17:53:49.251","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-13 17:53:50.255","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-13 17:53:58.118","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 17:53:58.120","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-13 17:54:24.908","file":"instance/list.go:18","msg":"0 \u0026{Model:{ID:1 CreatedAt:2018-08-13 11:07:47 +0800 CST UpdatedAt:2018-08-13 11:07:47 +0800 CST DeletedAt:\u003cnil\u003e} Name:dsafdsa Remark: Association:求是潮 StartTime:2018-08-13 11:07:43 +0800 CST EndTime:2018-08-31 23:59:59 +0800 CST FormId:1}"}
+{"level":"DEBUG","timestamp":"2018-08-13 17:54:24.910","file":"instance/list.go:18","msg":"1 \u0026{Model:{ID:2 CreatedAt:2018-08-13 11:19:16 +0800 CST UpdatedAt:2018-08-13 11:19:16 +0800 CST DeletedAt:\u003cnil\u003e} Name:罗文卿 Remark: Association:求是潮 StartTime:2018-08-14 11:14:17 +0800 CST EndTime:2018-09-03 11:14:17 +0800 CST FormId:1}"}
+{"level":"DEBUG","timestamp":"2018-08-13 17:54:24.910","file":"instance/list.go:18","msg":"2 \u0026{Model:{ID:3 CreatedAt:2018-08-13 11:34:46 +0800 CST UpdatedAt:2018-08-13 11:34:46 +0800 CST DeletedAt:\u003cnil\u003e} Name:3124321 Remark:41242 Association:求是潮 StartTime:2018-08-13 11:34:36 +0800 CST EndTime:2018-08-31 23:59:59 +0800 CST FormId:2}"}
+{"level":"DEBUG","timestamp":"2018-08-13 17:54:24.910","file":"instance/list.go:18","msg":"3 \u0026{Model:{ID:4 CreatedAt:2018-08-13 11:40:18 +0800 CST UpdatedAt:2018-08-13 11:40:18 +0800 CST DeletedAt:\u003cnil\u003e} Name:213214 Remark:42134231 Association:求是潮 StartTime:2018-08-13 11:40:14 +0800 CST EndTime:2018-08-31 23:59:59 +0800 CST FormId:1}"}
+{"level":"DEBUG","timestamp":"2018-08-13 17:54:24.910","file":"instance/list.go:18","msg":"4 \u0026{Model:{ID:5 CreatedAt:2018-08-13 11:46:44 +0800 CST UpdatedAt:2018-08-13 11:46:44 +0800 CST DeletedAt:\u003cnil\u003e} Name:测试1 Remark:大范德萨 Association:求是潮 StartTime:2018-08-13 11:46:38 +0800 CST EndTime:2018-08-13 11:46:38 +0800 CST FormId:1}"}
+{"level":"DEBUG","timestamp":"2018-08-13 17:54:24.910","file":"instance/list.go:18","msg":"5 \u0026{Model:{ID:6 CreatedAt:2018-08-13 11:50:17 +0800 CST UpdatedAt:2018-08-13 11:50:17 +0800 CST DeletedAt:\u003cnil\u003e} Name:fsadfdsa Remark:fdsafas Association:求是潮 StartTime:2018-08-13 11:50:13 +0800 CST EndTime:2018-08-31 23:59:59 +0800 CST FormId:1}"}
+{"level":"DEBUG","timestamp":"2018-08-13 17:54:24.910","file":"instance/list.go:18","msg":"6 \u0026{Model:{ID:7 CreatedAt:2018-08-13 13:47:38 +0800 CST UpdatedAt:2018-08-13 13:47:38 +0800 CST DeletedAt:\u003cnil\u003e} Name:罗文卿32 Remark: Association:求是潮 StartTime:2018-08-13 13:47:34 +0800 CST EndTime:2018-08-31 23:59:59 +0800 CST FormId:1}"}
+{"level":"DEBUG","timestamp":"2018-08-13 17:54:24.910","file":"instance/list.go:18","msg":"7 \u0026{Model:{ID:8 CreatedAt:2018-08-13 13:55:22 +0800 CST UpdatedAt:2018-08-13 13:55:22 +0800 CST DeletedAt:\u003cnil\u003e} Name:123213 Remark:41234321 Association:求是潮 StartTime:2018-08-13 13:55:17 +0800 CST EndTime:2018-08-31 23:59:59 +0800 CST FormId:1}"}
+{"level":"DEBUG","timestamp":"2018-08-13 17:54:24.910","file":"instance/list.go:18","msg":"8 \u0026{Model:{ID:9 CreatedAt:2018-08-13 14:30:22 +0800 CST UpdatedAt:2018-08-13 14:30:22 +0800 CST DeletedAt:\u003cnil\u003e} Name:求是潮2018秋纳测试 Remark: Association:求是潮 StartTime:2018-08-13 14:30:18 +0800 CST EndTime:2018-08-31 23:59:59 +0800 CST FormId:2}"}
+{"level":"INFO","timestamp":"2018-08-13 20:42:03.381","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 20:42:03.381","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-13 20:42:04.388","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-13 20:44:17.747","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 20:44:17.748","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-13 20:44:31.260","file":"model/freshman.go:41","msg":"1"}
+{"level":"INFO","timestamp":"2018-08-13 20:45:30.596","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 20:45:30.598","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-13 20:45:34.488","file":"model/freshman.go:42","msg":"1"}
+{"level":"DEBUG","timestamp":"2018-08-13 20:45:34.492","file":"model/freshman.go:24","msg":"1"}
+{"level":"INFO","timestamp":"2018-08-13 20:46:34.835","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 20:46:34.836","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-13 20:46:51.043","file":"model/freshman.go:43","msg":"1"}
+{"level":"DEBUG","timestamp":"2018-08-13 20:46:51.046","file":"model/freshman.go:24","msg":"1"}
+{"level":"DEBUG","timestamp":"2018-08-13 20:46:51.046","file":"model/freshman.go:26","msg":"Error 1103: Incorrect table name ''"}
+{"level":"INFO","timestamp":"2018-08-13 20:47:26.961","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 20:47:26.962","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-13 20:47:32.216","file":"model/freshman.go:43","msg":"1"}
+{"level":"DEBUG","timestamp":"2018-08-13 20:47:32.218","file":"model/freshman.go:24","msg":"freshman#1"}
+{"level":"DEBUG","timestamp":"2018-08-13 20:47:32.219","file":"model/freshman.go:26","msg":"Error 1103: Incorrect table name ''"}
+{"level":"INFO","timestamp":"2018-08-13 20:51:11.829","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 20:51:11.830","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-13 20:51:15.293","file":"model/freshman.go:43","msg":"1"}
+{"level":"DEBUG","timestamp":"2018-08-13 20:51:15.296","file":"model/freshman.go:24","msg":"freshman#1"}
+{"level":"DEBUG","timestamp":"2018-08-13 20:51:15.296","file":"model/freshman.go:26","msg":"Error 1103: Incorrect table name ''"}
+{"level":"INFO","timestamp":"2018-08-13 20:55:44.165","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 20:55:44.166","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-13 20:55:46.807","file":"model/freshman.go:43","msg":"1"}
+{"level":"DEBUG","timestamp":"2018-08-13 20:55:46.809","file":"model/freshman.go:24","msg":"freshman#1"}
+{"level":"INFO","timestamp":"2018-08-13 20:57:45.526","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 20:57:45.527","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-13 20:58:05.137","file":"model/freshman.go:43","msg":"1"}
+{"level":"DEBUG","timestamp":"2018-08-13 20:58:05.139","file":"model/freshman.go:24","msg":"freshman#1"}
+{"level":"INFO","timestamp":"2018-08-13 20:59:01.778","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 20:59:01.779","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-13 20:59:02.783","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-13 20:59:06.668","file":"model/freshman.go:43","msg":"1"}
+{"level":"INFO","timestamp":"2018-08-13 21:00:35.101","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 21:00:35.102","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-13 21:00:41.775","file":"model/freshman.go:43","msg":"1"}
+{"level":"DEBUG","timestamp":"2018-08-13 21:01:01.083","file":"model/freshman.go:43","msg":"1"}
+{"level":"INFO","timestamp":"2018-08-13 21:47:06.488","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 21:47:06.490","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-13 21:47:17.866","file":"model/freshman.go:43","msg":"1"}
+{"level":"INFO","timestamp":"2018-08-13 21:50:47.602","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 21:50:47.603","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-13 21:53:35.565","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 21:53:35.566","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-13 21:54:42.870","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 21:54:42.871","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-13 21:55:23.669","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 21:55:23.670","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-13 22:09:02.717","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 22:09:02.717","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-13 22:09:03.723","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-13 22:15:35.555","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 22:15:35.556","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-13 22:15:36.562","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-13 22:16:45.941","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 22:16:45.942","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-13 22:16:56.635","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 22:16:56.636","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-13 22:17:05.733","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 22:17:05.734","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-13 22:17:38.593","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 22:17:38.594","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-13 22:17:39.599","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-13 22:17:58.845","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 22:17:58.846","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-13 22:18:32.431","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 22:18:32.432","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-13 22:22:55.513","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 22:22:55.514","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-13 22:22:56.895","file":"freshman/submit.go:18","msg":"11"}
+{"level":"INFO","timestamp":"2018-08-13 22:33:49.933","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 22:33:49.936","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-13 22:34:34.156","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 22:34:34.158","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-13 22:38:39.167","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 22:38:39.168","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-13 22:39:18.686","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-13 22:39:18.687","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-14 00:12:40.175","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-14 00:12:40.175","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-14 00:12:41.183","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-14 00:12:59.916","file":"freshman/submit.go:18","msg":"11"}
+{"level":"DEBUG","timestamp":"2018-08-14 00:13:04.567","file":"freshman/submit.go:18","msg":"11"}
+{"level":"DEBUG","timestamp":"2018-08-14 00:13:15.469","file":"freshman/submit.go:18","msg":"1"}
+{"level":"DEBUG","timestamp":"2018-08-14 00:13:17.305","file":"freshman/submit.go:18","msg":"1"}
+{"level":"INFO","timestamp":"2018-08-14 00:18:12.426","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-14 00:18:12.427","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-14 00:22:28.720","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-14 00:22:28.726","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-14 00:24:54.589","file":"model/freshman.go:44","msg":"1"}
+{"level":"INFO","timestamp":"2018-08-14 00:27:58.247","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-14 00:27:58.248","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-14 00:28:55.501","file":"model/freshman.go:44","msg":"1"}
+{"level":"INFO","timestamp":"2018-08-14 00:29:49.307","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-14 00:29:49.308","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-14 00:29:53.254","file":"model/freshman.go:44","msg":"1"}
+{"level":"INFO","timestamp":"2018-08-14 00:31:31.364","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-14 00:31:31.364","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-14 00:31:32.374","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-14 00:31:44.879","file":"model/freshman.go:44","msg":"1"}
+{"level":"INFO","timestamp":"2018-08-14 00:33:04.871","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-14 00:33:04.873","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-14 00:33:56.637","file":"model/freshman.go:44","msg":"1"}
+{"level":"DEBUG","timestamp":"2018-08-14 00:35:06.875","file":"model/freshman.go:44","msg":"1"}
+{"level":"DEBUG","timestamp":"2018-08-14 00:35:06.878","file":"model/freshman.go:44","msg":"2"}
+{"level":"DEBUG","timestamp":"2018-08-14 00:35:06.880","file":"model/freshman.go:44","msg":"3"}
+{"level":"INFO","timestamp":"2018-08-14 00:36:27.893","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-14 00:36:27.894","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-14 00:36:32.387","file":"model/freshman.go:44","msg":"1"}
+{"level":"DEBUG","timestamp":"2018-08-14 00:36:32.392","file":"model/freshman.go:44","msg":"2"}
+{"level":"DEBUG","timestamp":"2018-08-14 00:36:32.395","file":"model/freshman.go:44","msg":"3"}
+{"level":"DEBUG","timestamp":"2018-08-14 00:36:32.399","file":"model/freshman.go:44","msg":"4"}
+{"level":"DEBUG","timestamp":"2018-08-14 00:36:32.406","file":"model/freshman.go:44","msg":"5"}
+{"level":"DEBUG","timestamp":"2018-08-14 00:36:32.408","file":"model/freshman.go:44","msg":"6"}
+{"level":"DEBUG","timestamp":"2018-08-14 00:36:32.411","file":"model/freshman.go:44","msg":"7"}
+{"level":"DEBUG","timestamp":"2018-08-14 00:36:32.414","file":"model/freshman.go:44","msg":"8"}
+{"level":"DEBUG","timestamp":"2018-08-14 00:36:32.416","file":"model/freshman.go:44","msg":"9"}
+{"level":"DEBUG","timestamp":"2018-08-14 00:36:32.419","file":"model/freshman.go:44","msg":"10"}
+{"level":"DEBUG","timestamp":"2018-08-14 00:42:07.177","file":"model/freshman.go:44","msg":"1"}
+{"level":"DEBUG","timestamp":"2018-08-14 00:42:07.181","file":"model/freshman.go:44","msg":"2"}
+{"level":"DEBUG","timestamp":"2018-08-14 00:42:07.185","file":"model/freshman.go:44","msg":"3"}
+{"level":"DEBUG","timestamp":"2018-08-14 00:42:07.194","file":"model/freshman.go:44","msg":"4"}
+{"level":"DEBUG","timestamp":"2018-08-14 00:42:07.200","file":"model/freshman.go:44","msg":"5"}
+{"level":"DEBUG","timestamp":"2018-08-14 00:42:07.203","file":"model/freshman.go:44","msg":"6"}
+{"level":"DEBUG","timestamp":"2018-08-14 00:42:07.205","file":"model/freshman.go:44","msg":"7"}
+{"level":"DEBUG","timestamp":"2018-08-14 00:42:07.207","file":"model/freshman.go:44","msg":"8"}
+{"level":"DEBUG","timestamp":"2018-08-14 00:42:07.210","file":"model/freshman.go:44","msg":"9"}
