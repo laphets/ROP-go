@@ -8,6 +8,7 @@ import (
 	"rop/model"
 )
 
+
 func Submit(c *gin.Context) {
 	instanceId, err := strconv.ParseUint(c.Param("instanceId"), 10, 64)
 	if err != nil {
@@ -30,8 +31,8 @@ func Submit(c *gin.Context) {
 		InstanceId: uint(instanceId),
 		ZJUid: "3170111705",
 		Mobile: "18888922004",
-		MainStage: "Public Sea",
-		SubStage: "None",
+		//MainStage: "Public Sea",
+		//SubStage: "None",
 		OtherInfo: "{a json here}",
 	}
 
@@ -39,6 +40,28 @@ func Submit(c *gin.Context) {
 		SendResponse(c, errno.DBError, err)
 		return
 	}
+
+	intent := &model.IntentModel{
+		FreshmanId: freshman.ID,
+		Department: "技术研发中心",
+		//GroupId: 0,
+		MainStage: "Public Sea",
+		SubStage: "None",
+	}
+
+	if err := intent.Create(); err != nil {
+		SendResponse(c, errno.DBError, err.Error())
+		return
+	}
+
+	intent.ID = 0
+	intent.Department = "人力资源中心"
+
+	if err := intent.Create(); err != nil {
+		SendResponse(c, errno.DBError, err.Error())
+		return
+	}
+
 	SendResponse(c, nil, nil)
 }
 

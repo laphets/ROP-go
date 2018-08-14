@@ -13,7 +13,7 @@ type InstanceModel struct {
 	Association string `json:"association"`
 	StartTime time.Time `json:"start_time"`
 	EndTime time.Time `json:"end_time"`
-	FormId uint `json:"not null;form_id"`
+	FormId uint `json:"form_id" gorm:"not null"`
 }
 
 func (x *InstanceModel) Create() error {
