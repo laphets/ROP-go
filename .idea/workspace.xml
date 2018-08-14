@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33ec94d2-72df-4f4a-8016-eb86fb9fcfe6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handler/freshman/submit.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/freshman/submit.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handler/instance/instance.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/instance/instance.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handler/instance/list.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/instance/list.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/rop.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/rop.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/form.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/form.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/freshman.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/freshman.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/init.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/instance.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/instance.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/errno/code.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/errno/code.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/SMS.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/SMS.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,6 +39,15 @@
                   <folding>
                     <element signature="e#18#114#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="create.go" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/handler/form/create.go">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="288">
+                  <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -92,7 +91,7 @@
           <file leaf-file-name="list.go" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/handler/instance/list.go">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="380">
+                <state relative-caret-position="344">
                   <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
                   <folding>
                     <element signature="e#18#132#0" expanded="true" />
@@ -104,8 +103,8 @@
           <file leaf-file-name="instance.go" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/model/instance.go">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="434">
-                  <caret line="45" column="57" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="57" />
+                <state relative-caret-position="366">
+                  <caret line="52" column="22" lean-forward="true" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
                 </state>
               </provider>
             </entry>
@@ -156,7 +155,7 @@
           <file leaf-file-name="login.go" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/handler/user/login.go">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-860">
+                <state relative-caret-position="-660">
                   <caret line="20" column="38" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="38" />
                 </state>
               </provider>
@@ -178,6 +177,7 @@
       <find>Err</find>
       <find>user</find>
       <find>uint</find>
+      <find>CanFormBeEdited</find>
     </findStrings>
   </component>
   <component name="GOROOT" path="/usr/local/Cellar/go/1.10.3/libexec" />
@@ -213,13 +213,13 @@
         <option value="$PROJECT_DIR$/handler/instance/instance.go" />
         <option value="$PROJECT_DIR$/handler/form/create.go" />
         <option value="$PROJECT_DIR$/model/user.go" />
-        <option value="$PROJECT_DIR$/model/instance.go" />
         <option value="$PROJECT_DIR$/handler/freshman/submit.go" />
         <option value="$PROJECT_DIR$/pkg/errno/code.go" />
         <option value="$PROJECT_DIR$/model/init.go" />
         <option value="$PROJECT_DIR$/model/form.go" />
         <option value="$PROJECT_DIR$/handler/instance/list.go" />
         <option value="$PROJECT_DIR$/model/freshman.go" />
+        <option value="$PROJECT_DIR$/model/instance.go" />
       </list>
     </option>
   </component>
@@ -274,12 +274,6 @@
               <item name="rop" type="462c0819:PsiDirectoryNode" />
               <item name="handler" type="462c0819:PsiDirectoryNode" />
               <item name="freshman" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rop" type="462c0819:PsiDirectoryNode" />
-              <item name="handler" type="462c0819:PsiDirectoryNode" />
-              <item name="instance" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rop" type="b2602c69:ProjectViewProjectNode" />
@@ -379,12 +373,13 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49845678" visible="true" weight="0.20208333" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49845678" visible="true" weight="0.20208333" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5009542" side_tool="true" weight="0.32900944" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4990458" visible="true" weight="0.23584905" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4990458" visible="true" weight="0.23584905" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.25589624" />
@@ -397,7 +392,6 @@
       <window_info anchor="bottom" id="Inspection Results" order="8" weight="0.32900944" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -699,7 +693,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/handler/user/login.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-860">
+        <state relative-caret-position="-660">
           <caret line="20" column="38" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="38" />
         </state>
       </provider>
@@ -725,24 +719,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/handler/form/create.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/router/router.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-323">
           <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/form.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -762,7 +742,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/handler/instance/list.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
+        <state relative-caret-position="344">
           <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
           <folding>
             <element signature="e#18#132#0" expanded="true" />
@@ -770,10 +750,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/handler/form/create.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/form.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/model/instance.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="45" column="57" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="57" />
+        <state relative-caret-position="366">
+          <caret line="52" column="22" lean-forward="true" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
         </state>
       </provider>
     </entry>

@@ -3,6 +3,7 @@ package model
 import (
 	"github.com/jinzhu/gorm"
 	"time"
+	"rop/pkg/timerange"
 )
 
 type InstanceModel struct {
@@ -42,10 +43,20 @@ func ListInstance() ([]*InstanceModel, error) {
 }
 
 func CanFormBeEdited(formId uint) (bool, error) {
-	ins := &InstanceModel{}
-	if err := DB.Local.Where("form_id = ?", formId).First(&ins).Error; err != nil {
+	ins := make([]*InstanceModel, 0)
+	if err := DB.Local.Where("form_id = ?", formId).Find(&ins).Error; err != nil {
 		// entity not exist
-		return true, err
+		return false, err
 	}
-	return false, nil
+	//log.Debugf("%d", len(ins))
+	if len(ins) == 0 {
+		return true, nil
+	}
+	now := time.Now()
+	for _, item := range ins {
+		if timerange.GetStatusSync(now, item.StartTime, item.EndTime) == "cur" {
+			return false, nil
+		}
+	}
+	return true, nil
 }
