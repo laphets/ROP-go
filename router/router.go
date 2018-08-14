@@ -48,7 +48,9 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	formGroup := g.Group("/v1/form")
 	insGroup.Use(middleware.AuthMiddleware())
 	{
-		formGroup.POST("/:id", form.Create)
+		formGroup.POST("", form.Create)
+		formGroup.GET("", form.List)
+		formGroup.PUT("/:id", form.Update)
 	}
 
 	freGroup := g.Group("/v1/freshman")

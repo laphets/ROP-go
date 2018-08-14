@@ -784,3 +784,14 @@
 {"level":"DEBUG","timestamp":"2018-08-14 10:09:43.751","file":"model/instance.go:52","msg":"0"}
 {"level":"INFO","timestamp":"2018-08-14 10:10:14.735","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
 {"level":"INFO","timestamp":"2018-08-14 10:10:14.736","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-14 11:49:05.943","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-14 11:49:05.944","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-14 11:49:06.949","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-14 12:05:04.128","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-14 12:05:04.129","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-14 13:53:01.094","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-14 13:53:01.095","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-14 13:54:24.893","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-14 13:54:24.894","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-14 14:02:31.393","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-14 14:02:31.394","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
