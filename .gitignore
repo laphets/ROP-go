@@ -3,6 +3,8 @@
 
 conf/config.yaml
 
+log/*
+
 .DS_Store
 
 # Binaries for programs and plugins
