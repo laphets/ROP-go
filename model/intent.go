@@ -1,9 +1,15 @@
 package model
 
-import "github.com/jinzhu/gorm"
+import (
+	"time"
+	"github.com/lexkong/log"
+)
 
 type IntentModel struct {
-	gorm.Model
+	ID        uint `gorm:"primary_key"`
+	CreatedAt time.Time
+	UpdatedAt time.Time
+	DeletedAt *time.Time `gorm:"unique_index:idx_freshman_department"`
 	FreshmanId uint `gorm:"not null;unique_index:idx_freshman_department" json:"freshman_id"`
 	Department string `gorm:"not null;unique_index:idx_freshman_department" json:"department"`
 	InterviewId uint `json:"interview_id"`
@@ -12,11 +18,47 @@ type IntentModel struct {
 }
 
 func (x *IntentModel) Create() error {
-	// Specify FreshmanId
 	return DB.Local.Create(&x).Error
 }
 
-//func (x *IntentModel) Update(freshmanId uint) error {
-//	intent := &IntentModel{}
-//	if err := DB.Local.Where("freshman_id = ?", freshmanId).
-//}
+// This method need to be checked
+func CreateIntents(intentsData []*IntentModel) error {
+	 //curIntents := make([]*IntentModel, 0)
+	 //if !DB.Local.Where("freshman_id = ?", lastfreshmanId).Find(&curIntents).RecordNotFound() {
+		//// if record exist, then all replace
+		//// Delete and insert
+		//log.Debugf("%d %d", len(curIntents), lastfreshmanId)
+		// for _, item := range curIntents {
+		// 	log.Debugf("%d", item.ID)
+		//	 if err := DeleteIntent(item.ID); err != nil {
+		//		 return err
+		//	 }
+		// }
+	 //}
+	 // Then insert
+	for _, item := range intentsData {
+		if err := item.Create(); err != nil {
+			return err
+		}
+	}
+	return nil
+}
+
+func ListIntentByFreshman(freshmanId uint) ([]*IntentModel, error) {
+	intents := make([]*IntentModel, 0)
+	d := DB.Local.Where("freshman_id = ?", freshmanId).Find(&intents)
+	return intents, d.Error
+}
+
+func GetIntentByID(intentId uint) (*IntentModel, error) {
+	intent := &IntentModel{}
+	d := DB.Local.Where("ID = ?", intentId).First(&intent)
+	return intent, d.Error
+}
+
+func DeleteIntent(intentId uint) error {
+	log.Debugf("%d", intentId)
+	intent := &IntentModel{}
+	intent.ID = intentId
+	return DB.Local.Delete(&intent).Error
+}

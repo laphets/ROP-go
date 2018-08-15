@@ -13,6 +13,10 @@ func Create(c *gin.Context) {
 		SendResponse(c, errno.ErrBind, err.Error())
 		return
 	}
+	if !req.StartTime.Before(req.EndTime) {
+		SendResponse(c, errno.ErrTime, nil)
+		return
+	}
 	//log.Debugf("%+v",req)
 	if _, err := model.GetInstanceByName(req.Name); err == nil {
 		SendResponse(c, errno.DuplicateKey, nil)

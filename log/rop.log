@@ -841,3 +841,266 @@
 {"level":"INFO","timestamp":"2018-08-14 19:39:16.074","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
 {"level":"INFO","timestamp":"2018-08-14 19:40:09.179","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
 {"level":"INFO","timestamp":"2018-08-14 19:40:09.180","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"ERROR","timestamp":"2018-08-15 09:34:09.459","file":"model/init.go:39","msg":"Database: rop connection failed.","data":{"error":"dial tcp 127.0.0.1:3306: connect: connection refused"}}
+{"level":"INFO","timestamp":"2018-08-15 09:34:09.461","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 09:34:09.462","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-15 09:34:44.054","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 09:34:44.055","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-15 09:35:06.105","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 09:35:06.106","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-15 10:38:38.201","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 10:38:38.202","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-15 10:38:39.208","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-15 10:47:07.611","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 10:47:07.611","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-15 10:47:08.615","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-15 10:48:02.054","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 10:48:02.055","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-15 10:48:03.059","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-15 10:51:52.467","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 10:51:52.468","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-15 10:53:17.040","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 10:53:17.041","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-15 10:53:19.171","file":"model/freshman.go:27","msg":"\u0026{Model:{ID:0 CreatedAt:0001-01-01 00:00:00 +0000 UTC UpdatedAt:0001-01-01 00:00:00 +0000 UTC DeletedAt:\u003cnil\u003e} InstanceId:0 ZJUid: Mobile: OtherInfo:}"}
+{"level":"INFO","timestamp":"2018-08-15 10:55:56.655","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 10:55:56.656","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-15 10:56:00.562","file":"model/freshman.go:22","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 10:56:00.564","file":"model/freshman.go:28","msg":"\u0026{Model:{ID:0 CreatedAt:0001-01-01 00:00:00 +0000 UTC UpdatedAt:0001-01-01 00:00:00 +0000 UTC DeletedAt:\u003cnil\u003e} InstanceId:0 ZJUid: Mobile: OtherInfo:}"}
+{"level":"INFO","timestamp":"2018-08-15 10:57:29.210","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 10:57:29.211","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-15 10:57:33.657","file":"model/freshman.go:22","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 10:57:33.661","file":"model/freshman.go:25","msg":"record not found"}
+{"level":"DEBUG","timestamp":"2018-08-15 10:57:33.664","file":"model/freshman.go:28","msg":"\u0026{Model:{ID:0 CreatedAt:0001-01-01 00:00:00 +0000 UTC UpdatedAt:0001-01-01 00:00:00 +0000 UTC DeletedAt:\u003cnil\u003e} InstanceId:0 ZJUid: Mobile: OtherInfo:}"}
+{"level":"INFO","timestamp":"2018-08-15 11:05:31.853","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 11:05:31.854","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-15 11:05:36.006","file":"model/freshman.go:22","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 11:05:36.008","file":"model/freshman.go:25","msg":"record not found"}
+{"level":"DEBUG","timestamp":"2018-08-15 11:05:36.009","file":"model/freshman.go:29","msg":"\u0026{Model:{ID:0 CreatedAt:0001-01-01 00:00:00 +0000 UTC UpdatedAt:0001-01-01 00:00:00 +0000 UTC DeletedAt:\u003cnil\u003e} InstanceId:0 ZJUid: Mobile: OtherInfo:}"}
+{"level":"INFO","timestamp":"2018-08-15 11:16:36.547","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 11:16:36.548","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-15 11:20:29.358","file":"model/freshman.go:22","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 11:20:29.359","file":"model/freshman.go:25","msg":"record not found"}
+{"level":"DEBUG","timestamp":"2018-08-15 11:20:29.361","file":"model/freshman.go:31","msg":"\u0026{Model:{ID:0 CreatedAt:0001-01-01 00:00:00 +0000 UTC UpdatedAt:0001-01-01 00:00:00 +0000 UTC DeletedAt:\u003cnil\u003e} InstanceId:0 ZJUid: Mobile: OtherInfo:}"}
+{"level":"INFO","timestamp":"2018-08-15 11:22:20.127","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 11:22:20.128","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-15 11:22:29.303","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 11:22:29.304","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-15 11:22:33.561","file":"model/freshman.go:22","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 11:22:33.562","file":"model/freshman.go:25","msg":"No recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 11:22:33.564","file":"model/freshman.go:31","msg":"\u0026{Model:{ID:0 CreatedAt:0001-01-01 00:00:00 +0000 UTC UpdatedAt:0001-01-01 00:00:00 +0000 UTC DeletedAt:\u003cnil\u003e} InstanceId:0 ZJUid: Mobile: OtherInfo:}"}
+{"level":"INFO","timestamp":"2018-08-15 11:23:04.058","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 11:23:04.059","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-15 11:23:38.228","file":"model/freshman.go:22","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 11:23:38.229","file":"model/freshman.go:31","msg":"\u0026{Model:{ID:0 CreatedAt:0001-01-01 00:00:00 +0000 UTC UpdatedAt:0001-01-01 00:00:00 +0000 UTC DeletedAt:\u003cnil\u003e} InstanceId:0 ZJUid: Mobile: OtherInfo:}"}
+{"level":"DEBUG","timestamp":"2018-08-15 11:48:41.100","file":"user/info.go:13","msg":"3170105978"}
+{"level":"INFO","timestamp":"2018-08-15 12:05:12.400","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 12:05:12.401","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-15 12:05:13.404","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-15 12:05:31.937","file":"model/freshman.go:24","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:05:31.938","file":"model/freshman.go:27","msg":"has recoard"}
+{"level":"INFO","timestamp":"2018-08-15 12:06:01.047","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 12:06:01.048","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-15 12:06:16.550","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 12:06:16.552","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-15 12:07:13.916","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 12:07:13.917","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-15 12:07:50.672","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 12:07:50.673","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-15 12:08:07.024","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 12:08:07.025","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-15 12:08:31.948","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 12:08:31.950","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-15 12:08:57.456","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 12:08:57.456","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-15 12:34:48.487","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 12:34:48.488","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-15 12:34:49.496","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-15 12:35:27.862","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 12:35:27.863","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-15 12:35:49.579","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 12:35:49.587","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:05.631","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:05.632","file":"model/freshman.go:34","msg":"\u0026{ID:0 CreatedAt:0001-01-01 00:00:00 +0000 UTC UpdatedAt:0001-01-01 00:00:00 +0000 UTC DeletedAt:\u003cnil\u003e InstanceId:0 ZJUid: Mobile: OtherInfo:}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:08.641","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:08.643","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:08.646","file":"model/freshman.go:34","msg":"\u0026{ID:1 CreatedAt:2018-08-15 12:36:06 +0800 CST UpdatedAt:2018-08-15 12:36:06 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:09.386","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:09.388","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:19.338","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:19.340","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:19.342","file":"model/freshman.go:34","msg":"\u0026{ID:2 CreatedAt:2018-08-15 12:36:09 +0800 CST UpdatedAt:2018-08-15 12:36:09 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:19.998","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:20.000","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:20.003","file":"model/freshman.go:34","msg":"\u0026{ID:3 CreatedAt:2018-08-15 12:36:19 +0800 CST UpdatedAt:2018-08-15 12:36:19 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:20.637","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:20.639","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:20.642","file":"model/freshman.go:34","msg":"\u0026{ID:4 CreatedAt:2018-08-15 12:36:20 +0800 CST UpdatedAt:2018-08-15 12:36:20 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:21.153","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:21.155","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:21.687","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:21.689","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:21.691","file":"model/freshman.go:34","msg":"\u0026{ID:5 CreatedAt:2018-08-15 12:36:21 +0800 CST UpdatedAt:2018-08-15 12:36:21 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:22.382","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:22.383","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:26.146","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:26.147","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:26.151","file":"model/freshman.go:34","msg":"\u0026{ID:6 CreatedAt:2018-08-15 12:36:22 +0800 CST UpdatedAt:2018-08-15 12:36:22 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:28.258","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:28.260","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:28.263","file":"model/freshman.go:34","msg":"\u0026{ID:7 CreatedAt:2018-08-15 12:36:26 +0800 CST UpdatedAt:2018-08-15 12:36:26 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:30.215","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:30.216","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:36:30.219","file":"model/freshman.go:34","msg":"\u0026{ID:8 CreatedAt:2018-08-15 12:36:28 +0800 CST UpdatedAt:2018-08-15 12:36:28 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"INFO","timestamp":"2018-08-15 12:37:17.553","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 12:37:17.555","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-15 12:37:30.942","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 12:37:30.943","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-15 12:37:45.552","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 12:37:45.553","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-15 12:38:44.746","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 12:38:44.746","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-15 12:38:45.751","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-15 12:39:35.194","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 12:39:35.194","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-15 12:39:36.201","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-15 12:39:47.350","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:39:47.351","file":"model/freshman.go:34","msg":"\u0026{ID:0 CreatedAt:0001-01-01 00:00:00 +0000 UTC UpdatedAt:0001-01-01 00:00:00 +0000 UTC DeletedAt:\u003cnil\u003e InstanceId:0 ZJUid: Mobile: OtherInfo:}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:39:51.481","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:39:51.483","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:39:51.486","file":"model/freshman.go:34","msg":"\u0026{ID:1 CreatedAt:2018-08-15 12:39:47 +0800 CST UpdatedAt:2018-08-15 12:39:47 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:39:52.639","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:39:52.641","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:39:52.645","file":"model/freshman.go:34","msg":"\u0026{ID:2 CreatedAt:2018-08-15 12:39:51 +0800 CST UpdatedAt:2018-08-15 12:39:51 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:39:53.455","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:39:53.458","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"INFO","timestamp":"2018-08-15 12:41:06.807","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 12:41:06.808","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-15 12:41:07.813","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:23.040","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:23.048","file":"model/freshman.go:34","msg":"\u0026{ID:0 CreatedAt:0001-01-01 00:00:00 +0000 UTC UpdatedAt:0001-01-01 00:00:00 +0000 UTC DeletedAt:\u003cnil\u003e InstanceId:0 ZJUid: Mobile: OtherInfo:}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:24.238","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:24.240","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:24.242","file":"model/freshman.go:34","msg":"\u0026{ID:1 CreatedAt:2018-08-15 12:43:23 +0800 CST UpdatedAt:2018-08-15 12:43:23 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:25.264","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:25.265","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:25.267","file":"model/freshman.go:34","msg":"\u0026{ID:2 CreatedAt:2018-08-15 12:43:24 +0800 CST UpdatedAt:2018-08-15 12:43:24 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:26.354","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:26.355","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:26.358","file":"model/freshman.go:34","msg":"\u0026{ID:3 CreatedAt:2018-08-15 12:43:25 +0800 CST UpdatedAt:2018-08-15 12:43:25 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:27.343","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:27.346","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:27.350","file":"model/freshman.go:34","msg":"\u0026{ID:4 CreatedAt:2018-08-15 12:43:26 +0800 CST UpdatedAt:2018-08-15 12:43:26 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:27.995","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:27.997","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:27.999","file":"model/freshman.go:34","msg":"\u0026{ID:5 CreatedAt:2018-08-15 12:43:27 +0800 CST UpdatedAt:2018-08-15 12:43:27 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:28.433","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:28.435","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:28.969","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:28.972","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:28.977","file":"model/freshman.go:34","msg":"\u0026{ID:6 CreatedAt:2018-08-15 12:43:28 +0800 CST UpdatedAt:2018-08-15 12:43:28 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:29.652","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:29.654","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:29.657","file":"model/freshman.go:34","msg":"\u0026{ID:7 CreatedAt:2018-08-15 12:43:29 +0800 CST UpdatedAt:2018-08-15 12:43:29 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:30.283","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:30.284","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:30.736","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:30.738","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:30.740","file":"model/freshman.go:34","msg":"\u0026{ID:8 CreatedAt:2018-08-15 12:43:30 +0800 CST UpdatedAt:2018-08-15 12:43:30 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:31.038","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:31.039","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:31.512","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:31.513","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:31.516","file":"model/freshman.go:34","msg":"\u0026{ID:9 CreatedAt:2018-08-15 12:43:31 +0800 CST UpdatedAt:2018-08-15 12:43:31 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:32.185","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:32.187","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:32.881","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:32.882","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:32.885","file":"model/freshman.go:34","msg":"\u0026{ID:10 CreatedAt:2018-08-15 12:43:32 +0800 CST UpdatedAt:2018-08-15 12:43:32 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:33.538","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:33.539","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:33.543","file":"model/freshman.go:34","msg":"\u0026{ID:11 CreatedAt:2018-08-15 12:43:33 +0800 CST UpdatedAt:2018-08-15 12:43:33 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:34.065","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:34.066","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:34.791","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:34.793","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:34.796","file":"model/freshman.go:34","msg":"\u0026{ID:12 CreatedAt:2018-08-15 12:43:34 +0800 CST UpdatedAt:2018-08-15 12:43:34 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:35.427","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:35.429","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:35.930","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:35.933","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:35.935","file":"model/freshman.go:34","msg":"\u0026{ID:13 CreatedAt:2018-08-15 12:43:35 +0800 CST UpdatedAt:2018-08-15 12:43:35 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:36.509","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:36.512","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:36.516","file":"model/freshman.go:34","msg":"\u0026{ID:14 CreatedAt:2018-08-15 12:43:36 +0800 CST UpdatedAt:2018-08-15 12:43:36 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:37.113","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:37.115","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:37.806","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:37.808","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:37.811","file":"model/freshman.go:34","msg":"\u0026{ID:15 CreatedAt:2018-08-15 12:43:37 +0800 CST UpdatedAt:2018-08-15 12:43:37 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:38.421","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:38.423","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:39.159","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:39.161","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:39.164","file":"model/freshman.go:34","msg":"\u0026{ID:16 CreatedAt:2018-08-15 12:43:38 +0800 CST UpdatedAt:2018-08-15 12:43:38 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:39.912","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:39.914","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:39.916","file":"model/freshman.go:34","msg":"\u0026{ID:17 CreatedAt:2018-08-15 12:43:39 +0800 CST UpdatedAt:2018-08-15 12:43:39 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:40.704","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:40.705","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:40.708","file":"model/freshman.go:34","msg":"\u0026{ID:18 CreatedAt:2018-08-15 12:43:40 +0800 CST UpdatedAt:2018-08-15 12:43:40 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:41.463","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:41.464","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:43.681","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:43.684","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:43.686","file":"model/freshman.go:34","msg":"\u0026{ID:19 CreatedAt:2018-08-15 12:43:41 +0800 CST UpdatedAt:2018-08-15 12:43:41 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:44.564","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:44.565","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:44.568","file":"model/freshman.go:34","msg":"\u0026{ID:20 CreatedAt:2018-08-15 12:43:44 +0800 CST UpdatedAt:2018-08-15 12:43:44 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:45.439","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:45.441","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:46.290","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:46.291","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:46.294","file":"model/freshman.go:34","msg":"\u0026{ID:21 CreatedAt:2018-08-15 12:43:45 +0800 CST UpdatedAt:2018-08-15 12:43:45 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:47.096","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:47.098","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:47.101","file":"model/freshman.go:34","msg":"\u0026{ID:22 CreatedAt:2018-08-15 12:43:46 +0800 CST UpdatedAt:2018-08-15 12:43:46 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:47.838","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:47.840","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:47.844","file":"model/freshman.go:34","msg":"\u0026{ID:23 CreatedAt:2018-08-15 12:43:47 +0800 CST UpdatedAt:2018-08-15 12:43:47 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:48.565","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:48.566","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:48.570","file":"model/freshman.go:34","msg":"\u0026{ID:24 CreatedAt:2018-08-15 12:43:48 +0800 CST UpdatedAt:2018-08-15 12:43:48 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:49.247","file":"model/freshman.go:25","msg":"7 3170111705"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:43:49.249","file":"model/freshman.go:28","msg":"has recoard"}
+{"level":"INFO","timestamp":"2018-08-15 12:46:46.414","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 12:46:46.414","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-15 12:46:47.420","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-15 12:46:50.452","file":"model/freshman.go:32","msg":"\u0026{ID:25 CreatedAt:2018-08-15 12:43:49 +0800 CST UpdatedAt:2018-08-15 12:43:49 +0800 CST DeletedAt:\u003cnil\u003e InstanceId:7 ZJUid:3170111705 Mobile:18888922004 OtherInfo:{a json here}}"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:46:50.455","file":"model/intent.go:30","msg":"sdfsdfdsfs"}
+{"level":"INFO","timestamp":"2018-08-15 12:51:32.511","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 12:51:32.513","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-15 12:51:56.627","file":"model/intent.go:30","msg":"sdfsdfdsfs"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:53:35.141","file":"model/intent.go:30","msg":"sdfsdfdsfs"}
+{"level":"INFO","timestamp":"2018-08-15 12:55:48.292","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 12:55:48.293","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-15 12:55:52.582","file":"model/intent.go:30","msg":"sdfsdfdsfs"}
+{"level":"DEBUG","timestamp":"2018-08-15 12:56:00.889","file":"model/intent.go:30","msg":"sdfsdfdsfs"}
+{"level":"INFO","timestamp":"2018-08-15 12:56:52.540","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 12:56:52.541","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-15 12:56:53.547","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-15 12:57:35.565","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 12:57:35.566","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-15 12:57:36.573","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-15 12:57:40.202","file":"model/intent.go:30","msg":"0"}
+{"level":"INFO","timestamp":"2018-08-15 12:59:05.366","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 12:59:05.367","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-15 12:59:19.496","file":"model/intent.go:30","msg":"0 8"}
+{"level":"INFO","timestamp":"2018-08-15 13:27:20.858","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 13:27:20.859","file":"rop/main.go:27","msg":"Waiting for the router, retry in 1 second."}
+{"level":"INFO","timestamp":"2018-08-15 13:27:21.866","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"DEBUG","timestamp":"2018-08-15 13:27:37.893","file":"model/intent.go:30","msg":"0 0"}
+{"level":"DEBUG","timestamp":"2018-08-15 13:27:52.604","file":"model/intent.go:30","msg":"0 0"}
+{"level":"INFO","timestamp":"2018-08-15 13:39:25.063","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 13:39:25.064","file":"rop/main.go:55","msg":"The router has been deployed successfully."}
+{"level":"INFO","timestamp":"2018-08-15 13:40:05.274","file":"rop/main.go:58","msg":"Start to listening the incoming requests on http address: :3000"}
+{"level":"INFO","timestamp":"2018-08-15 13:40:05.276","file":"rop/main.go:55","msg":"The router has been deployed successfully."}

@@ -16,7 +16,7 @@ var (
 	ErrTokenInvalid     = &Errno{Code: 20004, Message: "The token was invalid."}
 	DuplicateKey		= &Errno{Code: 20005, Message: "Duplicate key for database."}
 	ErrSMS				= &Errno{Code: 20006, Message: "Error occurred when sending SMS."}
-
+	ErrTime				= &Errno{Code: 20007, Message: "Time error in your submission."}
 
 	// user errors
 	ErrUserNotFound 	= &Errno{Code: 20102, Message: "The user was not found."}

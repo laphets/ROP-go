@@ -41,7 +41,7 @@ func Submit(c *gin.Context) {
 		return
 	}
 
-	intent := &model.IntentModel{
+	intent1 := &model.IntentModel{
 		FreshmanId: freshman.ID,
 		Department: "技术研发中心",
 		//GroupId: 0,
@@ -49,15 +49,17 @@ func Submit(c *gin.Context) {
 		SubStage: "None",
 	}
 
-	if err := intent.Create(); err != nil {
-		SendResponse(c, errno.DBError, err.Error())
-		return
+	intent2 := &model.IntentModel{
+		FreshmanId: freshman.ID,
+		Department: "人力资源部门",
+		//GroupId: 0,
+		MainStage: "Public Sea",
+		SubStage: "None",
 	}
 
-	intent.ID = 0
-	intent.Department = "人力资源中心"
+	intents := []*model.IntentModel{intent1, intent2}
 
-	if err := intent.Create(); err != nil {
+	if err := model.CreateIntents(intents); err != nil {
 		SendResponse(c, errno.DBError, err.Error())
 		return
 	}
