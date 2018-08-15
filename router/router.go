@@ -59,6 +59,13 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 		freGroup.POST("/submit/:instanceId", freshman.Submit)
 	}
 
+	interviewGroup := g.Group("v1/interview")
+	interviewGroup.Use(middleware.AuthMiddleware())
+	{
+		interviewGroup.POST("")
+		interviewGroup.PUT("/:id")
+	}
+
 	svcd := g.Group("/sd")
 	{
 		svcd.GET("/health", sd.HealthCheck)

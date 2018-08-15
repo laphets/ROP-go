@@ -7,13 +7,16 @@ import (
 
 type InterviewModel struct {
 	gorm.Model
-	InstanceId uint `gorm:"index" json:"instance_id"`
-	InterviewType uint `gorm:"index" json:"interview_type"`
-	Department string `json:"department"`
-	Director string `json:"director"`
-	Interviewer string `json:"interviewer"`
-	StartTime time.Time `json:"start_time"`
-	EndTime time.Time `json:"end_time"`
+	InstanceId uint `gorm:"not null;unique_index:idx_instance_interview" json:"instance_id"`
+	Name string `gorm:"not null;unique_index:idx_instance_interview" json:"name"`
+	InterviewType uint `gorm:"not null;unique_index:idx_instance_interview" json:"interview_type"`
+	Department string `gorm:"not null;unique_index:idx_instance_interview" json:"department"`
+	Director string `gorm:"not null" json:"director"`
+	AutoJoinable int `json:"auto_joinable"`
+	Interviewers string `json:"interviewer"`
+	StartTime time.Time `gorm:"not null" json:"start_time"`
+	EndTime time.Time `gorm:"not null" json:"end_time"`
+	Remark string `json:"remark"`
 }
 
 func (x *InterviewModel) Create() error {

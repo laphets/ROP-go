@@ -17,6 +17,8 @@ var (
 	DuplicateKey		= &Errno{Code: 20005, Message: "Duplicate key for database."}
 	ErrSMS				= &Errno{Code: 20006, Message: "Error occurred when sending SMS."}
 	ErrTime				= &Errno{Code: 20007, Message: "Time error in your submission."}
+	ErrOperation		= &Errno{Code: 20008, Message: "Unsupported operation."}
+
 
 	// user errors
 	ErrUserNotFound 	= &Errno{Code: 20102, Message: "The user was not found."}
