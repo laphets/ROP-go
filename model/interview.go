@@ -7,8 +7,8 @@ import (
 
 type InterviewModel struct {
 	gorm.Model
-	InstanceId uint `json:"instance_id"`
-	InterviewType uint `json:"interview_type"`
+	InstanceId uint `gorm:"index" json:"instance_id"`
+	InterviewType uint `gorm:"index" json:"interview_type"`
 	Department string `json:"department"`
 	Director string `json:"director"`
 	Interviewer string `json:"interviewer"`
@@ -40,4 +40,25 @@ func GetInterviewByID(interviewId uint) (*InterviewModel, error) {
 	interview := &InterviewModel{}
 	d := DB.Local.Where("ID = ?", interviewId).First(&interview)
 	return interview, d.Error
+}
+
+type FullInterview struct {
+	*InterviewModel
+	Participants []*FullIntent
+}
+
+func GetFulInterviewByID(interviewId uint) (*FullInterview, error) {
+	interview, err := GetInterviewByID(interviewId)
+	if err != nil {
+		return nil, err
+	}
+	fulInterview := &FullInterview{
+		InterviewModel: interview,
+	}
+	fulIntents, err := ListIntentByInterview(interviewId)
+	if err != nil {
+		return nil, err
+	}
+	fulInterview.Participants = fulIntents
+	return fulInterview, nil
 }

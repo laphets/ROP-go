@@ -12,9 +12,9 @@ type IntentModel struct {
 	DeletedAt *time.Time `gorm:"unique_index:idx_freshman_department"`
 	FreshmanId uint `gorm:"not null;unique_index:idx_freshman_department" json:"freshman_id"`
 	Department string `gorm:"not null;unique_index:idx_freshman_department" json:"department"`
-	InterviewId uint `json:"interview_id"`
+	InterviewId uint `gorm:"index" json:"interview_id"`
 	MainStage string `json:"main_stage"`
-	SubStage string `json:"sub_stage"`
+	SubStage int `json:"sub_stage"`
 }
 
 func (x *IntentModel) Create() error {
@@ -22,6 +22,7 @@ func (x *IntentModel) Create() error {
 }
 
 // This method need to be checked
+// Do delete in FreshmanModel
 func CreateIntents(intentsData []*IntentModel) error {
 	 //curIntents := make([]*IntentModel, 0)
 	 //if !DB.Local.Where("freshman_id = ?", lastfreshmanId).Find(&curIntents).RecordNotFound() {
@@ -50,10 +51,20 @@ func ListIntentByFreshman(freshmanId uint) ([]*IntentModel, error) {
 	return intents, d.Error
 }
 
-func GetIntentByID(intentId uint) (*IntentModel, error) {
-	intent := &IntentModel{}
-	d := DB.Local.Where("ID = ?", intentId).First(&intent)
-	return intent, d.Error
+func ListIntentByInterview(interviewId uint) ([]*FullIntent, error) {
+	intents := make([]*IntentModel, 0)
+	if err := DB.Local.Where("interview_id = ?", interviewId).Find(&intents).Error; err != nil {
+		return nil, err
+	}
+	fulIntents := make([]*FullIntent, 0)
+	for _, item := range intents {
+		tmp, err := GetFullIntentByID(item.ID)
+		if err != nil {
+			return nil, err
+		}
+		fulIntents = append(fulIntents, tmp)
+	}
+	return fulIntents, nil
 }
 
 func DeleteIntent(intentId uint) error {
@@ -61,4 +72,31 @@ func DeleteIntent(intentId uint) error {
 	intent := &IntentModel{}
 	intent.ID = intentId
 	return DB.Local.Delete(&intent).Error
+}
+
+func GetIntentByID(intentId uint) (*IntentModel, error) {
+	intent := &IntentModel{}
+	d := DB.Local.Where("ID = ?", intentId).First(&intent)
+	return intent, d.Error
+}
+
+type FullIntent struct {
+	*IntentModel
+	*FreshmanModel
+}
+
+func GetFullIntentByID(intentId uint) (*FullIntent, error) {
+	intent, err := GetIntentByID(intentId)
+	if err != nil {
+		return nil, err
+	}
+	freshman, err := GetFreshmanById(intent.FreshmanId);
+	if err != nil {
+		return nil, err
+	}
+	fulIntent := &FullIntent{
+		IntentModel: intent,
+		FreshmanModel: freshman,
+	}
+	return fulIntent, nil
 }

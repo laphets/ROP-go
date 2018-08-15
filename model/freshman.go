@@ -66,3 +66,9 @@ func ListFreshman(instanceId uint) ([]*FreshmanModel, error) {
 	d := DB.Local.Where("instance_id = ?", instanceId).Find(&fre)
 	return fre, d.Error
 }
+
+func GetFreshmanById(freshmanId uint) (*FreshmanModel, error) {
+	freshman := &FreshmanModel{}
+	d := DB.Local.Where("ID = ?", freshmanId).First(&freshman)
+	return freshman, d.Error
+}
