@@ -1,0 +1,39 @@
+runmode: debug
+addr: :3000
+name: ROP
+url: http://127.0.0.1:3000
+max_ping_count: 10
+log:
+  writers: file,stdout
+  logger_level: DEBUG
+  logger_file: log/rop.log
+  log_format_text: false
+  rollingPolicy: size
+  log_rotate_date: 1
+  log_rotate_size: 1
+  log_backup_count: 7
+yunpian:
+  apikey:
+  url_send_sms: https://sms.yunpian.com/v2/sms/single_send.json
+jwt_secret:
+passport:
+  appid: rop
+  appsecret:
+hr:
+  appid: rop
+  appsecret:
+db:
+  name: db_apiserver
+  addr: 127.0.0.1:3306
+  username:
+  password:
+local_db:
+  name: rop
+  addr: 127.0.0.1:3306
+  username:
+  password:
+qsc_db:
+  name: rop
+  addr: 127.0.0.1:3306
+  username:
+  password:
