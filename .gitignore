@@ -1,7 +1,9 @@
-.idea/
+.idea
 .vscode
 
 conf/config.yaml
+
+.DS_Store
 
 # Binaries for programs and plugins
 *.exe
