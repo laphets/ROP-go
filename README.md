@@ -40,7 +40,28 @@ insGroup.Use(middleware.AuthMiddleware())
 freGroup := g.Group("/v1/freshman")
 freGroup.Use(middleware.AuthMiddleware())
 {
-    freGroup.POST("/submit/:instanceId", freshman.Submit)
+    freGroup.POST("/submit", freshman.Submit)
+}
+
+intentGroup := g.Group("/v1/intent")
+intentGroup.Use(middleware.AuthMiddleware())
+{
+    intentGroup.POST("/assign", intent.Assign)
+}
+
+interviewGroup := g.Group("/v1/interview")
+interviewGroup.Use(middleware.AuthMiddleware())
+{
+    interviewGroup.POST("", interview.Create)
+    interviewGroup.PUT("/:id", interview.Update)
+    interviewGroup.GET("", interview.List)
+    interviewGroup.POST("/join/:id", interview.Join)
+}
+
+associationGroup := g.Group("/v1/association")
+associationGroup.Use(middleware.AuthMiddleware())
+{
+    associationGroup.POST("", association.Create)
 }
 
 svcd := g.Group("/sd")
@@ -58,11 +79,12 @@ svcd := g.Group("/sd")
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-Go                              34            210             63           1220
-XML                              6              0              0            872
+Go                              45            270             70           1644
+XML                              6              0              0            894
+Markdown                         1             12              0            115
 YAML                             2              0              0             78
 -------------------------------------------------------------------------------
-SUM:                            42            210             63           2170
+SUM:                            54            282             70           2731
 -------------------------------------------------------------------------------
 ```
 

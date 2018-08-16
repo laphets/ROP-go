@@ -10,6 +10,8 @@ import (
 	"rop/handler/form"
 	"rop/handler/freshman"
 	"rop/handler/interview"
+	"rop/handler/intent"
+	"rop/handler/association"
 )
 
 
@@ -60,12 +62,25 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 		freGroup.POST("/submit", freshman.Submit)
 	}
 
-	interviewGroup := g.Group("v1/interview")
+	intentGroup := g.Group("/v1/intent")
+	intentGroup.Use(middleware.AuthMiddleware())
+	{
+		intentGroup.POST("/assign", intent.Assign)
+	}
+
+	interviewGroup := g.Group("/v1/interview")
 	interviewGroup.Use(middleware.AuthMiddleware())
 	{
 		interviewGroup.POST("", interview.Create)
 		interviewGroup.PUT("/:id", interview.Update)
 		interviewGroup.GET("", interview.List)
+		interviewGroup.POST("/join/:id", interview.Join)
+	}
+
+	associationGroup := g.Group("/v1/association")
+	associationGroup.Use(middleware.AuthMiddleware())
+	{
+		associationGroup.POST("", association.Create)
 	}
 
 	svcd := g.Group("/sd")

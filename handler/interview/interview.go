@@ -14,3 +14,7 @@ type CreateRequest struct {
 	EndTime time.Time `json:"end_time" binding:"required"`
 	Remark string `json:"remark" binding:"-"`
 }
+
+type JoinRequest struct {
+	Intents []uint `json:"intents"`
+}

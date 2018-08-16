@@ -60,7 +60,7 @@ func Login(c *gin.Context) {
 	name, err := jsonparser.GetString(body, "info", "name")
 	department, err := jsonparser.GetString(body, "info", "department")
 	position, err := jsonparser.GetString(body, "info", "position")
-
+	mobile, err := jsonparser.GetString(body, "info", "mobile")
 	existing, err := model.GetUserByZJUid(ZJUid)
 
 	if err != nil {
@@ -70,6 +70,7 @@ func Login(c *gin.Context) {
 			Name:name,
 			Department:department,
 			Position:position,
+			Mobile:mobile,
 		}
 		if err := u.Create(); err != nil {
 			log.Debugf(err.Error())
@@ -81,6 +82,7 @@ func Login(c *gin.Context) {
 		existing.Name = name
 		existing.Department = department
 		existing.Position = position
+		existing.Mobile = mobile
 		if err := existing.Update(); err != nil {
 			log.Debugf(err.Error())
 			SendResponse(c, errno.DBError, nil)
