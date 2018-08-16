@@ -10,7 +10,7 @@ import (
 
 
 func Submit(c *gin.Context) {
-	instanceId, err := strconv.ParseUint(c.Param("instanceId"), 10, 64)
+	instanceId, err := strconv.ParseUint(c.Query("instanceId"), 10, 64)
 	if err != nil {
 		SendResponse(c, errno.ErrParam, err)
 		return
@@ -46,7 +46,7 @@ func Submit(c *gin.Context) {
 		Department: "技术研发中心",
 		//GroupId: 0,
 		MainStage: "Public Sea",
-		SubStage: "None",
+		SubStage: 0,
 	}
 
 	intent2 := &model.IntentModel{
@@ -54,7 +54,7 @@ func Submit(c *gin.Context) {
 		Department: "人力资源部门",
 		//GroupId: 0,
 		MainStage: "Public Sea",
-		SubStage: "None",
+		SubStage: 0,
 	}
 
 	intents := []*model.IntentModel{intent1, intent2}
