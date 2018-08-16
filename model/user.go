@@ -10,6 +10,7 @@ type UserModel struct {
 	Gender string	`json:"gender"`
 	InnerId string	`json:"inner_id"`
 	Position string	`json:"position"`
+	Mobile string `json:"mobile"`
 }
 
 func (x *UserModel) Create() error {

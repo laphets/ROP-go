@@ -31,6 +31,7 @@ func Submit(c *gin.Context) {
 		InstanceId: uint(instanceId),
 		ZJUid: "3170111705",
 		Mobile: "18888922004",
+		Name: "罗文卿",
 		//MainStage: "Public Sea",
 		//SubStage: "None",
 		OtherInfo: "{a json here}",
@@ -67,11 +68,7 @@ func Submit(c *gin.Context) {
 	SendResponse(c, nil, nil)
 }
 
-//_, err = service.SendRecruitTime("18867136212", "博亚", "一面", "求是潮2018秋纳", "https://rop.zjuqsc.com/7643ghrydst63teayd7")
-//if err != nil {
-//	SendResponse(c, errno.ErrSMS, err.Error())
-//	return
-//}
+
 //
 //res1, err1 := service.SendRejectNotice("18867136212", "博亚", "求是潮2018秋纳", "求是潮")
 //if err1 != nil {

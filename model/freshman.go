@@ -12,6 +12,7 @@ type FreshmanModel struct {
 	InstanceId uint `gorm:"not null;unique_index:idx_instance_ZJUid" json:"instance_id"`
 	ZJUid string `gorm:"not null;column:ZJUid;unique_index:idx_instance_ZJUid" json:"ZJUid"`
 	Mobile string `json:"mobile"`
+	Name string `json:"name"`
 	//MainStage string `json:"main_stage"`
 	//SubStage string `json:"sub_stage"`
 	//Intent []string `json:"intent"`

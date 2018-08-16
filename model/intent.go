@@ -15,6 +15,7 @@ type IntentModel struct {
 	InterviewId uint `gorm:"index" json:"interview_id"`
 	MainStage string `json:"main_stage"`
 	SubStage int `json:"sub_stage"`
+	TargetInterviewId uint `json:"target_interview_id"`
 }
 
 func (x *IntentModel) Create() error {
