@@ -3,6 +3,7 @@ package model
 import (
 	"github.com/jinzhu/gorm"
 	"time"
+	"rop/pkg/timerange"
 )
 
 type InterviewModel struct {
@@ -47,9 +48,24 @@ func GetInterviewByID(interviewId uint) (*InterviewModel, error) {
 
 type FullInterview struct {
 	*InterviewModel
-	Participants []*FullIntent
+	Status string `json:"status"`
+	Participants []*FullIntent `json:"participants"`
 }
-
+func ListFulInterview(instanceId uint) ([]*FullInterview, error) {
+	interviews, err := ListInterview(instanceId)
+	if err != nil {
+		return nil, err
+	}
+	fulInterviews := make([]*FullInterview, 0)
+	for _, item := range interviews {
+		tmp, err := GetFulInterviewByID(item.ID)
+		if err != nil {
+			return nil, err
+		}
+		fulInterviews = append(fulInterviews, tmp)
+	}
+	return fulInterviews, nil
+}
 func GetFulInterviewByID(interviewId uint) (*FullInterview, error) {
 	interview, err := GetInterviewByID(interviewId)
 	if err != nil {
@@ -57,6 +73,7 @@ func GetFulInterviewByID(interviewId uint) (*FullInterview, error) {
 	}
 	fulInterview := &FullInterview{
 		InterviewModel: interview,
+		Status: timerange.GetStatus(interview.StartTime, interview.EndTime),
 	}
 	fulIntents, err := ListIntentByInterview(interviewId)
 	if err != nil {

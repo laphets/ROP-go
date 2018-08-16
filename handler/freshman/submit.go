@@ -10,7 +10,7 @@ import (
 
 
 func Submit(c *gin.Context) {
-	instanceId, err := strconv.ParseUint(c.Param("instanceId"), 10, 64)
+	instanceId, err := strconv.ParseUint(c.Query("instanceId"), 10, 64)
 	if err != nil {
 		SendResponse(c, errno.ErrParam, err)
 		return

@@ -5,9 +5,20 @@ import (
 	. "rop/handler"
 	"rop/pkg/errno"
 	"rop/model"
+	"strconv"
 )
 
-func Submit(c *gin.Context) {
+func Create(c *gin.Context) {
+	instanceId, err := strconv.ParseUint(c.Query("instanceId"), 10, 64)
+	if err != nil {
+		SendResponse(c, errno.ErrParam, err)
+		return
+	}
+	if _, err := model.GetInstanceById(uint(instanceId)); err != nil {
+		SendResponse(c, errno.ErrInstanceNotFound, nil)
+		return
+	}
+
 	req := &CreateRequest{}
 	if err := c.ShouldBindJSON(req); err != nil {
 		SendResponse(c, errno.ErrBind, err.Error())
@@ -19,15 +30,8 @@ func Submit(c *gin.Context) {
 		return
 	}
 
-	instanceId := req.InstanceId
-
-	if _, err := model.GetInstanceById(instanceId); err != nil {
-		SendResponse(c, errno.ErrInstanceNotFound, nil)
-		return
-	}
-
 	interview := &model.InterviewModel{
-		InstanceId: req.InstanceId,
+		InstanceId: uint(instanceId),
 		Name:req.Name,
 		InterviewType: req.InterviewType,
 		Department:req.Department,
@@ -40,7 +44,7 @@ func Submit(c *gin.Context) {
 	}
 
 	if err := interview.Create(); err != nil {
-		SendResponse(c, errno.DBError, nil)
+		SendResponse(c, errno.DBError, err.Error())
 		return
 	}
 	SendResponse(c, nil, nil)

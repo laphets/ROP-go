@@ -3,7 +3,7 @@ package interview
 import "time"
 
 type CreateRequest struct {
-	InstanceId uint `json:"instance_id" binding:"required"`
+	//InstanceId uint `json:"instance_id" binding:"required"`
 	Name string `json:"name" binding:"required"`
 	InterviewType uint `json:"interview_type" binding:"required"`
 	Department string `json:"department" binding:"required"`
