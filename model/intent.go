@@ -76,6 +76,7 @@ func ListIntentByInterview(interviewId uint) ([]*FullIntent, error) {
 	return fulIntents, nil
 }
 
+
 func DeleteIntent(intentId uint) error {
 	log.Debugf("%d", intentId)
 	intent := &IntentModel{}
@@ -93,6 +94,37 @@ func GetIntentByID(intentId uint) (*IntentModel, error) {
 type FullIntent struct {
 	*IntentModel
 	*FreshmanModel
+}
+
+// for conditions, [0] is stage, [1] is department
+func ListFullIntentByInstance(instanceId uint, conditions ...string) ([]*FullIntent, error) {
+	mainStage, department := conditions[0], conditions[1]
+	freshmans, err := ListFreshman(instanceId)
+	if err != nil {
+		return nil, err
+	}
+	fulIntents := make([]*FullIntent, 0)
+	for _, freshman := range freshmans {
+		intents, err := ListIntentByFreshman(freshman.ID)
+		if err != nil {
+			return nil, err
+		}
+		for _, intent := range intents {
+			// Check condition here
+			if mainStage != "" && intent.MainStage != mainStage {
+				continue
+			}
+			if department != "" && intent.Department != department {
+				continue
+			}
+			fulIntent, err := GetFullIntentByID(intent.ID)
+			if err != nil {
+				return nil, err
+			}
+			fulIntents = append(fulIntents, fulIntent)
+		}
+	}
+	return fulIntents, nil
 }
 
 func GetFullIntentByID(intentId uint) (*FullIntent, error) {

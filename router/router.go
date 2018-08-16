@@ -66,6 +66,7 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	intentGroup.Use(middleware.AuthMiddleware())
 	{
 		intentGroup.POST("/assign", intent.Assign)
+		intentGroup.GET("", intent.List)
 	}
 
 	interviewGroup := g.Group("/v1/interview")
