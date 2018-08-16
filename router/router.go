@@ -66,6 +66,7 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 		interviewGroup.POST("", interview.Create)
 		interviewGroup.PUT("/:id", interview.Update)
 		interviewGroup.GET("", interview.List)
+		interviewGroup.POST("/join/:id", interview.Join)
 	}
 
 	svcd := g.Group("/sd")

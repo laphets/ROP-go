@@ -21,6 +21,14 @@ func (x *IntentModel) Create() error {
 	return DB.Local.Create(&x).Error
 }
 
+// You need set ID in update method
+func (x *IntentModel) Update() error {
+	if _, err := GetIntentByID(x.ID); err != nil {
+		return err
+	}
+	return DB.Local.Model(&x).Updates(&x).Error
+}
+
 // This method need to be checked
 // Do delete in FreshmanModel
 func CreateIntents(intentsData []*IntentModel) error {
@@ -77,6 +85,7 @@ func DeleteIntent(intentId uint) error {
 func GetIntentByID(intentId uint) (*IntentModel, error) {
 	intent := &IntentModel{}
 	d := DB.Local.Where("ID = ?", intentId).First(&intent)
+	//log.Debugf("%d", intentId)
 	return intent, d.Error
 }
 

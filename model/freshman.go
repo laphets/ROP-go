@@ -41,6 +41,7 @@ func (x *FreshmanModel) Update(instanceId uint) error {
 	return DB.Local.Where("instance_id = ?", instanceId).Model(&x).Update(&x).Error
 }
 
+
 func DeleteFreshman(freshmanId uint) error {
 	freshman := &FreshmanModel{}
 	freshman.ID = freshmanId
