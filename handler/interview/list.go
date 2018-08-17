@@ -14,13 +14,23 @@ func List(c *gin.Context) {
 		SendResponse(c, errno.ErrParam, err)
 		return
 	}
+	interviewType, err := strconv.ParseUint(c.DefaultQuery("interview_type", "0"), 10, 64)
+	if err != nil {
+		SendResponse(c, errno.ErrParam, err)
+		return
+	}
+	department := c.DefaultQuery("department", "")
+
 	if _, err := model.GetInstanceById(uint(instanceId)); err != nil {
 		SendResponse(c, errno.ErrInstanceNotFound, nil)
 		return
 	}
 
 
-	fulInterviews, err := model.ListFulInterview(uint(instanceId))
+	fulInterviews, err := model.ListFulInterview(uint(instanceId), &model.InterviewModel{
+		InterviewType: uint(interviewType),
+		Department: department,
+	})
 	if err != nil {
 		SendResponse(c, errno.DBError, err)
 		return

@@ -35,10 +35,12 @@ func DeleteInterview(interviewId uint) error {
 	interview.ID = interviewId
 	return DB.Local.Delete(&interview).Error
 }
-func ListInterview(instanceId uint) ([]*InterviewModel, error) {
+func ListInterview(instanceId uint, conditions *InterviewModel) ([]*InterviewModel, error) {
 	interviews := make([]*InterviewModel, 0)
-	d := DB.Local.Where("instance_id = ?", instanceId).Find(&interviews)
+
+	d := DB.Local.Where("instance_id = ?", instanceId).Where(conditions).Find(&interviews)
 	return interviews, d.Error
+
 }
 func GetInterviewByID(interviewId uint) (*InterviewModel, error) {
 	interview := &InterviewModel{}
@@ -51,8 +53,8 @@ type FullInterview struct {
 	Status string `json:"status"`
 	Participants []*FullIntent `json:"participants"`
 }
-func ListFulInterview(instanceId uint) ([]*FullInterview, error) {
-	interviews, err := ListInterview(instanceId)
+func ListFulInterview(instanceId uint, conditions *InterviewModel) ([]*FullInterview, error) {
+	interviews, err := ListInterview(instanceId, conditions)
 	if err != nil {
 		return nil, err
 	}
