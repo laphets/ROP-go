@@ -18,6 +18,7 @@ var (
 	ErrSMS				= &Errno{Code: 20006, Message: "Error occurred when sending SMS."}
 	ErrTime				= &Errno{Code: 20007, Message: "Time error in your submission."}
 	ErrOperation		= &Errno{Code: 20008, Message: "Unsupported operation."}
+	ErrEncrypt      	= &Errno{Code: 20009, Message: "Encrypt error."}
 
 
 	// user errors
@@ -25,5 +26,5 @@ var (
 	ErrInstanceNotFound = &Errno{Code: 20302, Message: "The instance was not found."}
 	ErrFormCantEdit		= &Errno{Code: 20201, Message: "This form can't be edited."}
 	ErrFormNotFound		= &Errno{Code: 20202, Message: "The form was not found."}
-
+	ErrNoProperGroup	= &Errno{Code: 20301, Message: "You have no proper group to join."}
 )
