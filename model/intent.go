@@ -6,7 +6,7 @@ import (
 )
 
 type IntentModel struct {
-	ID        uint `gorm:"primary_key"`
+	ID        uint `gorm:"primary_key" json:"intent_id"`
 	CreatedAt time.Time
 	UpdatedAt time.Time
 	DeletedAt *time.Time `gorm:"unique_index:idx_freshman_department"`

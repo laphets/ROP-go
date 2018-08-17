@@ -5,6 +5,7 @@ import (
 	. "rop/handler"
 	"rop/pkg/errno"
 	"rop/model"
+	"strings"
 )
 
 func Create(c *gin.Context) {
@@ -19,10 +20,10 @@ func Create(c *gin.Context) {
 		return
 	}
 
-	departList := ""
-	for _, dep := range req.Department {
-		departList += dep+"&"
-	}
+	departList := strings.Join(req.Department, "&")
+	//for _, dep := range req.Department {
+	//	departList += dep+"&"
+	//}
 
 	association := model.AssociationModel{
 		Name: req.Name,
