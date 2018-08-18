@@ -12,6 +12,7 @@ import (
 	"rop/handler/interview"
 	"rop/handler/intent"
 	"rop/handler/association"
+	"rop/handler/ssr"
 )
 
 
@@ -83,6 +84,11 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	{
 		associationGroup.POST("", association.Create)
 		associationGroup.GET("", association.Get)
+	}
+
+	ssrGroup := g.Group("/v1/ssr")
+	{
+		ssrGroup.GET("/schedule", ssr.Schedule)
 	}
 
 	svcd := g.Group("/sd")

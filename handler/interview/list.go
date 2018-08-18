@@ -19,6 +19,11 @@ func List(c *gin.Context) {
 		SendResponse(c, errno.ErrParam, err)
 		return
 	}
+	autoJoinable, err := strconv.ParseInt(c.DefaultQuery("auto_joinable", "0"), 10, 32)
+	if err != nil {
+		SendResponse(c, errno.ErrParam, err)
+		return
+	}
 	department := c.DefaultQuery("department", "")
 
 	if _, err := model.GetInstanceById(uint(instanceId)); err != nil {
@@ -30,6 +35,7 @@ func List(c *gin.Context) {
 	fulInterviews, err := model.ListFulInterview(uint(instanceId), &model.InterviewModel{
 		InterviewType: uint(interviewType),
 		Department: department,
+		AutoJoinable: int(autoJoinable),
 	})
 	if err != nil {
 		SendResponse(c, errno.DBError, err)

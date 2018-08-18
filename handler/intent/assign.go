@@ -7,6 +7,7 @@ import (
 	"rop/model"
 	"rop/service"
 	"fmt"
+	"strconv"
 )
 
 func Assign(c *gin.Context) {
@@ -63,8 +64,13 @@ func Assign(c *gin.Context) {
 				}
 			}
 
+			encryptedFreshmanId, err := service.Encrypt(strconv.FormatUint(uint64(fulIntent.FreshmanModel.ID), 10))
+			if err != nil {
+				SendResponse(c, errno.ErrEncrypt, err)
+				return
+			}
 			// Send SMS
-			_, err = service.SendRecruitTime(fulIntent.Mobile, fulIntent.Name, fulIntent.Department+service.NextState(fulIntent.MainStage), instance.Name, fmt.Sprintf("https://rop.zjuqsc.com/intent?id=%d",intentId))
+			_, err = service.SendRecruitTime(fulIntent.Mobile, fulIntent.Name, fulIntent.Department+service.NextState(fulIntent.MainStage), instance.Name, fmt.Sprintf("https://101.132.66.238:8081?uid=%s", encryptedFreshmanId))
 			if err != nil {
 				SendResponse(c, errno.ErrSMS, err.Error())
 				return

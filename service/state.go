@@ -1,5 +1,19 @@
 package service
 
+func StateInNum(state string) uint {
+	switch state {
+	case "Public Sea":
+		return 0
+	case "First":
+		return 1
+	case "Second":
+		return 2
+	case "Final":
+		return 3
+	}
+	return 999
+}
+
 func StateInChinese(state string) string {
 	switch state {
 	case "Public Sea":
