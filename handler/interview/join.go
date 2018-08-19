@@ -6,6 +6,7 @@ import (
 	"rop/pkg/errno"
 	. "rop/handler"
 	"rop/model"
+	"rop/service"
 )
 
 func Join(c *gin.Context) {
@@ -30,20 +31,25 @@ func Join(c *gin.Context) {
 
 	intent := &model.IntentModel{}
 	for _, item := range req.Intents {
-		if fulIntent, err := model.GetFullIntentByID(item); err != nil {
+
+		fulIntent, err := model.GetFullIntentByID(item);
+		if err != nil {
 			SendResponse(c, errno.DBError, err.Error())
 			return
-		} else {
-			if fulIntent.InstanceId != interview.InstanceId || fulIntent.Department != interview.Department {
-				//log.Debugf("%s||%s", fulIntent.Department, interview.Department)
-				SendResponse(c, errno.ErrOperation, "Instance or Department Not Match")
-				return
-			}
 		}
 
+		if fulIntent.InstanceId != interview.InstanceId || fulIntent.Department != interview.Department || service.StateInNum(service.NextState(fulIntent.MainStage)) != interview.InterviewType {
+			//log.Debugf("%s||%s", fulIntent.Department, interview.Department)
+			SendResponse(c, errno.ErrOperation, "Instance or Department or stage Not Match")
+			return
+		}
+		//log.Debugf("%+v", fulIntent.IntentModel)
 		//log.Debugf("%d", item)
 		intent.ID = item
 		intent.InterviewId = uint(interviewId)
+		intent.MainStage = service.NextState(fulIntent.MainStage)
+		intent.SubStage = 1
+		intent.TargetInterviewId = 0
 		if err := intent.Update(); err != nil {
 			SendResponse(c, errno.DBError, err.Error())
 			return

@@ -42,7 +42,7 @@ func Schedule(c *gin.Context)  {
 
 	for _, intent := range intents {
 
-		if intent.SubStage != 1 {
+		if intent.SubStage != 2 {
 			continue
 		}
 
@@ -58,6 +58,7 @@ func Schedule(c *gin.Context)  {
 			}
 			intentGroup := &IntentGroup{
 				IntentModel: intent,
+				ChineseStage: service.StateInChinese(service.NextState(intent.MainStage)),
 				Interviews:interviews,
 			}
 			intentGroups = append(intentGroups, intentGroup)
@@ -67,10 +68,11 @@ func Schedule(c *gin.Context)  {
 			if err != nil {
 				continue
 			}
-			interviewArray := make([]*model.FullInterview, 1)
+			interviewArray := make([]*model.FullInterview, 0)
 			interviewArray = append(interviewArray, interview)
 			intentGroup := &IntentGroup{
 				IntentModel: intent,
+				ChineseStage: service.StateInChinese(service.NextState(intent.MainStage)),
 				Interviews: interviewArray,
 			}
 			intentGroups = append(intentGroups, intentGroup)

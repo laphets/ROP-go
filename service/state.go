@@ -31,11 +31,11 @@ func StateInChinese(state string) string {
 func NextState(curState string) string {
 	switch curState {
 	case "Public Sea":
-		return StateInChinese("First")
+		return "First"
 	case "First":
-		return StateInChinese("Second")
+		return "Second"
 	case "Second":
-		return StateInChinese("Final")
+		return "Final"
 	}
 	return "null"
 }

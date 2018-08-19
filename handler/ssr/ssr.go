@@ -9,5 +9,6 @@ type ScheduleResponse struct {
 
 type IntentGroup struct {
 	*model.IntentModel
+	ChineseStage string `json:"chinese_stage"`
 	Interviews []*model.FullInterview `json:"interviews"`
 }

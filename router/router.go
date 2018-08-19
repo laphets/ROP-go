@@ -76,7 +76,6 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 		interviewGroup.POST("", interview.Create)
 		interviewGroup.PUT("/:id", interview.Update)
 		interviewGroup.GET("", interview.List)
-		interviewGroup.POST("/join/:id", interview.Join)
 	}
 
 	associationGroup := g.Group("/v1/association")
@@ -89,6 +88,8 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	ssrGroup := g.Group("/v1/ssr")
 	{
 		ssrGroup.GET("/schedule", ssr.Schedule)
+		ssrGroup.POST("/join/:id", interview.Join)
+		ssrGroup.POST("/reject/:id", intent.Reject)
 	}
 
 	svcd := g.Group("/sd")

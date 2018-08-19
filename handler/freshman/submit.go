@@ -29,9 +29,9 @@ func Submit(c *gin.Context) {
 
 	freshman := &model.FreshmanModel{
 		InstanceId: uint(instanceId),
-		ZJUid: "3170101004",
-		Mobile: "17342018650",
-		Name: "郑皓",
+		ZJUid: "3170111705",
+		Mobile: "18888922004",
+		Name: "罗文卿",
 		//MainStage: "Public Sea",
 		//SubStage: "None",
 		OtherInfo: "{a json here}",
@@ -47,7 +47,7 @@ func Submit(c *gin.Context) {
 		Department: "技术研发中心",
 		//GroupId: 0,
 		MainStage: "Public Sea",
-		SubStage: 0,
+		SubStage: 1,
 	}
 
 	intent2 := &model.IntentModel{
@@ -55,7 +55,7 @@ func Submit(c *gin.Context) {
 		Department: "人力资源部门",
 		//GroupId: 0,
 		MainStage: "Public Sea",
-		SubStage: 0,
+		SubStage: 1,
 	}
 
 	intents := []*model.IntentModel{intent1, intent2}
