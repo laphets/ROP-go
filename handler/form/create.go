@@ -5,6 +5,7 @@ import (
 	. "rop/handler"
 	"rop/pkg/errno"
 	"rop/model"
+	json2 "encoding/json"
 )
 
 func Create(c *gin.Context) {
@@ -14,14 +15,20 @@ func Create(c *gin.Context) {
 		return
 	}
 
+	json, err := json2.Marshal(req)
+	if err != nil {
+		SendResponse(c, errno.ErrParam, nil)
+		return
+	}
+
 	form := model.FormModel{
 		Name:req.Name,
-		Data:req.Data,
+		Data:string(json),
 	}
 
 	if err := form.Create(); err != nil {
 		SendResponse(c, errno.DBError, err.Error())
 		return
 	}
-	SendResponse(c, nil, nil)
+	SendResponse(c, nil, string(json))
 }

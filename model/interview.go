@@ -15,8 +15,8 @@ type InterviewModel struct {
 	Director string `gorm:"not null" json:"director"`
 	AutoJoinable int `json:"auto_joinable"`
 	Interviewers string `json:"interviewer"`
-	StartTime time.Time `gorm:"not null" json:"start_time"`
-	EndTime time.Time `gorm:"not null" json:"end_time"`
+	StartTime time.Time `json:"start_time"`
+	EndTime time.Time `json:"end_time"`
 	Remark string `json:"remark"`
 }
 
