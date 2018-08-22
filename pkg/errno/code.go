@@ -19,7 +19,7 @@ var (
 	ErrTime				= &Errno{Code: 20007, Message: "Time error in your submission."}
 	ErrOperation		= &Errno{Code: 20008, Message: "Unsupported operation."}
 	ErrEncrypt      	= &Errno{Code: 20009, Message: "Encrypt error."}
-
+	ErrPrase			= &Errno{Code: 20010, Message: "Prase error."}
 
 	// user errors
 	ErrUserNotFound 	= &Errno{Code: 20102, Message: "The user was not found."}
@@ -27,4 +27,11 @@ var (
 	ErrFormCantEdit		= &Errno{Code: 20201, Message: "This form can't be edited."}
 	ErrFormNotFound		= &Errno{Code: 20202, Message: "The form was not found."}
 	ErrNoProperGroup	= &Errno{Code: 20301, Message: "You have no proper group to join."}
+
+	// submission errors
+	ErrFieldEmpty		= &Errno{Code: 20401, Message: "Some field is required."}
+	ErrTypeNotMatch		= &Errno{Code: 20402, Message: "Error type not match."}
+	ErrAnsNotMatch		= &Errno{Code: 20404, Message: "Some Ans not match."}
+
+
 )

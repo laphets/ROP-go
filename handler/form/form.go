@@ -12,6 +12,7 @@ type DataItem struct {
 	Text string `json:"text" binding:"required"`
 	Type string `json:"type" binding:"required"`
 	Next int `json:"next" binding:"required"`
+	AvailableCnt int `json:"available_cnt" binding:"-"`
 	Required bool `json:"required" binding:"-"`
 	DefaultJump bool `json:"default_jump" binding:"-"`
 	Spec string `json:"spec" binding:"-"`
