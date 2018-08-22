@@ -175,9 +175,9 @@ func dfs(curTag int, formMap map[int]*form2.DataItem, submission map[int][]strin
 
 	// Check for RE for common type
 	if curForm.Re != "" && len(submission[curTag]) != 0 {
-		//log.Debugf("111 %+v %d", submission[curTag], curTag)
+		//log.Debugf("%s 111 %+v %d", curForm.Re, submission[curTag][0], curTag)
 		_, _ = regexp.MatchString(curForm.Re, submission[curTag][0])
-		//log.Debugf("222")
+		//log.Debugf("%s 222")
 		if ok, err := regexp.MatchString(curForm.Re, submission[curTag][0]); !ok || err != nil {
 			log.Debugf("fail %s %s", curForm.Re, submission[curTag][0])
 			return errors.New("Not RE.")
@@ -194,7 +194,7 @@ func Submit(c *gin.Context) {
 		return
 	}
 
-	instance, err := model.GetInstanceById(uint(instanceId));
+	instance, err := model.GetInstanceById(uint(instanceId))
 	if err != nil {
 		SendResponse(c, errno.ErrInstanceNotFound, nil)
 		return
@@ -212,7 +212,7 @@ func Submit(c *gin.Context) {
 		return
 	}
 
-	log.Debugf("%s", form.Data)
+	//log.Debugf("%s", form.Data)
 
 	submitArray := req.Data
 
@@ -232,8 +232,8 @@ func Submit(c *gin.Context) {
 		formMap[item.Tag] = item
 	}
 
-	log.Debugf("%d", root)
-	log.Debugf("%+v", req.Data[0].Value)
+	//log.Debugf("%d", root)
+	//log.Debugf("%+v", req.Data[0].Value)
 
 	// Tags for visted(prased)
 
