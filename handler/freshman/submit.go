@@ -12,6 +12,8 @@ import (
 	"regexp"
 	"errors"
 	"strings"
+	"rop/service"
+	"fmt"
 )
 
 //func praseBranch(visited map[int]int, formTemplate []*form2.DataItem, submission map[int]string) error {
@@ -346,7 +348,13 @@ func Submit(c *gin.Context) {
 		SendResponse(c, errno.DBError, err)
 	}
 
+	encryptedInstanceId, err := service.Encrypt(strconv.FormatUint(uint64(freshman.InstanceId), 10))
 
+	_, err = service.SendSubmitNotice(freshman.Mobile, freshman.Name, fmt.Sprintf("https://101.132.66.238:8081?uid=%s", encryptedInstanceId), instance.Name, freshman.ZJUid, freshman.Mobile, intents[0].Department, intents[1].Department, instance.Name )
+	if err != nil {
+		SendResponse(c, errno.ErrSMS, err.Error())
+		return
+	}
 	//freshman := &model.FreshmanModel{
 	//	InstanceId: uint(instanceId),
 	//	ZJUid: "3170111705",
