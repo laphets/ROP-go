@@ -67,6 +67,7 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	intentGroup.Use(middleware.AuthMiddleware())
 	{
 		intentGroup.POST("/assign", intent.Assign)
+		intentGroup.POST("/reject/:id", intent.Reject)
 		intentGroup.GET("", intent.List)
 	}
 
