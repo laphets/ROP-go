@@ -72,21 +72,38 @@ import (
 //	}
 //}
 //
+func goThisWay(curTag int, formMap map[int]*form2.DataItem, submission map[int][]string) bool {
+	if curTag == -1 {
+		return false
+	}
+	if len(submission[curTag]) != 0 && submission[curTag][0] != "" {
+		return true
+	}
+	return goThisWay(formMap[curTag].Next, formMap, submission)
+}
+
 func dfs(curTag int, formMap map[int]*form2.DataItem, submission map[int][]string, inBranch bool) error {
 	if curTag == -1 {
 		return nil
 	}
 
 	curForm := formMap[curTag]
+
 	//submitAns := submission[curTag]
 	next := curForm.Next
 
+	if curForm.Type == "TEXT" {
+		return dfs(next, formMap, submission, inBranch)
+	}
 
 	// Check for required
+	//log.Debugf("%t", curForm.Required)
+
 	if curForm.Required && !inBranch {
-		if _, ok := submission[curTag]; ok && submission[curTag][0] != "" {
+		if _, ok := submission[curTag]; ok && len(submission[curTag]) != 0 && submission[curTag][0] != "" {
 
 		} else {
+			log.Debugf("Required %d", curTag)
 			// Not exist
 			return errors.New("Not required.")
 		}
@@ -117,28 +134,57 @@ func dfs(curTag int, formMap map[int]*form2.DataItem, submission map[int][]strin
 		if curForm.DefaultJump {
 			// DefaultJump
 			// Done
-			return dfs(next, formMap, submission, false)
+			return dfs(next, formMap, submission, inBranch)
 		} else {
-			for _, choice := range curForm.Choices {
-				if err := dfs(choice.Next, formMap, submission, true); err != nil {
+			cnt := 0
+			// answer contains which choice
+			hasThisChoice := make(map[int]bool)
+			for _, tag := range submission[curTag] {
+				taginInt, err := strconv.ParseInt(tag, 10, 32)
+				if err != nil {
 					return err
 				}
+				hasThisChoice[int(taginInt)] = true
 			}
-			return dfs(next, formMap, submission, false)
+
+			for _, choice := range curForm.Choices {
+				// if it is answer branch
+				if hasThisChoice[choice.Tag] {
+					if goThisWay(choice.Next, formMap, submission) {
+						cnt ++
+						if err := dfs(choice.Next, formMap, submission, false); err != nil {
+							return err
+						}
+					} else {
+						return errors.New("Branches not match.")
+					}
+				} else {
+					if goThisWay(choice.Next, formMap, submission) {
+						return errors.New("Submit too much.")
+					}
+				}
+
+			}
+			//if cnt == 0 {
+			//	return errors.New("Branches not match.")
+			//}
+			return dfs(next, formMap, submission, inBranch)
 		}
 
 	}
 
 	// Check for RE for common type
-	if curForm.Re != "" {
+	if curForm.Re != "" && len(submission[curTag]) != 0 {
+		//log.Debugf("111 %+v %d", submission[curTag], curTag)
 		_, _ = regexp.MatchString(curForm.Re, submission[curTag][0])
+		//log.Debugf("222")
 		if ok, err := regexp.MatchString(curForm.Re, submission[curTag][0]); !ok || err != nil {
 			log.Debugf("fail %s %s", curForm.Re, submission[curTag][0])
 			return errors.New("Not RE.")
 		}
 	}
 
-	return dfs(next, formMap, submission, false)
+	return dfs(next, formMap, submission, inBranch)
 }
 
 func Submit(c *gin.Context) {
@@ -165,6 +211,8 @@ func Submit(c *gin.Context) {
 		SendResponse(c, errno.DBError, err)
 		return
 	}
+
+	log.Debugf("%s", form.Data)
 
 	submitArray := req.Data
 
@@ -221,7 +269,7 @@ func Submit(c *gin.Context) {
 			}
 			otherInfo.Value = strings.Join(ansList, "%")
 		}
-		log.Debugf("%+v", otherInfo)
+		//log.Debugf("%+v", otherInfo)
 		otherInfoArray = append(otherInfoArray, otherInfo)
 	}
 	//}()
@@ -231,7 +279,7 @@ func Submit(c *gin.Context) {
 		return
 	}
 
-	log.Debugf("%s", string(otherInfoToJson))
+	//log.Debugf("%s", string(otherInfoToJson))
 
 	freshman := &model.FreshmanModel{
 		OtherInfo: string(otherInfoToJson),
