@@ -8,6 +8,7 @@ import (
 	"rop/service"
 	"fmt"
 	"strconv"
+	"github.com/lexkong/log"
 )
 
 func Assign(c *gin.Context) {
@@ -44,7 +45,7 @@ func Assign(c *gin.Context) {
 				}
 				intent := &model.IntentModel{
 					ID: intentId,
-					SubStage:1,
+					SubStage:2,
 					TargetInterviewId:targetInterview.ID,
 				}
 				if err := intent.Update(); err != nil {
@@ -53,9 +54,10 @@ func Assign(c *gin.Context) {
 				}
 			} else {
 				// Auto assign autojoinable should be 1
+				// SubStage into 2
 				intent := &model.IntentModel{
 					ID:intentId,
-					SubStage:1,
+					SubStage:2,
 					//TargetInterviewId: 0,
 				}
 				if err := intent.Update(); err != nil {
@@ -65,12 +67,15 @@ func Assign(c *gin.Context) {
 			}
 
 			encryptedFreshmanId, err := service.Encrypt(strconv.FormatUint(uint64(fulIntent.FreshmanModel.ID), 10))
+
+			log.Debug(encryptedFreshmanId)
+
 			if err != nil {
 				SendResponse(c, errno.ErrEncrypt, err)
 				return
 			}
 			// Send SMS
-			_, err = service.SendRecruitTime(fulIntent.Mobile, fulIntent.Name, fulIntent.Department+service.NextState(fulIntent.MainStage), instance.Name, fmt.Sprintf("https://101.132.66.238:8081?uid=%s", encryptedFreshmanId))
+			_, err = service.SendRecruitTime(fulIntent.Mobile, fulIntent.Name, fulIntent.Department+service.StateInChinese(service.NextState(fulIntent.MainStage)), instance.Name, fmt.Sprintf("https://101.132.66.238:8081?uid=%s", encryptedFreshmanId))
 			if err != nil {
 				SendResponse(c, errno.ErrSMS, err.Error())
 				return

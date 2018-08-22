@@ -58,7 +58,7 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	}
 
 	freGroup := g.Group("/v1/freshman")
-	freGroup.Use(middleware.AuthMiddleware())
+	//freGroup.Use(middleware.AuthMiddleware())
 	{
 		freGroup.POST("/submit", freshman.Submit)
 	}
@@ -76,7 +76,6 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 		interviewGroup.POST("", interview.Create)
 		interviewGroup.PUT("/:id", interview.Update)
 		interviewGroup.GET("", interview.List)
-		interviewGroup.POST("/join/:id", interview.Join)
 	}
 
 	associationGroup := g.Group("/v1/association")
@@ -89,6 +88,9 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	ssrGroup := g.Group("/v1/ssr")
 	{
 		ssrGroup.GET("/schedule", ssr.Schedule)
+		ssrGroup.POST("/join/:id", interview.Join)
+		ssrGroup.GET("/form", ssr.GetFormByIns)
+		ssrGroup.POST("/reject/:id", intent.Cancel)
 	}
 
 	svcd := g.Group("/sd")

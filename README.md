@@ -8,6 +8,10 @@ If you are interested in this project, any contricution is welcomed.
 ## Tech Stack
 Gin, Gorm, Vendor, JWT, Viper.
 
+## Constant
+substage 1 => INIT, 2 <= ASSIGNED
+AutoJoinable 1 => OK， -1 <= BAN
+
 ## Routers
 ```go
 auth := g.Group("/v1/auth")

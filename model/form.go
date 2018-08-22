@@ -5,7 +5,8 @@ import "github.com/jinzhu/gorm"
 type FormModel struct {
 	gorm.Model
 	Name string `gorm:"unique_index" json:"name"`
-	Data string `json:"data"`
+	RootTag int `json:"root_tag"`
+	Data string `json:"data" gorm:"type:varchar(20000)"`
 }
 
 func (x *FormModel) Create() error {

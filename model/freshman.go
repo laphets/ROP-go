@@ -12,11 +12,14 @@ type FreshmanModel struct {
 	InstanceId uint `gorm:"not null;unique_index:idx_instance_ZJUid" json:"instance_id"`
 	ZJUid string `gorm:"not null;column:ZJUid;unique_index:idx_instance_ZJUid" json:"ZJUid"`
 	Mobile string `json:"mobile"`
+	Gender string `json:"gender"`
+	Email string `json:"email"`
+	Photo string `json:"photo"`
 	Name string `json:"name"`
 	//MainStage string `json:"main_stage"`
 	//SubStage string `json:"sub_stage"`
 	//Intent []string `json:"intent"`
-	OtherInfo string `json:"other_info"`
+	OtherInfo string `json:"other_info" gorm:"type:varchar(100000)"`
 }
 
 // When calling this method, you need make sure instanceId and ZJUid exists in your freshmanModel
