@@ -325,7 +325,10 @@ func Submit(c *gin.Context) {
 		}
 	}
 
-
+	if len(intentList) > instance.MaxIntent {
+		SendResponse(c, errno.TooMuchIntent, nil)
+		return
+	}
 
 	if err := freshman.Create(); err != nil {
 		SendResponse(c, errno.DBError, err)
@@ -343,6 +346,7 @@ func Submit(c *gin.Context) {
 		}
 		intents = append(intents, intent)
 	}
+
 
 	if err := model.CreateIntents(intents); err != nil {
 		SendResponse(c, errno.DBError, err)

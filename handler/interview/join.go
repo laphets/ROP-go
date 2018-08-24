@@ -23,16 +23,29 @@ func Join(c *gin.Context) {
 	}
 
 	// Check for interview
-	interview, err := model.GetInterviewByID(uint(interviewId));
+	// TODO: Del this extra query
+	interview, err := model.GetInterviewByID(uint(interviewId))
 	if err != nil {
 		SendResponse(c, errno.DBError, err.Error())
+		return
+	}
+
+
+	fulInterview, err := model.GetFulInterviewByID(uint(interviewId))
+	if err != nil {
+		SendResponse(c, errno.DBError, err.Error())
+		return
+	}
+
+	if len(fulInterview.Participants) + len(req.Intents) > fulInterview.Capacity {
+		SendResponse(c, errno.ErrInterviewFull, nil)
 		return
 	}
 
 	intent := &model.IntentModel{}
 	for _, item := range req.Intents {
 
-		fulIntent, err := model.GetFullIntentByID(item);
+		fulIntent, err := model.GetFullIntentByID(item)
 		if err != nil {
 			SendResponse(c, errno.DBError, err.Error())
 			return

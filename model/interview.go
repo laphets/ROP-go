@@ -17,6 +17,7 @@ type InterviewModel struct {
 	Interviewers string `json:"interviewer"`
 	StartTime time.Time `json:"start_time"`
 	EndTime time.Time `json:"end_time"`
+	Capacity int `json:"capacity"`
 	Remark string `json:"remark"`
 }
 

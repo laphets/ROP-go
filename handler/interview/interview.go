@@ -12,6 +12,7 @@ type CreateRequest struct {
 	Interviewers string `json:"interviewers" binding:"required"`
 	StartTime time.Time `json:"start_time" binding:"required"`
 	EndTime time.Time `json:"end_time" binding:"required"`
+	Capacity int `json:"capacity" binding:"required"`
 	Remark string `json:"remark" binding:"-"`
 }
 

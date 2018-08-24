@@ -34,9 +34,13 @@ func Assign(c *gin.Context) {
 
 			if req.AssignMode == "manual" {
 				// Manual assign autojoinable should be -1
-				targetInterview, err := model.GetInterviewByID(req.TargetInterviewId)
+				targetInterview, err := model.GetFulInterviewByID(req.TargetInterviewId)
 				if err != nil {
 					SendResponse(c, errno.DBError, err)
+					return
+				}
+				if targetInterview.Capacity <= len(targetInterview.Participants) {
+					SendResponse(c, errno.ErrInterviewFull, "This interview is full.")
 					return
 				}
 				if targetInterview.AutoJoinable != -1 {

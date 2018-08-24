@@ -30,6 +30,11 @@ func Create(c *gin.Context) {
 		return
 	}
 
+	if req.Capacity < 1 {
+		SendResponse(c, errno.ErrParam, "Error capacity.")
+		return
+	}
+
 	interview := &model.InterviewModel{
 		InstanceId: uint(instanceId),
 		Name:req.Name,
@@ -41,6 +46,7 @@ func Create(c *gin.Context) {
 		StartTime:req.StartTime,
 		EndTime:req.EndTime,
 		Remark:req.Remark,
+		Capacity: req.Capacity,
 	}
 
 	if err := interview.Create(); err != nil {

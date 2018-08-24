@@ -53,13 +53,21 @@ func Schedule(c *gin.Context)  {
 				Department: intent.Department,
 				AutoJoinable: 1,
 			})
+
+			avaliInterviews := make([]*model.FullInterview, 0)
+			for _, interview := range interviews {
+				if len(interview.Participants) < interview.Capacity {
+					avaliInterviews = append(avaliInterviews, interview)
+				}
+			}
+
 			if err != nil {
 				continue
 			}
 			intentGroup := &IntentGroup{
 				IntentModel: intent,
 				ChineseStage: service.StateInChinese(service.NextState(intent.MainStage)),
-				Interviews:interviews,
+				Interviews: avaliInterviews,
 			}
 			intentGroups = append(intentGroups, intentGroup)
 		} else {
