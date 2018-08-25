@@ -94,6 +94,7 @@ func GetIntentByID(intentId uint) (*IntentModel, error) {
 type FullIntent struct {
 	*IntentModel
 	*FreshmanModel
+	Interview *InterviewModel `json:"interview"`
 }
 
 // for conditions, [0] is stage, [1] is department
@@ -139,6 +140,13 @@ func GetFullIntentByID(intentId uint) (*FullIntent, error) {
 	fulIntent := &FullIntent{
 		IntentModel: intent,
 		FreshmanModel: freshman,
+	}
+	if intent.InterviewId != 0 {
+		interview, err := GetInterviewByID(intent.InterviewId)
+		if err != nil {
+			return nil, err
+		}
+		fulIntent.Interview = interview
 	}
 	return fulIntent, nil
 }

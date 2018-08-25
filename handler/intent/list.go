@@ -25,6 +25,7 @@ func List(c *gin.Context) {
 	department := c.DefaultQuery("department", "")
 
 	fullIntents, err := model.ListFullIntentByInstance(uint(instanceId), mainStage, department)
+
 	if err != nil {
 		SendResponse(c, errno.DBError, err)
 		return
