@@ -14,6 +14,7 @@ type InstanceModel struct {
 	StartTime time.Time `json:"start_time"`
 	EndTime time.Time `json:"end_time"`
 	FormId uint `json:"form_id" gorm:"not null"`
+	MaxIntent int `json:"max_intent"`
 }
 
 func (x *InstanceModel) Create() error {

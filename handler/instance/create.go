@@ -18,6 +18,11 @@ func Create(c *gin.Context) {
 		SendResponse(c, errno.ErrTime, nil)
 		return
 	}
+	// TODO: Only Support >=1 intent now
+	if req.MaxIntent <= 0 {
+		SendResponse(c, errno.ErrParam, "IntentNum must > 0")
+		return
+	}
 	//log.Debugf("%+v",req)
 	if _, err := model.GetInstanceByName(req.Name); err == nil {
 		SendResponse(c, errno.DuplicateKey, nil)
@@ -30,6 +35,7 @@ func Create(c *gin.Context) {
 		StartTime:req.StartTime,
 		EndTime:req.EndTime,
 		FormId:req.FormId,
+		MaxIntent:req.MaxIntent,
 	}
 
 	if err := ins.Create(); err != nil {

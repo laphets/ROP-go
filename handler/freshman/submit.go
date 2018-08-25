@@ -196,6 +196,8 @@ func Submit(c *gin.Context) {
 		return
 	}
 
+
+
 	instance, err := model.GetInstanceById(uint(instanceId))
 	if err != nil {
 		SendResponse(c, errno.ErrInstanceNotFound, nil)
@@ -284,6 +286,7 @@ func Submit(c *gin.Context) {
 	//log.Debugf("%s", string(otherInfoToJson))
 
 	freshman := &model.FreshmanModel{
+		InstanceId: uint(instanceId),
 		OtherInfo: string(otherInfoToJson),
 	}
 
@@ -325,7 +328,10 @@ func Submit(c *gin.Context) {
 		}
 	}
 
-
+	if len(intentList) > instance.MaxIntent {
+		SendResponse(c, errno.TooMuchIntent, nil)
+		return
+	}
 
 	if err := freshman.Create(); err != nil {
 		SendResponse(c, errno.DBError, err)
@@ -344,13 +350,14 @@ func Submit(c *gin.Context) {
 		intents = append(intents, intent)
 	}
 
+
 	if err := model.CreateIntents(intents); err != nil {
 		SendResponse(c, errno.DBError, err)
 	}
 
 	encryptedInstanceId, err := service.Encrypt(strconv.FormatUint(uint64(freshman.InstanceId), 10))
-
-	_, err = service.SendSubmitNotice(freshman.Mobile, freshman.Name, fmt.Sprintf("https://101.132.66.238:8081?uid=%s", encryptedInstanceId), instance.Name, freshman.ZJUid, freshman.Mobile, intents[0].Department, intents[1].Department, instance.Name )
+	// TODO: Fix bug when intent is 1
+	_, err = service.SendSubmitNotice(freshman.Mobile, freshman.Name, fmt.Sprintf("https://101.132.66.238:8081?uid=%s", encryptedInstanceId), instance.Name, freshman.ZJUid, freshman.Mobile, intents[0].Department, "模板测试" , instance.Name )
 	if err != nil {
 		SendResponse(c, errno.ErrSMS, err.Error())
 		return

@@ -12,6 +12,7 @@ type CreateRequest struct {
 	StartTime time.Time `json:"start_time" binding:"required"`
 	EndTime time.Time `json:"end_time" binding:"required"`
 	FormId uint `json:"form_id" binding:"required"`
+	MaxIntent int `json:"max_intent" binding:"required"`
 }
 
 type ListResponse struct {

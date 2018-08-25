@@ -32,6 +32,7 @@ var (
 	ErrFieldEmpty		= &Errno{Code: 20401, Message: "Some field is required."}
 	ErrTypeNotMatch		= &Errno{Code: 20402, Message: "Error type not match."}
 	ErrAnsNotMatch		= &Errno{Code: 20404, Message: "Some Ans not match."}
+	TooMuchIntent		= &Errno{Code: 20405, Message: "Too much intents."}
 
-
+	ErrInterviewFull		= &Errno{Code: 20501, Message: "Interview is full"}
 )

@@ -34,9 +34,13 @@ func Assign(c *gin.Context) {
 
 			if req.AssignMode == "manual" {
 				// Manual assign autojoinable should be -1
-				targetInterview, err := model.GetInterviewByID(req.TargetInterviewId)
+				targetInterview, err := model.GetFulInterviewByID(req.TargetInterviewId)
 				if err != nil {
 					SendResponse(c, errno.DBError, err)
+					return
+				}
+				if targetInterview.Capacity <= len(targetInterview.Participants) {
+					SendResponse(c, errno.ErrInterviewFull, "This interview is full.")
 					return
 				}
 				if targetInterview.AutoJoinable != -1 {
@@ -75,7 +79,7 @@ func Assign(c *gin.Context) {
 				return
 			}
 			// Send SMS
-			_, err = service.SendRecruitTime(fulIntent.Mobile, fulIntent.Name, fulIntent.Department+service.StateInChinese(service.NextState(fulIntent.MainStage)), instance.Name, fmt.Sprintf("https://101.132.66.238:8081?uid=%s", encryptedFreshmanId))
+			_, err = service.SendRecruitTime(fulIntent.Mobile, fulIntent.Name, fulIntent.Department+service.StateInChinese(service.NextState(fulIntent.MainStage)), instance.Name, fmt.Sprintf("http://192.168.199.211:8081/schedule?uid=%s", encryptedFreshmanId))
 			if err != nil {
 				SendResponse(c, errno.ErrSMS, err.Error())
 				return
