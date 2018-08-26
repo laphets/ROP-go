@@ -20,6 +20,11 @@ var (
 	ErrOperation		= &Errno{Code: 20008, Message: "Unsupported operation."}
 	ErrEncrypt      	= &Errno{Code: 20009, Message: "Encrypt error."}
 	ErrPrase			= &Errno{Code: 20010, Message: "Prase error."}
+	ErrFileType			= &Errno{Code: 20011, Message: "File type not match."}
+	ErrFileRead			= &Errno{Code: 20012, Message: "Read.io error."}
+	ErrOSS				= &Errno{Code: 20013, Message: "OSS File Upload Error."}
+	ErrFileSize			= &Errno{Code: 20014, Message: "File size exceeding."}
+	ErrUUID				= &Errno{Code: 20015, Message: "UUID generates fail."}
 
 	// user errors
 	ErrUserNotFound 	= &Errno{Code: 20102, Message: "The user was not found."}

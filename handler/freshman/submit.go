@@ -105,9 +105,9 @@ func dfs(curTag int, formMap map[int]*form2.DataItem, submission map[int][]strin
 		if _, ok := submission[curTag]; ok && len(submission[curTag]) != 0 && submission[curTag][0] != "" {
 
 		} else {
-			log.Debugf("Required %d", curTag)
+			//log.Debugf("Required %d", curTag)
 			// Not exist
-			return errors.New("Not required.")
+			return errors.New(fmt.Sprintf("问题字段不能为空: %s", curForm.Text))
 		}
 	}
 
@@ -125,12 +125,12 @@ func dfs(curTag int, formMap map[int]*form2.DataItem, submission map[int][]strin
 				}
 			}
 			if !flag {
-				return errors.New("Choice not match.")
+				return errors.New(fmt.Sprintf("提交了非法的选项: %s", curForm.Text))
 			}
 		}
 		avali := curForm.AvailableCnt
 		if avali < len(submission[curTag]) {
-			return errors.New("Choice too much.")
+			return errors.New(fmt.Sprintf("选择了过多的选项: %s", curForm.Text))
 		}
 
 		if curForm.DefaultJump {
@@ -158,11 +158,11 @@ func dfs(curTag int, formMap map[int]*form2.DataItem, submission map[int][]strin
 							return err
 						}
 					} else {
-						return errors.New("Branches not match.")
+						return errors.New(fmt.Sprintf("多选选择与提交不符: %s", choice.Text))
 					}
 				} else {
 					if goThisWay(choice.Next, formMap, submission) {
-						return errors.New("Submit too much.")
+						return errors.New(fmt.Sprintf("提交了过多的多选信息: %s", choice.Text))
 					}
 				}
 
@@ -182,7 +182,7 @@ func dfs(curTag int, formMap map[int]*form2.DataItem, submission map[int][]strin
 		//log.Debugf("%s 222")
 		if ok, err := regexp.MatchString(curForm.Re, submission[curTag][0]); !ok || err != nil {
 			log.Debugf("fail %s %s", curForm.Re, submission[curTag][0])
-			return errors.New("Not RE.")
+			return errors.New(fmt.Sprintf("正则判断错误: %s", curForm.Text))
 		}
 	}
 
@@ -355,13 +355,19 @@ func Submit(c *gin.Context) {
 		SendResponse(c, errno.DBError, err)
 	}
 
-	encryptedInstanceId, err := service.Encrypt(strconv.FormatUint(uint64(freshman.InstanceId), 10))
+	//encryptedInstanceId, err := service.Encrypt(strconv.FormatUint(uint64(freshman.InstanceId), 10))
 	// TODO: Fix bug when intent is 1
-	_, err = service.SendSubmitNotice(freshman.Mobile, freshman.Name, fmt.Sprintf("https://101.132.66.238:8081?uid=%s", encryptedInstanceId), instance.Name, freshman.ZJUid, freshman.Mobile, intents[0].Department, "模板测试" , instance.Name )
+	intentsforString := make([]string, 0)
+	for _, intent := range intents {
+		intentsforString = append(intentsforString, intent.Department)
+	}
+
+	smsRes, err := service.SendSubmitNotice(freshman.Name, fmt.Sprintf("https://rop.zjuqsc.com"), freshman.ZJUid, freshman.Mobile, strings.Join(intentsforString, ","), instance.Name)
 	if err != nil {
 		SendResponse(c, errno.ErrSMS, err.Error())
 		return
 	}
+	log.Debugf("%s", smsRes)
 	//freshman := &model.FreshmanModel{
 	//	InstanceId: uint(instanceId),
 	//	ZJUid: "3170111705",
