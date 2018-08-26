@@ -13,11 +13,14 @@ import (
 )
 
 func UploadImage(c *gin.Context) {
-	file, _ := c.FormFile("file")
+	file, err := c.FormFile("file")
+	if err != nil {
+		SendResponse(c, errno.ErrFileRead, "请上传有效的文件~")
+	}
 
 	contentType := file.Header["Content-Type"][0]
 	if contentType != "image/png" && contentType != "image/jpeg" {
-		SendResponse(c, errno.ErrFileType, "Need *.png or *.jpg")
+		SendResponse(c, errno.ErrFileType, "需要以.png或者.jpg类型的图片~")
 		return
 	}
 
@@ -26,7 +29,7 @@ func UploadImage(c *gin.Context) {
 
 	fileSize := file.Size
 	if fileSize > (1 << 20) {
-		SendResponse(c, errno.ErrFileSize, "Maxium file size is 1MB")
+		SendResponse(c, errno.ErrFileSize, "图片的最大尺寸为1MB哦~~")
 		return
 	}
 
