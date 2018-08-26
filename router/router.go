@@ -13,10 +13,13 @@ import (
 	"rop/handler/intent"
 	"rop/handler/association"
 	"rop/handler/ssr"
+	"rop/handler/file"
 )
 
 
 func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
+
+	//g.MaxMultipartMemory = 8 << 20
 
 	g.Use(gin.Recovery())
 	g.Use(middleware.NoCache)
@@ -92,6 +95,11 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 		ssrGroup.POST("/join/:id", interview.Join)
 		ssrGroup.GET("/form", ssr.GetFormByIns)
 		ssrGroup.POST("/reject/:id", intent.Cancel)
+	}
+
+	fileGroup := g.Group("/v1/file")
+	{
+		fileGroup.POST("/upload/img", file.UploadImage)
 	}
 
 	svcd := g.Group("/sd")
