@@ -176,7 +176,7 @@ func dfs(curTag int, formMap map[int]*form2.DataItem, submission map[int][]strin
 	}
 
 	// Check for RE for common type
-	if curForm.Re != "" && len(submission[curTag]) != 0 {
+	if curForm.Re != "" && len(submission[curTag]) != 0 && submission[curTag][0] != "" {
 		//log.Debugf("%s 111 %+v %d", curForm.Re, submission[curTag][0], curTag)
 		_, _ = regexp.MatchString(curForm.Re, submission[curTag][0])
 		//log.Debugf("%s 222")
