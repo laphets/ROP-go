@@ -162,7 +162,8 @@ func dfs(curTag int, formMap map[int]*form2.DataItem, submission map[int][]strin
 					}
 				} else {
 					if goThisWay(choice.Next, formMap, submission) {
-						return errors.New(fmt.Sprintf("提交了过多的多选信息: %s", choice.Text))
+						// TODO: Uncheck exceed submission
+						//return errors.New(fmt.Sprintf("提交了过多的多选信息: %s", choice.Text))
 					}
 				}
 
@@ -362,7 +363,7 @@ func Submit(c *gin.Context) {
 		intentsforString = append(intentsforString, intent.Department)
 	}
 
-	smsRes, err := service.SendSubmitNotice(freshman.Name, fmt.Sprintf("https://rop.zjuqsc.com"), freshman.ZJUid, freshman.Mobile, strings.Join(intentsforString, ","), instance.Name)
+	smsRes, err := service.SendSubmitNotice(freshman.Name, freshman.ZJUid, freshman.Mobile, strings.Join(intentsforString, ","), instance.Name)
 	if err != nil {
 		SendResponse(c, errno.ErrSMS, err.Error())
 		return

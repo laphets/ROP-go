@@ -9,13 +9,13 @@ import (
 	"fmt"
 	"github.com/satori/go.uuid"
 	"path"
-	"github.com/lexkong/log"
 )
 
 func UploadImage(c *gin.Context) {
 	file, err := c.FormFile("file")
 	if err != nil {
 		SendResponse(c, errno.ErrFileRead, "请上传有效的文件~")
+		return
 	}
 
 	contentType := file.Header["Content-Type"][0]
@@ -25,7 +25,7 @@ func UploadImage(c *gin.Context) {
 	}
 
 
-	log.Debugf("%d", file.Size)
+	//log.Debugf("%d", file.Size)
 
 	fileSize := file.Size
 	if fileSize > (1 << 20) {
