@@ -219,7 +219,35 @@ func Submit(c *gin.Context) {
 
 	//log.Debugf("%s", form.Data)
 
-	submitArray := req.Data
+	submitArray := make([]*DecryptData, 0)
+
+	for _, item := range req.Data {
+		keyString ,err := service.FormDecrypt(item.Key)
+		if err != nil {
+			SendResponse(c, errno.ErrDecrypt, err.Error())
+			return
+		}
+		key, err := strconv.ParseInt(keyString, 10, 32)
+		if err != nil {
+			SendResponse(c, errno.ErrPrase, err.Error())
+			return
+		}
+
+		value := make([]string, 0)
+		for _, ans := range item.Value {
+			deAns, err := service.FormDecrypt(ans)
+			if err != nil {
+				SendResponse(c, errno.ErrDecrypt, err.Error())
+				return
+			}
+			value = append(value, deAns)
+		}
+		submitItem := &DecryptData{
+			Key: int(key),
+			Value: value,
+		}
+		submitArray = append(submitArray, submitItem)
+	}
 
 	// Trans submission into map style
 	submission := make(map[int][]string)
