@@ -5,13 +5,13 @@ import (
 	"crypto/cipher"
 	"bytes"
 	"github.com/spf13/viper"
-	"encoding/hex"
+	"encoding/base64"
 )
 
 func FormDecrypt(textBase64 string) (string, error) {
 	//log.Debugf("%s", textBase64)
-	//text, err := base64.URLEncoding.DecodeString(textBase64)
-	text, err := hex.DecodeString(textBase64)
+	text, err := base64.StdEncoding.DecodeString(textBase64)
+	//text, err := hex.DecodeString(textBase64)
 	if err != nil {
 		return "", err
 	}

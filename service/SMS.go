@@ -6,7 +6,6 @@ import (
 	"github.com/spf13/viper"
 	"net/http"
 	"io/ioutil"
-	"github.com/lexkong/log"
 )
 
 func sendSMS(data url.Values, tpl bool) (string, error) {
@@ -25,7 +24,7 @@ func sendSMS(data url.Values, tpl bool) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	log.Debugf("%s", string(body))
+	//log.Debugf("%s", string(body))
 	return string(body), nil
 }
 
