@@ -25,6 +25,7 @@ var (
 	ErrOSS				= &Errno{Code: 20013, Message: "OSS File Upload Error."}
 	ErrFileSize			= &Errno{Code: 20014, Message: "File size exceeding."}
 	ErrUUID				= &Errno{Code: 20015, Message: "UUID generates fail."}
+	ErrDecrypt      	= &Errno{Code: 20016, Message: "Decrypt error."}
 
 	// user errors
 	ErrUserNotFound 	= &Errno{Code: 20102, Message: "The user was not found."}

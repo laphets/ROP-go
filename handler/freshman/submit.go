@@ -162,7 +162,8 @@ func dfs(curTag int, formMap map[int]*form2.DataItem, submission map[int][]strin
 					}
 				} else {
 					if goThisWay(choice.Next, formMap, submission) {
-						return errors.New(fmt.Sprintf("提交了过多的多选信息: %s", choice.Text))
+						// TODO: Uncheck exceed submission
+						//return errors.New(fmt.Sprintf("提交了过多的多选信息: %s", choice.Text))
 					}
 				}
 
@@ -218,7 +219,35 @@ func Submit(c *gin.Context) {
 
 	//log.Debugf("%s", form.Data)
 
-	submitArray := req.Data
+	submitArray := make([]*DecryptData, 0)
+
+	for _, item := range req.Data {
+		keyString ,err := service.FormDecrypt(item.Key)
+		if err != nil {
+			SendResponse(c, errno.ErrDecrypt, err.Error())
+			return
+		}
+		key, err := strconv.ParseInt(keyString, 10, 32)
+		if err != nil {
+			SendResponse(c, errno.ErrPrase, err.Error())
+			return
+		}
+
+		value := make([]string, 0)
+		for _, ans := range item.Value {
+			deAns, err := service.FormDecrypt(ans)
+			if err != nil {
+				SendResponse(c, errno.ErrDecrypt, err.Error())
+				return
+			}
+			value = append(value, deAns)
+		}
+		submitItem := &DecryptData{
+			Key: int(key),
+			Value: value,
+		}
+		submitArray = append(submitArray, submitItem)
+	}
 
 	// Trans submission into map style
 	submission := make(map[int][]string)
@@ -362,7 +391,7 @@ func Submit(c *gin.Context) {
 		intentsforString = append(intentsforString, intent.Department)
 	}
 
-	smsRes, err := service.SendSubmitNotice(freshman.Name, fmt.Sprintf("https://rop.zjuqsc.com"), freshman.ZJUid, freshman.Mobile, strings.Join(intentsforString, ","), instance.Name)
+	smsRes, err := service.SendSubmitNotice(freshman.Name, freshman.ZJUid, freshman.Mobile, strings.Join(intentsforString, ","), instance.Name)
 	if err != nil {
 		SendResponse(c, errno.ErrSMS, err.Error())
 		return
