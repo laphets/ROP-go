@@ -42,7 +42,7 @@ insGroup.Use(middleware.AuthMiddleware())
 }
 
 freGroup := g.Group("/v1/freshman")
-freGroup.Use(middleware.AuthMiddleware())
+//freGroup.Use(middleware.AuthMiddleware())
 {
     freGroup.POST("/submit", freshman.Submit)
 }
@@ -51,6 +51,8 @@ intentGroup := g.Group("/v1/intent")
 intentGroup.Use(middleware.AuthMiddleware())
 {
     intentGroup.POST("/assign", intent.Assign)
+    intentGroup.POST("/reject/:id", intent.Reject)
+    intentGroup.GET("", intent.List)
 }
 
 interviewGroup := g.Group("/v1/interview")
@@ -59,13 +61,26 @@ interviewGroup.Use(middleware.AuthMiddleware())
     interviewGroup.POST("", interview.Create)
     interviewGroup.PUT("/:id", interview.Update)
     interviewGroup.GET("", interview.List)
-    interviewGroup.POST("/join/:id", interview.Join)
 }
 
 associationGroup := g.Group("/v1/association")
 associationGroup.Use(middleware.AuthMiddleware())
 {
     associationGroup.POST("", association.Create)
+    associationGroup.GET("", association.Get)
+}
+
+ssrGroup := g.Group("/v1/ssr")
+{
+    ssrGroup.GET("/schedule", ssr.Schedule)
+    ssrGroup.POST("/join/:id", interview.Join)
+    ssrGroup.GET("/form", ssr.GetFormByIns)
+    ssrGroup.POST("/reject/:id", intent.Cancel)
+}
+
+fileGroup := g.Group("/v1/file")
+{
+    fileGroup.POST("/upload/img", file.UploadImage)
 }
 
 svcd := g.Group("/sd")
