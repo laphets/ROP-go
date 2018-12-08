@@ -3,6 +3,8 @@
 
 conf/config.yaml
 
+ROP-go
+
 log/*
 
 tmp/*
