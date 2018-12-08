@@ -22,7 +22,7 @@ services:
         #- "traefik.frontend.rule=Host:intl.rpc.zjuqsc.com"
         - "traefik.frontend.rule=Host:rop.zjuqsc.com"
 configs:
-  wechat-configv3:
+  rop-configv2:
     external: true
 networks:
   traefik_net:
