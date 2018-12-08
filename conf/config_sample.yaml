@@ -1,7 +1,7 @@
-runmode: debug
-addr: :3000
+runmode: release
+addr: :8080
 name: ROP
-url: http://127.0.0.1:3000
+url: http://127.0.0.1:8080
 max_ping_count: 10
 log:
   writers: file,stdout
@@ -15,7 +15,18 @@ log:
 yunpian:
   apikey:
   url_send_sms: https://sms.yunpian.com/v2/sms/single_send.json
-jwt_secret:
+  tpl_send_sms: https://sms.yunpian.com/v2/sms/tpl_single_send.json
+jwt_secret: XQiOjE1MjgwMTY5MjIsImlkIjowL
+aes_secret: qsc2018neCAj0KFC
+form_ase_secret: a263e73bd9083ae6
+ssr:
+  host: http://192.168.120.61
+minio:
+  endpoint: 10.202.68.181:9000
+  accessKeyID:
+  secretAccessKey:
+  bucket: rop
+  useSSL: false
 passport:
   appid: rop
   appsecret:
@@ -24,16 +35,21 @@ hr:
   appsecret:
 db:
   name: db_apiserver
-  addr: 127.0.0.1:3306
-  username:
+  addr: 101.132.66.238:3306
+  username: root
   password:
+#local_db:
+#  name: rop
+#  addr: 127.0.0.1:3306
+#  username: root
+#  password: root
 local_db:
   name: rop
-  addr: 127.0.0.1:3306
-  username:
+  addr: db3.zjuqsc.com
+  username: rop
   password:
 qsc_db:
   name: rop
   addr: 127.0.0.1:3306
-  username:
+  username: rop
   password:
