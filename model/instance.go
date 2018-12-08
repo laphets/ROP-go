@@ -3,7 +3,7 @@ package model
 import (
 	"github.com/jinzhu/gorm"
 	"time"
-	"rop/pkg/timerange"
+	"git.zjuqsc.com/rop/ROP-go/pkg/timerange"
 )
 
 type InstanceModel struct {

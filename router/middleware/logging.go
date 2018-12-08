@@ -7,8 +7,8 @@ import (
 	"regexp"
 	"time"
 
-	"rop/handler"
-	"rop/pkg/errno"
+	"git.zjuqsc.com/rop/ROP-go/handler"
+	"git.zjuqsc.com/rop/ROP-go/pkg/errno"
 
 	"github.com/gin-gonic/gin"
 	"github.com/lexkong/log"

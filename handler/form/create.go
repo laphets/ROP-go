@@ -2,9 +2,9 @@ package form
 
 import (
 	"github.com/gin-gonic/gin"
-	. "rop/handler"
-	"rop/pkg/errno"
-	"rop/model"
+	. "git.zjuqsc.com/rop/ROP-go/handler"
+	"git.zjuqsc.com/rop/ROP-go/pkg/errno"
+	"git.zjuqsc.com/rop/ROP-go/model"
 	json2 "encoding/json"
 )
 

@@ -3,9 +3,9 @@ package user
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/lexkong/log"
-	. "rop/handler"
-	"rop/model"
-	"rop/pkg/errno"
+	. "git.zjuqsc.com/rop/ROP-go/handler"
+	"git.zjuqsc.com/rop/ROP-go/model"
+	"git.zjuqsc.com/rop/ROP-go/pkg/errno"
 )
 
 func Info(c *gin.Context) {

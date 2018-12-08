@@ -2,17 +2,17 @@ package freshman
 
 import (
 	"github.com/gin-gonic/gin"
-	"rop/pkg/errno"
-	. "rop/handler"
+	"git.zjuqsc.com/rop/ROP-go/pkg/errno"
+	. "git.zjuqsc.com/rop/ROP-go/handler"
 	"strconv"
-	"rop/model"
-	form2 "rop/handler/form"
+	"git.zjuqsc.com/rop/ROP-go/model"
+	form2 "git.zjuqsc.com/rop/ROP-go/handler/form"
 	"encoding/json"
 	"github.com/lexkong/log"
 	"regexp"
 	"errors"
 	"strings"
-	"rop/service"
+	"git.zjuqsc.com/rop/ROP-go/service"
 	"fmt"
 )
 

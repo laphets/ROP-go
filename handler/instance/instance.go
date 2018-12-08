@@ -2,7 +2,7 @@ package instance
 
 import (
 	"time"
-	"rop/model"
+	"git.zjuqsc.com/rop/ROP-go/model"
 )
 
 type CreateRequest struct {

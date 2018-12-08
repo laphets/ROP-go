@@ -3,9 +3,9 @@ package intent
 import (
 	"github.com/gin-gonic/gin"
 	"strconv"
-	. "rop/handler"
-	"rop/pkg/errno"
-	"rop/model"
+	. "git.zjuqsc.com/rop/ROP-go/handler"
+	"git.zjuqsc.com/rop/ROP-go/pkg/errno"
+	"git.zjuqsc.com/rop/ROP-go/model"
 )
 
 func List(c *gin.Context) {

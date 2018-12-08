@@ -4,8 +4,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/minio/minio-go"
 	"github.com/spf13/viper"
-	. "rop/handler"
-	"rop/pkg/errno"
+	. "git.zjuqsc.com/rop/ROP-go/handler"
+	"git.zjuqsc.com/rop/ROP-go/pkg/errno"
 	"fmt"
 	"github.com/satori/go.uuid"
 	"path"
@@ -39,7 +39,7 @@ func UploadImage(c *gin.Context) {
 		return
 	}
 
-	UUID, err := uuid.NewV4()
+	UUID := uuid.NewV4()
 
 	fileName := fmt.Sprintf("QSC-IMG-%s%s", UUID.String(), path.Ext(file.Filename))
 	minioClient, err := minio.New(viper.GetString("minio.endpoint"), viper.GetString("minio.accessKeyID"), viper.GetString("minio.secretAccessKey"), viper.GetBool("minio.useSSL"))

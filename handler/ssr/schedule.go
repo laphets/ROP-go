@@ -2,10 +2,10 @@ package ssr
 
 import (
 	"github.com/gin-gonic/gin"
-	. "rop/handler"
-	"rop/service"
-	"rop/pkg/errno"
-	"rop/model"
+	. "git.zjuqsc.com/rop/ROP-go/handler"
+	"git.zjuqsc.com/rop/ROP-go/service"
+	"git.zjuqsc.com/rop/ROP-go/pkg/errno"
+	"git.zjuqsc.com/rop/ROP-go/model"
 	"strconv"
 )
 

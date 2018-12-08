@@ -5,7 +5,7 @@ import (
 	"github.com/dgrijalva/jwt-go"
 	"time"
 	"github.com/gin-gonic/gin"
-	"rop/pkg/errno"
+	"git.zjuqsc.com/rop/ROP-go/pkg/errno"
 	"fmt"
 )
 

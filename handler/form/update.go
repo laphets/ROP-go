@@ -3,9 +3,9 @@ package form
 import (
 	"github.com/gin-gonic/gin"
 	"strconv"
-	"rop/pkg/errno"
-	. "rop/handler"
-	"rop/model"
+	"git.zjuqsc.com/rop/ROP-go/pkg/errno"
+	. "git.zjuqsc.com/rop/ROP-go/handler"
+	"git.zjuqsc.com/rop/ROP-go/model"
 )
 
 func Update(c *gin.Context) {

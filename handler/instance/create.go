@@ -2,9 +2,9 @@ package instance
 
 import (
 	"github.com/gin-gonic/gin"
-	"rop/pkg/errno"
-	"rop/model"
-	. "rop/handler"
+	"git.zjuqsc.com/rop/ROP-go/pkg/errno"
+	"git.zjuqsc.com/rop/ROP-go/model"
+	. "git.zjuqsc.com/rop/ROP-go/handler"
 )
 
 func Create(c *gin.Context) {

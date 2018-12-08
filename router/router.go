@@ -2,18 +2,18 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"rop/router/middleware"
+	"git.zjuqsc.com/rop/ROP-go/router/middleware"
 	"net/http"
-	"rop/handler/sd"
-	"rop/handler/user"
-	"rop/handler/instance"
-	"rop/handler/form"
-	"rop/handler/freshman"
-	"rop/handler/interview"
-	"rop/handler/intent"
-	"rop/handler/association"
-	"rop/handler/ssr"
-	"rop/handler/file"
+	"git.zjuqsc.com/rop/ROP-go/handler/sd"
+	"git.zjuqsc.com/rop/ROP-go/handler/user"
+	"git.zjuqsc.com/rop/ROP-go/handler/instance"
+	"git.zjuqsc.com/rop/ROP-go/handler/form"
+	"git.zjuqsc.com/rop/ROP-go/handler/freshman"
+	"git.zjuqsc.com/rop/ROP-go/handler/interview"
+	"git.zjuqsc.com/rop/ROP-go/handler/intent"
+	"git.zjuqsc.com/rop/ROP-go/handler/association"
+	"git.zjuqsc.com/rop/ROP-go/handler/ssr"
+	"git.zjuqsc.com/rop/ROP-go/handler/file"
 )
 
 
@@ -53,7 +53,7 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	}
 
 	formGroup := g.Group("/v1/form")
-	insGroup.Use(middleware.AuthMiddleware())
+	formGroup.Use(middleware.AuthMiddleware())
 	{
 		formGroup.POST("", form.Create)
 		formGroup.GET("", form.List)

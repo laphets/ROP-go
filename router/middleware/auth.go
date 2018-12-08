@@ -2,9 +2,9 @@ package middleware
 
 import (
 	"github.com/gin-gonic/gin"
-	"rop/pkg/token"
-	"rop/handler"
-	"rop/pkg/errno"
+	"git.zjuqsc.com/rop/ROP-go/pkg/token"
+	"git.zjuqsc.com/rop/ROP-go/handler"
+	"git.zjuqsc.com/rop/ROP-go/pkg/errno"
 )
 
 func AuthMiddleware() gin.HandlerFunc {

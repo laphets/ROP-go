@@ -2,7 +2,7 @@ package handler
 
 import (
 	"github.com/gin-gonic/gin"
-	"rop/pkg/errno"
+	"git.zjuqsc.com/rop/ROP-go/pkg/errno"
 	"net/http"
 )
 

@@ -2,9 +2,9 @@ package form
 
 import (
 	"github.com/gin-gonic/gin"
-	"rop/model"
-	. "rop/handler"
-	"rop/pkg/errno"
+	"git.zjuqsc.com/rop/ROP-go/model"
+	. "git.zjuqsc.com/rop/ROP-go/handler"
+	"git.zjuqsc.com/rop/ROP-go/pkg/errno"
 )
 
 func List(c *gin.Context)  {

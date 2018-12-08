@@ -2,10 +2,10 @@ package ssr
 
 import (
 	"github.com/gin-gonic/gin"
-	"rop/pkg/errno"
+	"git.zjuqsc.com/rop/ROP-go/pkg/errno"
 	"strconv"
-	. "rop/handler"
-	"rop/model"
+	. "git.zjuqsc.com/rop/ROP-go/handler"
+	"git.zjuqsc.com/rop/ROP-go/model"
 )
 
 func GetFormByIns(c *gin.Context) {

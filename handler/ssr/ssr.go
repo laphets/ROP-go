@@ -1,6 +1,6 @@
 package ssr
 
-import "rop/model"
+import "git.zjuqsc.com/rop/ROP-go/model"
 
 type ScheduleResponse struct {
 	*model.FreshmanModel

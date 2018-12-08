@@ -3,10 +3,10 @@ package interview
 import (
 	"github.com/gin-gonic/gin"
 	"strconv"
-	"rop/pkg/errno"
-	. "rop/handler"
-	"rop/model"
-	"rop/service"
+	"git.zjuqsc.com/rop/ROP-go/pkg/errno"
+	. "git.zjuqsc.com/rop/ROP-go/handler"
+	"git.zjuqsc.com/rop/ROP-go/model"
+	"git.zjuqsc.com/rop/ROP-go/service"
 )
 
 func Join(c *gin.Context) {

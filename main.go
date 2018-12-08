@@ -2,15 +2,15 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"rop/router"
+	"git.zjuqsc.com/rop/ROP-go/router"
 	"net/http"
 	"github.com/lexkong/log"
 	"time"
 	"errors"
-	"rop/config"
+	"git.zjuqsc.com/rop/ROP-go/config"
 	"github.com/spf13/viper"
-	"rop/model"
-	"rop/router/middleware"
+	"git.zjuqsc.com/rop/ROP-go/model"
+	"git.zjuqsc.com/rop/ROP-go/router/middleware"
 )
 
 //var (

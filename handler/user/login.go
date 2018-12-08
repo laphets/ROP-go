@@ -2,16 +2,16 @@ package user
 
 import (
 	"github.com/gin-gonic/gin"
-	. "rop/handler"
-	"rop/pkg/errno"
+	. "git.zjuqsc.com/rop/ROP-go/handler"
+	"git.zjuqsc.com/rop/ROP-go/pkg/errno"
 	"net/http"
 	"fmt"
 	"github.com/spf13/viper"
 	"io/ioutil"
 	"github.com/lexkong/log"
 	"github.com/buger/jsonparser"
-	"rop/model"
-	"rop/pkg/token"
+	"git.zjuqsc.com/rop/ROP-go/model"
+	"git.zjuqsc.com/rop/ROP-go/pkg/token"
 )
 
 

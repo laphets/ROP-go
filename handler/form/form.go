@@ -1,6 +1,6 @@
 package form
 
-import "rop/model"
+import "git.zjuqsc.com/rop/ROP-go/model"
 
 type CreateRequest struct {
 	Name string `json:"name" binding:"required"`
