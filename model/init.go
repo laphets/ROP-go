@@ -20,6 +20,7 @@ func (db *Database) Init() {
 	}
 	if err := DB.Local.AutoMigrate(&UserModel{}, &InstanceModel{}, &FormModel{}, &FreshmanModel{}, &IntentModel{}, &InterviewModel{}, &AssociationModel{}).Error; err != nil {
 		log.Debug(err.Error())
+		panic(err)
 	}
 }
 func (db *Database) Close() {
