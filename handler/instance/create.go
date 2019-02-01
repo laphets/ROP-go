@@ -1,10 +1,10 @@
 package instance
 
 import (
-	"github.com/gin-gonic/gin"
-	"git.zjuqsc.com/rop/ROP-go/pkg/errno"
-	"git.zjuqsc.com/rop/ROP-go/model"
 	. "git.zjuqsc.com/rop/ROP-go/handler"
+	"git.zjuqsc.com/rop/ROP-go/model"
+	"git.zjuqsc.com/rop/ROP-go/pkg/errno"
+	"github.com/gin-gonic/gin"
 )
 
 func Create(c *gin.Context) {
@@ -28,14 +28,20 @@ func Create(c *gin.Context) {
 		SendResponse(c, errno.DuplicateKey, nil)
 		return
 	}
+
+	if _, err := model.GetFormByID(req.FormId); err != nil {
+		SendResponse(c, errno.ErrFormNotFound, nil)
+		return
+	}
+
 	ins := model.InstanceModel{
-		Name:req.Name,
-		Remark:req.Remark,
-		Association:req.Association,
-		StartTime:req.StartTime,
-		EndTime:req.EndTime,
-		FormId:req.FormId,
-		MaxIntent:req.MaxIntent,
+		Name:        req.Name,
+		Remark:      req.Remark,
+		Association: req.Association,
+		StartTime:   req.StartTime,
+		EndTime:     req.EndTime,
+		FormId:      req.FormId,
+		MaxIntent:   req.MaxIntent,
 	}
 
 	if err := ins.Create(); err != nil {
