@@ -20,7 +20,7 @@ services:
         - "traefik.docker.network=traefik_net"
         - "traefik.backend=ROP-Backend"
         #- "traefik.frontend.rule=Host:intl.rpc.zjuqsc.com"
-        - "traefik.frontend.rule=Host:rop.zjuqsc.com"
+        - "traefik.frontend.rule=Host:api.rop.zjuqsc.com"
 configs:
   rop-configv2:
     external: true
