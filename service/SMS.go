@@ -2,6 +2,7 @@ package service
 
 import (
 	"fmt"
+	"git.zjuqsc.com/rop/ROP-go/model"
 	"net/url"
 	"github.com/spf13/viper"
 	"net/http"
@@ -24,6 +25,15 @@ func sendSMS(data url.Values, tpl bool) (string, error) {
 	if err != nil {
 		return "", err
 	}
+
+	sms4Save := model.SmsModel{
+		Mobile: data["mobile"][0],
+		Text: data["text"][0],
+		Result: string(body),
+		Error: err.Error(),
+	}
+	go sms4Save.Create()
+
 	//log.Debugf("%s", string(body))
 	return string(body), nil
 }

@@ -18,7 +18,7 @@ func (db *Database) Init() {
 	DB = &Database{
 		Local: GetLocalDB(),
 	}
-	if err := DB.Local.AutoMigrate(&UserModel{}, &InstanceModel{}, &FormModel{}, &FreshmanModel{}, &IntentModel{}, &InterviewModel{}, &AssociationModel{}).Error; err != nil {
+	if err := DB.Local.AutoMigrate(&UserModel{}, &InstanceModel{}, &FormModel{}, &FreshmanModel{}, &IntentModel{}, &InterviewModel{}, &AssociationModel{}, &LogModel{}, &SmsModel{}).Error; err != nil {
 		log.Debug(err.Error())
 		panic(err)
 	}

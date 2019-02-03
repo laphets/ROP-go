@@ -1,6 +1,7 @@
 package middleware
 
 import (
+	"git.zjuqsc.com/rop/ROP-go/model"
 	"github.com/gin-gonic/gin"
 	"git.zjuqsc.com/rop/ROP-go/pkg/token"
 	"git.zjuqsc.com/rop/ROP-go/handler"
@@ -16,6 +17,16 @@ func AuthMiddleware() gin.HandlerFunc {
 			return
 		}
 		c.Set("ZJUid", JWTpayload.ZJUid)
+
+		// Log begin here
+		log4Save := model.LogModel{
+			ZJUid: JWTpayload.ZJUid,
+			IP: c.ClientIP(),
+			URL: c.Request.RequestURI,
+			UA: c.GetHeader("User-Agent"),
+		}
+		go log4Save.Create()
+
 		c.Next()
 	}
 }
