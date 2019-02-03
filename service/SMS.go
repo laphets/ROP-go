@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"git.zjuqsc.com/rop/ROP-go/model"
 	"github.com/lexkong/log"
-	"net/url"
 	"github.com/spf13/viper"
-	"net/http"
 	"io/ioutil"
+	"net/http"
+	"net/url"
 )
 
 func sendSMS(data url.Values, tpl bool) (string, error) {
@@ -23,9 +23,6 @@ func sendSMS(data url.Values, tpl bool) (string, error) {
 	}
 	defer resp.Body.Close()
 	body, err := ioutil.ReadAll(resp.Body)
-	if err != nil {
-		return "", err
-	}
 
 	sms4Save := model.SmsModel{
 		Mobile: data["mobile"][0],
@@ -34,6 +31,10 @@ func sendSMS(data url.Values, tpl bool) (string, error) {
 		Error: err.Error(),
 	}
 	go sms4Save.Create()
+
+	if err != nil {
+		return "", err
+	}
 
 	//log.Debugf("%s", string(body))
 	return string(body), nil
