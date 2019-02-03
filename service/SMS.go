@@ -3,7 +3,6 @@ package service
 import (
 	"fmt"
 	"git.zjuqsc.com/rop/ROP-go/model"
-	"github.com/lexkong/log"
 	"github.com/spf13/viper"
 	"io/ioutil"
 	"net/http"
@@ -11,7 +10,6 @@ import (
 )
 
 func sendSMS(data url.Values, tpl bool) (string, error) {
-	log.Debugf("In sending")
 	var resp *http.Response
 	var err error
 	if tpl {
@@ -20,7 +18,6 @@ func sendSMS(data url.Values, tpl bool) (string, error) {
 		resp, err = http.PostForm(viper.GetString("yunpian.url_send_sms"),data)
 	}
 	if err != nil {
-		log.Debugf("%s", err.Error())
 		return "", err
 	}
 	defer resp.Body.Close()
@@ -30,12 +27,11 @@ func sendSMS(data url.Values, tpl bool) (string, error) {
 		Mobile: data["mobile"][0],
 		Text: data["text"][0],
 		Result: string(body),
-		Error: err.Error(),
+		//Error: err.Error(),
 	}
 	go sms4Save.Create()
 
 	if err != nil {
-		log.Debugf("%s", err.Error())
 		return "", err
 	}
 
@@ -60,9 +56,7 @@ func SendSubmitNotice(name, ZJUid, mobile, intents, instanceName string) (string
 
 func SendRecruitTime(mobile, name, recruitType, instanceName, URL string) (string, error) {
 	text := fmt.Sprintf("【求是潮纳新平台】%s同学，我们已为你生成出了%s的时间与地点，请点击以下链接进行选择与确认。（注意：在链接中我们不会要求你输入任何诸如密码等的敏感信息）感谢参与%s。 %s", name, recruitType, instanceName, URL)
-	log.Debugf("SMS Sending for recruit")
 	data := url.Values{"apikey": {viper.GetString("yunpian.apikey")}, "mobile": {mobile},"text":{text}}
-
 	return sendSMS(data, false)
 }
 
