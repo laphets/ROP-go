@@ -3,6 +3,7 @@ package service
 import (
 	"fmt"
 	"git.zjuqsc.com/rop/ROP-go/model"
+	"github.com/lexkong/log"
 	"net/url"
 	"github.com/spf13/viper"
 	"net/http"
@@ -55,6 +56,7 @@ func SendSubmitNotice(name, ZJUid, mobile, intents, instanceName string) (string
 
 func SendRecruitTime(mobile, name, recruitType, instanceName, URL string) (string, error) {
 	text := fmt.Sprintf("【求是潮纳新平台】%s同学，我们已为你生成出了%s的时间与地点，请点击以下链接进行选择与确认。（注意：在链接中我们不会要求你输入任何诸如密码等的敏感信息）感谢参与%s。 %s", name, recruitType, instanceName, URL)
+	log.Debugf("SMS Sending for recruit")
 	data := url.Values{"apikey": {viper.GetString("yunpian.apikey")}, "mobile": {mobile},"text":{text}}
 	return sendSMS(data, false)
 }
