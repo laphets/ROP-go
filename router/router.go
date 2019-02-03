@@ -95,6 +95,7 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 		ssrGroup.POST("/join/:id", interview.Join)
 		ssrGroup.GET("/form", ssr.GetFormByIns)
 		ssrGroup.POST("/reject/:id", intent.Cancel)
+		ssrGroup.GET("/instance", instance.List)
 	}
 
 	fileGroup := g.Group("/v1/file")

@@ -80,7 +80,8 @@ func Assign(c *gin.Context) {
 			}
 			// Send SMS
 			ress, err := service.SendRecruitTime(fulIntent.Mobile, fulIntent.Name, fulIntent.Department+service.StateInChinese(service.NextState(fulIntent.MainStage)), instance.Name, fmt.Sprintf("https://rop.zjuqsc.com/schedule?uid=%s", encryptedFreshmanId))
-			log.Debugf("SMS Has sent: %s", ress)
+			log.Debugf("SMS Has sent: %s, error: %s", ress, err.Error())
+
 
 			if err != nil {
 				SendResponse(c, errno.ErrSMS, err.Error())
