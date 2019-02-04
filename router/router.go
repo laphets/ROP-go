@@ -87,6 +87,7 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	{
 		associationGroup.POST("", association.Create)
 		associationGroup.GET("", association.Get)
+		associationGroup.GET("/user", association.GetUser)
 	}
 
 	ssrGroup := g.Group("/v1/ssr")
