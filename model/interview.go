@@ -19,6 +19,7 @@ type InterviewModel struct {
 	EndTime time.Time `json:"end_time"`
 	Capacity int `json:"capacity"`
 	Remark string `json:"remark"`
+	Location string `json:"location"`
 }
 
 func (x *InterviewModel) Create() error {

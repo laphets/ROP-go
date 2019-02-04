@@ -11,11 +11,13 @@ import (
 func Get(c *gin.Context) {
 	associationName := c.Query("associationName")
 	association, err := model.GetAssociationByName(associationName)
+
 	if err != nil {
 		SendResponse(c, errno.DBError, err)
 		return
 	}
 	res := &GetResponse{
+		AssociationModel: association,
 		Department: strings.Split(association.DepartmentList, "&"),
 	}
 	SendResponse(c, nil, res)
