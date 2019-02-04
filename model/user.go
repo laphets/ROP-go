@@ -1,6 +1,9 @@
 package model
 
-import "github.com/jinzhu/gorm"
+import (
+	"github.com/jinzhu/gorm"
+	"time"
+)
 
 type UserModel struct {
 	gorm.Model
@@ -11,6 +14,7 @@ type UserModel struct {
 	InnerId string	`json:"inner_id"`
 	Position string	`json:"position"`
 	Mobile string `json:"mobile"`
+	LastSeen time.Time `json:"last_seen"`
 }
 
 func (x *UserModel) Create() error {
@@ -33,4 +37,12 @@ func ListUser() ([]*UserModel, error) {
 	users := make([]*UserModel, 0)
 	d := DB.Local.Find(&users)
 	return users, d.Error
+}
+func UpdateLastSeen(ZJUid string) (error) {
+	user, err := GetUserByZJUid(ZJUid)
+	if err != nil {
+		return err
+	}
+	user.LastSeen = time.Now()
+	return DB.Local.Save(&user).Error
 }

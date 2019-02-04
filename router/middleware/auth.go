@@ -18,6 +18,9 @@ func AuthMiddleware() gin.HandlerFunc {
 		}
 		c.Set("ZJUid", JWTpayload.ZJUid)
 
+		// Update last seen time
+		go model.UpdateLastSeen(JWTpayload.ZJUid)
+
 		// Log begin here
 		log4Save := model.LogModel{
 			ZJUid: JWTpayload.ZJUid,
