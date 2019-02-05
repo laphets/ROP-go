@@ -42,6 +42,7 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	userGroup.Use(middleware.AuthMiddleware())
 	{
 		userGroup.GET("/info", user.Info)
+		userGroup.POST("/avatar", user.Avatar)
 	}
 
 	insGroup := g.Group("/v1/instance")

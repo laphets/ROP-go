@@ -48,3 +48,11 @@ func UpdateLastSeen(ZJUid string) (error) {
 	user.LastSeen = time.Now()
 	return DB.Local.Save(&user).Error
 }
+func UpdateAvatar(ZJUid, URL string) (error) {
+	user, err := GetUserByZJUid(ZJUid)
+	if err != nil {
+		return err
+	}
+	user.Avatar = URL
+	return DB.Local.Save(&user).Error
+}
