@@ -15,6 +15,8 @@ type UserModel struct {
 	Position string	`json:"position"`
 	Mobile string `json:"mobile"`
 	LastSeen time.Time `json:"last_seen"`
+	AssociationId string `json:"association_id"`
+	Avatar string `json:"avatar"`
 }
 
 func (x *UserModel) Create() error {

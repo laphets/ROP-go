@@ -13,3 +13,7 @@ type GetResponse struct {
 	*model.AssociationModel
 	Department []string `json:"department"`
 }
+
+type SendNoticeRequest struct {
+	ZJUid []string `json:"ZJUid" binding:"required"`
+}

@@ -43,13 +43,6 @@ func sendSMS(data url.Values, tpl bool) (string, error) {
 func SendSubmitNotice(name, ZJUid, mobile, intents, instanceName string) (string, error) {
 	//text := fmt.Sprintf("【求是潮纳新平台】亲爱的%s您好：<br>我们已经收到了您的报名表，请核对下列信息是否准确。重新提交报名表可以修改信息%s<br>您的学号：%s<br>您的手机号：%s<br>您的志愿：%s<br>  我们将在之后通过短信通知您具体的初试信息，敬请留意。感谢您报名%s，期待您的加入！", name, recruitUrl, ZJUid, mobile, intents, instanceName)
 	text := fmt.Sprintf("【求是潮纳新平台】亲爱的%s，我们已经收到了您的报名表，请核对下列信息，重复提交可覆盖原表。学号：%s 。部门志愿： %s 。我们将在之后通过短信通知您具体的初试信息，敬请留意。感谢您报名%s，期待您的加入！", name, ZJUid, intents, instanceName)
-	//text := url.Values{}
-	//text.Set("#name#", name)
-	//text.Set("#stuid#", ZJUid)
-	//text.Set("#intent#", intents)
-	//text.Set("#recruit#", instanceName)
-	//log.Debugf("%s", text.Encode())
-	//data := url.Values{"apikey": {viper.GetString("yunpian.apikey")}, "mobile": {mobile},"tpl_id":{"2462474"}, "tql_value": {text.Encode()}}
 	data := url.Values{"apikey": {viper.GetString("yunpian.apikey")}, "mobile": {mobile},"text":{text}}
 	return sendSMS(data, false)
 }
@@ -63,6 +56,12 @@ func SendRecruitTime(mobile, name, recruitType, instanceName, URL string) (strin
 
 func SendRejectNotice(mobile, name, target, us string) (string, error) {
 	text := fmt.Sprintf("【求是潮纳新平台】%s同学，我们很遗憾地通知你，你未能成功加入%s。感谢你的支持，欢迎继续关注%s。", name, target, us)
+	data := url.Values{"apikey": {viper.GetString("yunpian.apikey")}, "mobile": {mobile},"text":{text}}
+	return sendSMS(data, false)
+}
+
+func SendInterviewerNotice(mobile, name, association, department, instanceName string) (string, error) {
+	text := fmt.Sprintf("【求是潮纳新平台】%s%s%s同学您好，求是潮纳新开放平台温馨提醒您注意最近为您安排的%s日程。详情请登录ROP管理后台查看: https://rop.zjuqsc.com/console", association, department, name, instanceName)
 	data := url.Values{"apikey": {viper.GetString("yunpian.apikey")}, "mobile": {mobile},"text":{text}}
 	return sendSMS(data, false)
 }
