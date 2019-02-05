@@ -51,5 +51,5 @@ func UploadImage(c *gin.Context) {
 
 	//log.Debugf("%d ", n)
 	//log.Debugf("%d %s ... %+v", file.Size, file.Header["Content-Type"][0], file)
-	SendResponse(c, nil, fmt.Sprintf("http://%s/%s/%s", viper.GetString("minio.endpoint"), viper.GetString("minio.bucket"), fileName))
+	SendResponse(c, nil, fmt.Sprintf("https://rop.zjuqsc.com/oss/%s", fileName))
 }
