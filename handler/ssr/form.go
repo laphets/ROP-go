@@ -6,6 +6,7 @@ import (
 	"strconv"
 	. "git.zjuqsc.com/rop/ROP-go/handler"
 	"git.zjuqsc.com/rop/ROP-go/model"
+	"time"
 )
 
 func GetFormByIns(c *gin.Context) {
@@ -33,6 +34,11 @@ func GetFormByIns(c *gin.Context) {
 	instance, err := model.GetInstanceById(uint(instanceId))
 	if err != nil {
 		SendResponse(c, errno.DBError, err)
+		return
+	}
+
+	if time.Now().Before(instance.StartTime) || time.Now().After(instance.EndTime) {
+		SendResponse(c, errno.ErrInstanceNotOpen, nil)
 		return
 	}
 

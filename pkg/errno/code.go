@@ -33,6 +33,7 @@ var (
 	ErrFormCantEdit		= &Errno{Code: 20201, Message: "This form can't be edited."}
 	ErrFormNotFound		= &Errno{Code: 20202, Message: "The form was not found."}
 	ErrNoProperGroup	= &Errno{Code: 20301, Message: "You have no proper group to join."}
+	ErrInstanceNotOpen  = &Errno{Code: 20401, Message: "The instance is not available."}
 
 	// submission errors
 	ErrFieldEmpty		= &Errno{Code: 20401, Message: "Some field is required."}
