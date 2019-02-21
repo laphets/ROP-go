@@ -14,6 +14,7 @@ import (
 	"strings"
 	"git.zjuqsc.com/rop/ROP-go/service"
 	"fmt"
+	"time"
 )
 
 //func praseBranch(visited map[int]int, formTemplate []*form2.DataItem, submission map[int]string) error {
@@ -202,6 +203,16 @@ func Submit(c *gin.Context) {
 	instance, err := model.GetInstanceById(uint(instanceId))
 	if err != nil {
 		SendResponse(c, errno.ErrInstanceNotFound, nil)
+		return
+	}
+
+	// Add starting and ending checking here
+	if time.Now().Before(instance.StartTime) {
+		SendResponse(c, errno.ErrInstanceNotOpen, nil)
+		return
+	}
+	if time.Now().After(instance.EndTime) {
+		SendResponse(c, errno.ErrInstanceNotOpen, nil)
 		return
 	}
 
