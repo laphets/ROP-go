@@ -8,7 +8,7 @@ import (
 	json2 "encoding/json"
 )
 
-func getRoot(formTemplate []*DataItem) int {
+func GetRoot(formTemplate []*DataItem) int {
 	vis := make(map[int]int)
 	for _, item := range formTemplate {
 		vis[item.Next] = 1
@@ -41,7 +41,7 @@ func Create(c *gin.Context) {
 
 	form := model.FormModel{
 		Name:req.Name,
-		RootTag: getRoot(req.Data),
+		RootTag: GetRoot(req.Data),
 		Data:string(json),
 	}
 

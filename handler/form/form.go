@@ -7,6 +7,11 @@ type CreateRequest struct {
 	Data []*DataItem `json:"data" binding:"required,dive"`
 }
 
+type UpdateRequest struct {
+	Name string `json:"name" binding:"required"`
+	Data []*DataItem `json:"data" binding:"required,dive"`
+}
+
 type DataItem struct {
 	Tag int `json:"tag" binding:"required"`
 	Text string `json:"text" binding:"required"`

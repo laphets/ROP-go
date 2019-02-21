@@ -6,6 +6,7 @@ import (
 	"git.zjuqsc.com/rop/ROP-go/pkg/errno"
 	. "git.zjuqsc.com/rop/ROP-go/handler"
 	"git.zjuqsc.com/rop/ROP-go/model"
+	json2 "encoding/json"
 )
 
 func Update(c *gin.Context) {
@@ -19,12 +20,30 @@ func Update(c *gin.Context) {
 		return
 	}
 
-
-	form := model.FormModel{}
-	if err := c.ShouldBindJSON(&form); err != nil {
-		SendResponse(c, errno.ErrBind, err)
+	req := UpdateRequest{}
+	if err := c.ShouldBindJSON(&req); err != nil {
+		SendResponse(c, errno.ErrBind, err.Error())
 		return
 	}
+
+	json, err := json2.Marshal(req.Data)
+	if err != nil {
+		SendResponse(c, errno.ErrParam, nil)
+		return
+	}
+
+	form := model.FormModel{
+		Name:req.Name,
+		RootTag: GetRoot(req.Data),
+		Data:string(json),
+	}
+
+
+	//form := model.FormModel{}
+	//if err := c.ShouldBindJSON(&form); err != nil {
+	//	SendResponse(c, errno.ErrBind, err)
+	//	return
+	//}
 
 	form.ID = uint(formId)
 
