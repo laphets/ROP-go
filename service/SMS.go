@@ -1,13 +1,46 @@
 package service
 
 import (
+	"encoding/json"
 	"fmt"
 	"git.zjuqsc.com/rop/ROP-go/model"
 	"github.com/spf13/viper"
 	"io/ioutil"
 	"net/http"
 	"net/url"
+	"strings"
 )
+
+type SMSInfo struct {
+	Balance float32 `json:"balance"`
+	Mobile string `json:"mobile"`
+}
+
+func GetAccountInfo() (*SMSInfo, error) {
+	u := "https://sms.yunpian.com/v2/user/get.json"
+
+	payload := strings.NewReader("apikey=a167cfafc6e2d99668fcaaae0a3ba887&undefined=")
+
+	req, _ := http.NewRequest("POST", u, payload)
+
+	req.Header.Add("Content-Type", "application/x-www-form-urlencoded")
+	req.Header.Add("cache-control", "no-cache")
+
+	res, _ := http.DefaultClient.Do(req)
+
+	defer res.Body.Close()
+	body, err := ioutil.ReadAll(res.Body)
+	if err != nil {
+		return nil, err
+	}
+
+	//fmt.Println(res)
+
+	info := SMSInfo{}
+	json.Unmarshal(body, &info)
+
+	return &info, nil
+}
 
 func sendSMS(data url.Values, tpl bool) (string, error) {
 	var resp *http.Response

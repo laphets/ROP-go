@@ -43,6 +43,7 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	{
 		userGroup.GET("/info", user.Info)
 		userGroup.POST("/avatar", user.Avatar)
+		userGroup.GET("/sms", user.GetSMSAccount)
 	}
 
 	insGroup := g.Group("/v1/instance")
