@@ -19,7 +19,7 @@ type SMSInfo struct {
 func GetAccountInfo() (*SMSInfo, error) {
 	u := "https://sms.yunpian.com/v2/user/get.json"
 
-	payload := strings.NewReader("apikey=a167cfafc6e2d99668fcaaae0a3ba887&undefined=")
+	payload := strings.NewReader(fmt.Sprintf("apikey=%s", viper.GetString("yunpian.tpl_send_sms")))
 
 	req, _ := http.NewRequest("POST", u, payload)
 
