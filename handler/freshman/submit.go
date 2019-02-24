@@ -184,7 +184,7 @@ func dfs(curTag int, formMap map[int]*form2.DataItem, submission map[int][]strin
 		//log.Debugf("%s 222")
 		if ok, err := regexp.MatchString(curForm.Re, submission[curTag][0]); !ok || err != nil {
 			log.Debugf("fail %s %s", curForm.Re, submission[curTag][0])
-			return errors.New(fmt.Sprintf("正则判断错误: %s", curForm.Text))
+			return errors.New(fmt.Sprintf("输入不符合规则: %s", curForm.Text))
 		}
 	}
 

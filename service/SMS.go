@@ -34,8 +34,6 @@ func GetAccountInfo() (*SMSInfo, error) {
 		return nil, err
 	}
 
-	fmt.Println(string(body))
-
 	info := SMSInfo{}
 	json.Unmarshal(body, &info)
 
