@@ -17,6 +17,7 @@ type UserModel struct {
 	LastSeen time.Time `json:"last_seen"`
 	AssociationId string `json:"association_id"`
 	Avatar string `json:"avatar"`
+	Admin bool `json:"admin"`
 }
 
 func (x *UserModel) Create() error {

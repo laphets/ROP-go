@@ -14,6 +14,7 @@ type CreateRequest struct {
 	EndTime time.Time `json:"end_time" binding:"required"`
 	Capacity int `json:"capacity" binding:"required"`
 	Remark string `json:"remark" binding:"-"`
+	Location string `json:"location" binding:"-"`
 }
 
 type JoinRequest struct {
