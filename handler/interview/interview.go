@@ -19,4 +19,5 @@ type CreateRequest struct {
 
 type JoinRequest struct {
 	Intents []uint `json:"intents"`
+	Uid string `json:"uid"`
 }

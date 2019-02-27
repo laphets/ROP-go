@@ -22,6 +22,30 @@ func Join(c *gin.Context) {
 		return
 	}
 
+	uid := req.Uid
+
+	if uid == "" {
+		SendResponse(c, errno.ErrParam, "param is null")
+		return
+	}
+	freshmanIdString, err := service.Decrypt(uid)
+	if err != nil {
+		SendResponse(c, errno.ErrParam, err)
+		return
+	}
+
+	freshmanId, err := strconv.ParseUint(freshmanIdString, 10, 64)
+	if err != nil {
+		SendResponse(c, errno.ErrParam, err)
+		return
+	}
+
+	freshmanInfo ,err := model.GetFreshmanById(uint(freshmanId));
+	if err != nil {
+		SendResponse(c, errno.ErrUserNotFound, err.Error())
+		return
+	}
+
 	// Check for interview
 	// TODO: Del this extra query
 	interview, err := model.GetInterviewByID(uint(interviewId))
@@ -39,6 +63,12 @@ func Join(c *gin.Context) {
 
 	if len(fulInterview.Participants) + len(req.Intents) > fulInterview.Capacity {
 		SendResponse(c, errno.ErrInterviewFull, nil)
+		return
+	}
+
+	instance, err := model.GetInstanceById(interview.InstanceId)
+	if err != nil {
+		SendResponse(c, errno.DBError, err.Error())
 		return
 	}
 
@@ -67,6 +97,7 @@ func Join(c *gin.Context) {
 			SendResponse(c, errno.DBError, err.Error())
 			return
 		}
+		go service.SendInterviewConfirm(freshmanInfo.Mobile, freshmanInfo.Name, intent.Department, service.StateInChinese(intent.MainStage), interview.StartTime.Format("2006-01-02 15:04:05"), interview.Location, instance.Name)
 	}
 	SendResponse(c, nil, nil)
 }

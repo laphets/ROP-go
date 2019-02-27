@@ -84,6 +84,11 @@ func SendRecruitTime(mobile, name, recruitType, instanceName, URL string) (strin
 	return sendSMS(data, false)
 }
 
+func SendInterviewConfirm(mobile, name, department, recruitType, time, location, instanceName string) (string, error) {
+	text := fmt.Sprintf("【求是潮纳新平台】%s同学您好，您刚刚提交的%s面试已经确认。%s时间为%s，地点为%s。请提前10分钟到场准备。感谢报名%s。", name, department, recruitType, time, location, instanceName)
+	data := url.Values{"apikey": {viper.GetString("yunpian.apikey")}, "mobile": {mobile},"text":{text}}
+	return sendSMS(data, false)
+}
 
 func SendRejectNotice(mobile, name, target, us string) (string, error) {
 	text := fmt.Sprintf("【求是潮纳新平台】%s同学，我们很遗憾地通知你，你未能成功加入%s。感谢你的支持，欢迎继续关注%s。", name, target, us)
