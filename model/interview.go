@@ -1,9 +1,9 @@
 package model
 
 import (
+	"git.zjuqsc.com/rop/ROP-go/pkg/timerange"
 	"github.com/jinzhu/gorm"
 	"time"
-	"git.zjuqsc.com/rop/ROP-go/pkg/timerange"
 )
 
 type InterviewModel struct {
@@ -20,6 +20,7 @@ type InterviewModel struct {
 	Capacity int `json:"capacity"`
 	Remark string `json:"remark"`
 	Location string `json:"location"`
+	Available int `json:"available"`
 }
 
 func (x *InterviewModel) Create() error {
@@ -48,6 +49,22 @@ func GetInterviewByID(interviewId uint) (*InterviewModel, error) {
 	interview := &InterviewModel{}
 	d := DB.Local.Where("ID = ?", interviewId).First(&interview)
 	return interview, d.Error
+}
+func EnableInterview(interviewId uint) (error) {
+	interview, err := GetInterviewByID(interviewId)
+	if err != nil {
+		return err
+	}
+	interview.Available = 1
+	return DB.Local.Save(&interview).Error
+}
+func DisableInterview(interviewId uint) (error) {
+	interview, err := GetInterviewByID(interviewId)
+	if err != nil {
+		return err
+	}
+	interview.Available = 0
+	return DB.Local.Save(&interview).Error
 }
 
 type FullInterview struct {

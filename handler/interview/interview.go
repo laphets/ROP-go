@@ -21,3 +21,7 @@ type JoinRequest struct {
 	Intents []uint `json:"intents"`
 	Uid string `json:"uid"`
 }
+
+type RejectRequest struct {
+	Uid string `json:"uid"`
+}
