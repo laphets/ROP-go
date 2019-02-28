@@ -101,7 +101,7 @@ func Join(c *gin.Context) {
 			SendResponse(c, errno.DBError, err.Error())
 			return
 		}
-		go service.SendInterviewConfirm(freshmanInfo.Mobile, freshmanInfo.Name, intent.Department, service.StateInChinese(intent.MainStage), interview.StartTime.Format("2006-01-02 15:04"), interview.Location, instance.Name)
+		go service.SendInterviewConfirm(freshmanInfo.Mobile, freshmanInfo.Name, interview.Department, service.StateInChinese(intent.MainStage), interview.StartTime.Format("2006-01-02 15:04"), interview.Location, instance.Name)
 	}
 	SendResponse(c, nil, nil)
 }
