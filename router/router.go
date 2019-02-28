@@ -82,8 +82,8 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 		interviewGroup.POST("", interview.Create)
 		interviewGroup.PUT("/:id", interview.Update)
 		interviewGroup.GET("", interview.List)
-		interviewGroup.POST("/enable", interview.Enable)
-		interviewGroup.POST("/disable", interview.Disable)
+		interviewGroup.POST("/enable/:id", interview.Enable)
+		interviewGroup.POST("/disable/:id", interview.Disable)
 	}
 
 	associationGroup := g.Group("/v1/association")
