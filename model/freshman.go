@@ -1,6 +1,7 @@
 package model
 
 import (
+	"errors"
 	"time"
 )
 
@@ -28,6 +29,23 @@ func (x *FreshmanModel) Create() (error) {
 	//log.Debugf("%d %s", x.InstanceId, x.ZJUid)
 	if !DB.Local.Where("instance_id = ?", x.InstanceId).Where("ZJUid = ?", x.ZJUid).First(&curFreshman).RecordNotFound() {
 		// if record exist, then replace
+
+		// First checkfor interview
+		oldFreshman, err := GetFreshmanByZJUid(x.InstanceId, x.ZJUid)
+		if err != nil {
+			return err
+		}
+		intents, err := ListIntentByFreshman(oldFreshman.ID)
+		if err != nil {
+			return err
+		}
+
+		for _, intent := range intents {
+			if intent.InterviewId != 0 || intent.TargetInterviewId != 0 {
+				return errors.New("您已被安排面试，无法更改信息")
+			}
+		}
+
 		if err := DeleteFreshman(curFreshman.ID); err != nil {
 			return err
 		}

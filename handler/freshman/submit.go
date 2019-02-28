@@ -374,7 +374,7 @@ func Submit(c *gin.Context) {
 	}
 
 	if err := freshman.Create(); err != nil {
-		SendResponse(c, errno.DBError, err)
+		SendResponse(c, errno.DBError, err.Error())
 		return
 	}
 
