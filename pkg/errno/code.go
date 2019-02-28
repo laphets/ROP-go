@@ -42,4 +42,5 @@ var (
 	TooMuchIntent		= &Errno{Code: 20405, Message: "Too much intents."}
 
 	ErrInterviewFull		= &Errno{Code: 20501, Message: "Interview is full"}
+	ErrInterviewNotAble		= &Errno{Code: 20501, Message: "Interview is not available"}
 )
