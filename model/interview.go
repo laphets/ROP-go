@@ -20,7 +20,7 @@ type InterviewModel struct {
 	Capacity int `json:"capacity"`
 	Remark string `json:"remark"`
 	Location string `json:"location"`
-	Available int `json:"available"`
+	NotAvailable int `json:"not_available"`
 }
 
 func (x *InterviewModel) Create() error {
@@ -55,7 +55,7 @@ func EnableInterview(interviewId uint) (error) {
 	if err != nil {
 		return err
 	}
-	interview.Available = 1
+	interview.NotAvailable = 0
 	return DB.Local.Save(&interview).Error
 }
 func DisableInterview(interviewId uint) (error) {
@@ -63,7 +63,7 @@ func DisableInterview(interviewId uint) (error) {
 	if err != nil {
 		return err
 	}
-	interview.Available = 0
+	interview.NotAvailable = 1
 	return DB.Local.Save(&interview).Error
 }
 

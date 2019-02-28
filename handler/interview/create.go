@@ -48,6 +48,7 @@ func Create(c *gin.Context) {
 		Remark:req.Remark,
 		Capacity: req.Capacity,
 		Location: req.Location,
+		NotAvailable: 0,
 	}
 
 	if err := interview.Create(); err != nil {

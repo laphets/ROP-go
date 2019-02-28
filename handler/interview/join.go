@@ -53,7 +53,7 @@ func Join(c *gin.Context) {
 		SendResponse(c, errno.DBError, err.Error())
 		return
 	}
-	if interview.Available != 1 {
+	if interview.NotAvailable == 1 {
 		SendResponse(c, errno.ErrInterviewNotAble, "This interview is not available")
 		return
 	}
