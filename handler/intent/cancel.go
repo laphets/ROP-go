@@ -8,6 +8,8 @@ import (
 	"git.zjuqsc.com/rop/ROP-go/model"
 )
 
+// This API is deprecated
+
 func Cancel(c *gin.Context) {
 	intentId, err := strconv.ParseUint(c.Param("id"), 10, 64)
 	if err != nil {

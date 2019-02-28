@@ -100,7 +100,7 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 		ssrGroup.GET("/schedule", ssr.Schedule)
 		ssrGroup.POST("/join/:id", interview.Join)
 		ssrGroup.GET("/form", ssr.GetFormByIns)
-		ssrGroup.POST("/reject/:id", intent.Cancel)
+		ssrGroup.POST("/reject/:id", interview.Reject)
 		ssrGroup.GET("/instance", instance.List)
 	}
 
