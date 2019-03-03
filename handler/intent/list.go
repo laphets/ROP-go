@@ -11,7 +11,7 @@ import (
 func List(c *gin.Context) {
 	instanceId, err := strconv.ParseUint(c.Query("instanceId"), 10, 64)
 	if err != nil {
-		SendResponse(c, errno.ErrParam, err)
+		SendResponse(c, errno.ErrInstanceNotSelected, err)
 		return
 	}
 

@@ -35,7 +35,9 @@ var (
 
 
 
-	ErrInstanceNotFound = &Errno{Code: 20302, Message: "The instance was not found."}
+	ErrInstanceNotFound 	= &Errno{Code: 20302, Message: "The instance was not found."}
+	ErrInstanceNotSelected  = &Errno{Code: 20303, Message: "请先在查看纳新页面选择一个纳新实例."}
+
 	ErrFormCantEdit		= &Errno{Code: 20201, Message: "This form can't be edited."}
 	ErrFormNotFound		= &Errno{Code: 20202, Message: "The form was not found."}
 	ErrNoProperGroup	= &Errno{Code: 20301, Message: "You have no proper group to join."}
