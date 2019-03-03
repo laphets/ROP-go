@@ -3,6 +3,7 @@ package user
 import (
 	"git.zjuqsc.com/rop/ROP-go/model"
 	"git.zjuqsc.com/rop/ROP-go/pkg/errno"
+	"git.zjuqsc.com/rop/ROP-go/pkg/token"
 	"git.zjuqsc.com/rop/ROP-go/service"
 	"github.com/gin-gonic/gin"
 	. "git.zjuqsc.com/rop/ROP-go/handler"
@@ -50,5 +51,11 @@ func Register(c *gin.Context) {
 		return
 	}
 
-	SendResponse(c, nil, nil)
+	JWT, err := token.Sign(token.Context{UserId:int(user.ID)}, "")
+	if err != nil {
+		SendResponse(c, errno.ErrToken, nil)
+		return
+	}
+
+	SendResponse(c, nil, JWT)
 }

@@ -43,5 +43,6 @@ func Register(c *gin.Context) {
 		Name: user.Name,
 		Association: association,
 	}
+
 	SendResponse(c, nil, res)
 }
