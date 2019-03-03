@@ -1,11 +1,11 @@
 package model
 
 import (
-	"github.com/jinzhu/gorm"
 	"fmt"
+	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"github.com/lexkong/log"
 	"github.com/spf13/viper"
-	_ "github.com/jinzhu/gorm/dialects/mysql"
 )
 
 type Database struct {
@@ -13,6 +13,22 @@ type Database struct {
 }
 
 var DB *Database
+
+func InitQSC(db *Database) error {
+	_, err := GetAssociationByName("求是潮")
+	if err != nil {
+		// Create QSC association
+		association := AssociationModel{
+			Name: "求是潮",
+			DepartmentList: "人力资源部门&技术研发中心&产品运营部门&设计与视觉中心&推广与策划中心&水朝夕工作室&新闻资讯中心&视频团队(主持人)&视频团队(拍摄与制作)&摄影部",
+		}
+
+		if err := association.Create(); err != nil {
+			panic(err)
+		}
+	}
+	return nil
+}
 
 func (db *Database) Init() {
 	DB = &Database{
@@ -22,6 +38,7 @@ func (db *Database) Init() {
 		log.Debug(err.Error())
 		panic(err)
 	}
+	InitQSC(db)
 }
 func (db *Database) Close() {
 	DB.Local.Close()

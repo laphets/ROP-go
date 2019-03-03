@@ -41,7 +41,7 @@ func Join(c *gin.Context) {
 		return
 	}
 
-	freshmanInfo ,err := model.GetFreshmanById(uint(freshmanId));
+	freshmanInfo ,err := model.GetFreshmanById(uint(freshmanId))
 	if err != nil {
 		SendResponse(c, errno.ErrUserNotFound, err.Error())
 		return

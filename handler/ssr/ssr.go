@@ -12,3 +12,8 @@ type IntentGroup struct {
 	ChineseStage string `json:"chinese_stage"`
 	Interviews []*model.FullInterview `json:"interviews"`
 }
+
+type RegisterResponse struct {
+	Name string `json:"name"`
+	Association *model.AssociationModel `json:"association"`
+}

@@ -1,6 +1,7 @@
 package user
 
 import (
+	"git.zjuqsc.com/rop/ROP-go/service"
 	"github.com/gin-gonic/gin"
 	. "git.zjuqsc.com/rop/ROP-go/handler"
 	"git.zjuqsc.com/rop/ROP-go/pkg/errno"
@@ -14,8 +15,45 @@ import (
 	"git.zjuqsc.com/rop/ROP-go/pkg/token"
 )
 
+func LoginByPassword(c *gin.Context) {
+	req := LoginByPasswordRequest{}
+	if err := c.ShouldBindJSON(&req); err != nil {
+		SendResponse(c, errno.ErrBind, err.Error())
+		return
+	}
 
-func Login(c *gin.Context) {
+	association, err := model.GetAssociationById(req.AssociationId)
+	if err != nil {
+		SendResponse(c, errno.ErrAssociationNotExist, err.Error())
+		return
+	}
+
+	user, err := model.GetUserByAssociationAndZJUid(association.ID, req.ZJUid)
+	if err != nil {
+		SendResponse(c, errno.ErrUserNotFound, err.Error())
+		return
+	}
+
+	if user.Password == "" {
+		SendResponse(c, errno.ErrPasswordNotSet, "Password is not set, try another way to login")
+		return
+	}
+
+	if user.Password != service.SHAHash(req.Password) {
+		SendResponse(c, errno.ErrPasswordWrong, "Password does not match")
+		return
+	}
+
+	JWT, err := token.Sign(token.Context{UserId:int(user.ID)}, "")
+	if err != nil {
+		SendResponse(c, errno.ErrToken, nil)
+		return
+	}
+
+	SendResponse(c, nil, JWT)
+}
+
+func LoginByQSC(c *gin.Context) {
 	qscCookie, err := c.Cookie("qp2gl_sesstok")
 	if err != nil {
 		SendResponse(c, errno.NoCookie, err.Error())
@@ -56,16 +94,27 @@ func Login(c *gin.Context) {
 		return
 	}
 
+	// Get Association
+	association, err := model.GetAssociationByName("求是潮")
+	if err != nil {
+		SendResponse(c, errno.ErrAssociationNotExist, err.Error())
+		return
+	}
+
 	innerId, err := jsonparser.GetString(body, "info", "bbs")
 	name, err := jsonparser.GetString(body, "info", "name")
 	department, err := jsonparser.GetString(body, "info", "department")
 	position, err := jsonparser.GetString(body, "info", "position")
 	mobile, err := jsonparser.GetString(body, "info", "mobile")
-	existing, err := model.GetUserByZJUid(ZJUid)
+
+	existing, err := model.GetUserByAssociationAndZJUid(association.ID, ZJUid)
+
+	var userId uint
 
 	if err != nil {
 		u := model.UserModel{
 			ZJUid:ZJUid,
+			AssociationId:association.ID,
 			InnerId:innerId,
 			Name:name,
 			Department:department,
@@ -77,6 +126,7 @@ func Login(c *gin.Context) {
 			SendResponse(c, errno.DBError, nil)
 			return
 		}
+		userId = u.ID
 	} else {
 		existing.InnerId = innerId
 		existing.Name = name
@@ -88,8 +138,9 @@ func Login(c *gin.Context) {
 			SendResponse(c, errno.DBError, nil)
 			return
 		}
+		userId = existing.ID
 	}
-	JWT, err := token.Sign(token.Context{ZJUid:ZJUid}, "")
+	JWT, err := token.Sign(token.Context{UserId:int(userId)}, "")
 	if err != nil {
 		SendResponse(c, errno.ErrToken, nil)
 		return

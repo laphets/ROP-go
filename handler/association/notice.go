@@ -7,6 +7,7 @@ import (
 	"git.zjuqsc.com/rop/ROP-go/pkg/errno"
 	"git.zjuqsc.com/rop/ROP-go/service"
 	"github.com/gin-gonic/gin"
+	"strconv"
 	"strings"
 )
 
@@ -17,20 +18,20 @@ func SendNotice(c *gin.Context) {
 		return
 	}
 
-	if len(req.ZJUid) == 0 {
-		SendResponse(c, errno.ErrBind, "ZJUid should be unempty list.")
+	if len(req.UserId) == 0 {
+		SendResponse(c, errno.ErrBind, "UserId should be unempty list.")
 		return
 	}
 
 	success := true
 	errorList := make([]string, 0)
 
-	for _, ZJUid := range req.ZJUid {
-		user, err := model.GetUserByZJUid(ZJUid)
+	for _, userId := range req.UserId {
+		user, err := model.GetUserById(userId)
 		if err != nil {
 			// Here we should handle error
 			success = false
-			errorList = append(errorList, ZJUid)
+			errorList = append(errorList, strconv.Itoa(int(userId)))
 			continue
 		}
 		if user.Mobile == "" {

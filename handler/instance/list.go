@@ -12,7 +12,7 @@ import (
 
 
 func List(c *gin.Context) {
-	instances, err := model.ListInstance()
+	instances, err := model.ListInstanceByAssociation(uint(c.GetInt("AssociationId")))
 	if err != nil {
 		SendResponse(c, errno.DBError, err.Error())
 		return

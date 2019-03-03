@@ -8,7 +8,8 @@ import (
 
 type InstanceModel struct {
 	gorm.Model
-	Name string `gorm:"not null;unique_index" json:"name"`
+	AssociationId uint `gorm:"not null;unique_index:idx_instance_associaiton" json:"association_id"`
+	Name string `gorm:"not null;unique_index:idx_instance_associaiton" json:"name"`
 	Remark string `json:"remark"`
 	Association string `json:"association"`
 	StartTime time.Time `json:"start_time"`
@@ -40,6 +41,12 @@ func GetInstanceById(ID uint) (*InstanceModel, error) {
 func ListInstance() ([]*InstanceModel, error) {
 	ins := make([]*InstanceModel, 0)
 	d := DB.Local.Find(&ins)
+	return ins, d.Error
+}
+
+func ListInstanceByAssociation(associationId uint) ([]*InstanceModel, error) {
+	ins := make([]*InstanceModel, 0)
+	d := DB.Local.Where(&InstanceModel{AssociationId:associationId}).Find(&ins)
 	return ins, d.Error
 }
 

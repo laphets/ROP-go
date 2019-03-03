@@ -32,10 +32,11 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 		c.String(http.StatusNotFound, "The incorrect API route.")
 	})
 
-
 	auth := g.Group("/v1/auth")
 	{
-		auth.POST("/login", user.Login)
+		auth.GET("/association", association.ListAssociaton)
+		auth.POST("/login/qsc", user.LoginByQSC)
+		auth.POST("/login/passwd", user.LoginByPassword)
 	}
 
 	userGroup := g.Group("/v1/user")
@@ -90,8 +91,10 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	associationGroup.Use(middleware.AuthMiddleware())
 	{
 		associationGroup.POST("", association.Create)
-		associationGroup.GET("", association.Get)
+		associationGroup.GET("", association.ListAssociaton)
+		associationGroup.GET("/name/:name", association.Get)
 		associationGroup.GET("/user", association.GetUser)
+		associationGroup.POST("/user", association.AddUser)
 		associationGroup.POST("/notice", association.SendNotice)
 	}
 
@@ -102,6 +105,8 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 		ssrGroup.GET("/form", ssr.GetFormByIns)
 		ssrGroup.POST("/reject/:id", interview.Reject)
 		ssrGroup.GET("/instance", instance.List)
+		ssrGroup.GET("/register", ssr.Register)
+		ssrGroup.POST("/register", user.Register)
 	}
 
 	fileGroup := g.Group("/v1/file")

@@ -15,5 +15,14 @@ type GetResponse struct {
 }
 
 type SendNoticeRequest struct {
-	ZJUid []string `json:"ZJUid" binding:"required"`
+	UserId []uint `json:"user_id" binding:"required"`
+}
+
+type AddUserRequest struct {
+	ZJUid string `json:"ZJUid" binding:"required"`
+	Mobile string `json:"mobile" binding:"required"`
+	Name string `json:"name" binding:"required"`
+	Department string `json:"department"`
+	AssociationId uint `json:"association_id" binding:"required"`
+	AdminLevel uint `json:"admin_level" binding:"-"`
 }

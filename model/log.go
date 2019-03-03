@@ -6,7 +6,7 @@ import (
 
 type LogModel struct {
 	gorm.Model
-	ZJUid string `json:"ZJUid" gorm:"column:ZJUid"`
+	UserId uint `json:"user_id"`
 	IP string `json:"ip"`
 	URL string `json:"url"`
 	UA string `json:"ua"`

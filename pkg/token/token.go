@@ -1,16 +1,16 @@
 package token
 
 import (
-	"github.com/spf13/viper"
-	"github.com/dgrijalva/jwt-go"
-	"time"
-	"github.com/gin-gonic/gin"
-	"git.zjuqsc.com/rop/ROP-go/pkg/errno"
 	"fmt"
+	"git.zjuqsc.com/rop/ROP-go/pkg/errno"
+	"github.com/dgrijalva/jwt-go"
+	"github.com/gin-gonic/gin"
+	"github.com/spf13/viper"
+	"time"
 )
 
 type Context struct {
-	ZJUid string
+	UserId int
 }
 
 func secretFunc(secret string) jwt.Keyfunc {
@@ -31,7 +31,7 @@ func Parse(tokenString, secret string) (*Context, error) {
 	if err != nil {
 		return ctx, err
 	} else if claims, ok := token.Claims.(jwt.MapClaims); ok && token.Valid {
-		ctx.ZJUid = claims["ZJUid"].(string)
+		ctx.UserId = int(claims["UserId"].(float64))
 		return ctx, nil
 	} else {
 		return ctx, err
@@ -56,7 +56,7 @@ func Sign(ctx Context, secret string) (tokenString string, err error) {
 		secret = viper.GetString("jwt_secret")
 	}
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
-		"ZJUid":       ctx.ZJUid,
+		"UserId":       ctx.UserId,
 		"nbf":      time.Now().Unix(),
 		"iat":      time.Now().Unix(),
 	})

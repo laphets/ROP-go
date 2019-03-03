@@ -17,3 +17,15 @@ func GetAssociationByName(associationName string) (*AssociationModel, error) {
 	d := DB.Local.Where("name = ?", associationName).First(&association)
 	return association, d.Error
 }
+
+func ListAssociation() ([]*AssociationModel, error) {
+	associations := make([]*AssociationModel, 0)
+	d := DB.Local.Find(&associations)
+	return associations, d.Error
+}
+
+func GetAssociationById(ID uint) (*AssociationModel, error) {
+	ins := &AssociationModel{}
+	d := DB.Local.Where("ID = ?", ID).First(&ins)
+	return ins, d.Error
+}

@@ -13,8 +13,8 @@ func Avatar(c *gin.Context) {
 		SendResponse(c, errno.ErrBind, err.Error())
 		return
 	}
-	ZJUid := c.GetString("ZJUid")
-	if err := model.UpdateAvatar(ZJUid, req.URL); err != nil {
+	userId := c.GetInt("UserId")
+	if err := model.UpdateAvatar(uint(userId), req.URL); err != nil {
 		SendResponse(c, errno.DBError, err.Error())
 		return
 	}

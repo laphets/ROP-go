@@ -101,3 +101,9 @@ func SendInterviewerNotice(mobile, name, association, department, instanceName s
 	data := url.Values{"apikey": {viper.GetString("yunpian.apikey")}, "mobile": {mobile},"text":{text}}
 	return sendSMS(data, false)
 }
+func SendRegisterNotice(mobile, name, admin, association, URL string) (string, error) {
+	text := fmt.Sprintf("【求是潮纳新系统】%s同学您好，管理员%s已为您创建好%s的账号。请点击下方链接完善您的账号信息。欢迎使用求是潮纳新开放平台。%s", name, admin, association, URL)
+	data := url.Values{"apikey": {viper.GetString("yunpian.apikey")}, "mobile": {mobile},"text":{text}}
+	return sendSMS(data, false)
+}
+

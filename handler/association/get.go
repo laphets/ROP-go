@@ -9,7 +9,8 @@ import (
 )
 
 func Get(c *gin.Context) {
-	associationName := c.Query("associationName")
+	//associationName := c.Query("associationName")
+	associationName := c.Param("name")
 	association, err := model.GetAssociationByName(associationName)
 
 	if err != nil {

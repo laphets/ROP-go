@@ -8,7 +8,6 @@ import (
 )
 
 func Create(c *gin.Context) {
-
 	req := CreateRequest{}
 	if err := c.ShouldBindJSON(&req); err != nil {
 		SendResponse(c, errno.ErrBind, err.Error())
@@ -34,10 +33,17 @@ func Create(c *gin.Context) {
 		return
 	}
 
+	association, err := model.GetAssociationById(uint(c.GetInt("AssociationId")))
+	if err != nil {
+		SendResponse(c, errno.ErrAssociationNotExist, err.Error())
+		return
+	}
+
 	ins := model.InstanceModel{
 		Name:        req.Name,
+		AssociationId: association.ID,
 		Remark:      req.Remark,
-		Association: req.Association,
+		Association: association.Name,
 		StartTime:   req.StartTime,
 		EndTime:     req.EndTime,
 		FormId:      req.FormId,
