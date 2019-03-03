@@ -16,13 +16,17 @@ AutoJoinable 1 => OK， -1 <= BAN
 ```go
 auth := g.Group("/v1/auth")
 {
-    auth.POST("/login", user.Login)
+    auth.GET("/association", association.ListAssociaton)
+    auth.POST("/login/qsc", user.LoginByQSC)
+    auth.POST("/login/passwd", user.LoginByPassword)
 }
 
 userGroup := g.Group("/v1/user")
 userGroup.Use(middleware.AuthMiddleware())
 {
     userGroup.GET("/info", user.Info)
+    userGroup.POST("/avatar", user.Avatar)
+    userGroup.GET("/sms", user.GetSMSAccount)
 }
 
 insGroup := g.Group("/v1/instance")
@@ -34,7 +38,7 @@ insGroup.Use(middleware.AuthMiddleware())
 }
 
 formGroup := g.Group("/v1/form")
-insGroup.Use(middleware.AuthMiddleware())
+formGroup.Use(middleware.AuthMiddleware())
 {
     formGroup.POST("", form.Create)
     formGroup.GET("", form.List)
@@ -61,13 +65,19 @@ interviewGroup.Use(middleware.AuthMiddleware())
     interviewGroup.POST("", interview.Create)
     interviewGroup.PUT("/:id", interview.Update)
     interviewGroup.GET("", interview.List)
+    interviewGroup.POST("/enable/:id", interview.Enable)
+    interviewGroup.POST("/disable/:id", interview.Disable)
 }
 
 associationGroup := g.Group("/v1/association")
 associationGroup.Use(middleware.AuthMiddleware())
 {
     associationGroup.POST("", association.Create)
-    associationGroup.GET("", association.Get)
+    associationGroup.GET("", association.ListAssociaton)
+    associationGroup.GET("/name/:name", association.Get)
+    associationGroup.GET("/user", association.GetUser)
+    associationGroup.POST("/user", association.AddUser)
+    associationGroup.POST("/notice", association.SendNotice)
 }
 
 ssrGroup := g.Group("/v1/ssr")
@@ -75,7 +85,10 @@ ssrGroup := g.Group("/v1/ssr")
     ssrGroup.GET("/schedule", ssr.Schedule)
     ssrGroup.POST("/join/:id", interview.Join)
     ssrGroup.GET("/form", ssr.GetFormByIns)
-    ssrGroup.POST("/reject/:id", intent.Cancel)
+    ssrGroup.POST("/reject/:id", interview.Reject)
+    ssrGroup.GET("/instance", instance.List)
+    ssrGroup.GET("/register", ssr.Register)
+    ssrGroup.POST("/register", user.Register)
 }
 
 fileGroup := g.Group("/v1/file")
@@ -98,12 +111,13 @@ svcd := g.Group("/sd")
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-Go                              57            408            249           2440
-XML                              5              0              0            716
-Markdown                         1             18              0            149
-YAML                             2              0              5             89
+Go                              70            545            265           3195
+XML                              5              0              0            896
+YAML                             4              6             19            150
+Markdown                         1             18              0            150
+Dockerfile                       1              5              0              6
 -------------------------------------------------------------------------------
-SUM:                            65            426            254           3394
+SUM:                            81            574            284           4397
 -------------------------------------------------------------------------------
 ```
 
