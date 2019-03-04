@@ -15,7 +15,7 @@ replace (
 	google.golang.org/grpc => github.com/grpc/grpc-go v1.15.0
 	gopkg.in/go-playground/assert.v1 => github.com/go-playground/assert v1.2.1
 	gopkg.in/go-playground/validator.v8 => github.com/go-playground/validator v8.18.2+incompatible
-	gopkg.in/ini.v1 => github.com/go-ini/ini v1.39.2
+	gopkg.in/ini.v1 => github.com/go-ini/ini v1.42.0
 	gopkg.in/tomb.v1 => github.com/go-tomb/tomb v1.0.0-20141024135613-dd632973f1e7
 )
 
@@ -29,7 +29,7 @@ require (
 	github.com/fsnotify/fsnotify v1.4.7
 	github.com/gin-contrib/sse v0.0.0-20170109093832-22d885f9ecc7 // indirect
 	github.com/gin-gonic/gin v1.3.0
-	github.com/go-ini/ini v1.39.2 // indirect
+	github.com/go-ini/ini v1.42.0 // indirect
 	github.com/go-ole/go-ole v1.2.1 // indirect
 	github.com/go-sql-driver/mysql v1.4.1 // indirect
 	github.com/gofrs/uuid v3.1.0+incompatible // indirect
@@ -57,4 +57,5 @@ require (
 	github.com/willf/pad v0.0.0-20160331131008-b3d780601022
 	gopkg.in/go-playground/assert.v1 v1.2.1 // indirect
 	gopkg.in/go-playground/validator.v8 v8.18.2 // indirect
+	gopkg.in/ini.v1 v1.42.0 // indirect
 )
