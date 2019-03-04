@@ -20,7 +20,7 @@ type FreshmanModel struct {
 	//MainStage string `json:"main_stage"`
 	//SubStage string `json:"sub_stage"`
 	//Intent []string `json:"intent"`
-	OtherInfo string `json:"other_info" gorm:"type:varchar(100000)"`
+	OtherInfo string `json:"other_info" gorm:"type:varchar(500000)"`
 }
 
 // When calling this method, you need make sure instanceId and ZJUid exists in your freshmanModel
