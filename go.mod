@@ -13,6 +13,9 @@ replace (
 	google.golang.org/appengine => github.com/golang/appengine v1.1.0
 	google.golang.org/genproto => github.com/google/go-genproto v0.0.0-20180817151627-c66870c02cf8
 	google.golang.org/grpc => github.com/grpc/grpc-go v1.15.0
+	gopkg.in/go-playground/assert.v1 => github.com/go-playground/assert v1.2.1
+	gopkg.in/go-playground/validator.v8 => github.com/go-playground/validator v8.18.2+incompatible
+	gopkg.in/ini.v1 => github.com/go-ini/ini v1.39.2
 	gopkg.in/tomb.v1 => github.com/go-tomb/tomb v1.0.0-20141024135613-dd632973f1e7
 )
 
