@@ -15,7 +15,7 @@ replace (
 	google.golang.org/grpc => github.com/grpc/grpc-go v1.15.0
 	gopkg.in/go-playground/assert.v1 => github.com/go-playground/assert v1.2.1
 	gopkg.in/go-playground/validator.v8 => github.com/go-playground/validator v8.18.2+incompatible
-	gopkg.in/ini.v1 => github.com/go-ini/ini v1.42.0
+	gopkg.in/ini.v1 => gitlab.com/laphets/ini v1.42.0
 	gopkg.in/tomb.v1 => github.com/go-tomb/tomb v1.0.0-20141024135613-dd632973f1e7
 )
 
@@ -57,5 +57,5 @@ require (
 	github.com/willf/pad v0.0.0-20160331131008-b3d780601022
 	gopkg.in/go-playground/assert.v1 v1.2.1 // indirect
 	gopkg.in/go-playground/validator.v8 v8.18.2 // indirect
-	gopkg.in/ini.v1 v1.42.0
+	gopkg.in/ini.v1 v1.42.0 // indirect
 )
