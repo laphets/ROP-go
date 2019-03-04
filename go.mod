@@ -57,5 +57,4 @@ require (
 	github.com/willf/pad v0.0.0-20160331131008-b3d780601022
 	gopkg.in/go-playground/assert.v1 v1.2.1 // indirect
 	gopkg.in/go-playground/validator.v8 v8.18.2 // indirect
-	gopkg.in/ini.v1 v1.42.0 // indirect
 )
