@@ -31,16 +31,12 @@ github.com/go-sql-driver/mysql v1.4.1/go.mod h1:zAC/RDZ24gD3HViQzih4MyKcchzm+sOG
 github.com/go-tomb/tomb v1.0.0-20141024135613-dd632973f1e7/go.mod h1:RBAwp+uBhymHG7YL5Wjwy9uKPyOHOwbtWOZucxDDSl8=
 github.com/gofrs/uuid v3.1.0+incompatible h1:q2rtkjaKT4YEr6E1kamy0Ha4RtepWlQBedyHx0uzKwA=
 github.com/gofrs/uuid v3.1.0+incompatible/go.mod h1:b2aQJv3Z4Fp6yNu3cdSllBxTCLRxnplIgP/c0N/04lM=
-github.com/golang/crypto v0.0.0-20180904163835-0709b304e793 h1:5UkN9wgtgT071jowYuBxnF8+4tXVRVbaH2Z18AnH6gQ=
 github.com/golang/crypto v0.0.0-20180904163835-0709b304e793/go.mod h1:uZvAcrsnNaCxlh1HorK5dUQHGmEKPh2H/Rl1kehswPo=
-github.com/golang/net v0.0.0-20180826012351-8a410e7b638d h1:XXZ0nKFacC83c+kBG0i/rJdPj9HtnO0OKefFKaELC1M=
 github.com/golang/net v0.0.0-20180826012351-8a410e7b638d/go.mod h1:98y8FxUyMjTdJ5eOj/8vzuiVO14/dkJ98NYhEPG8QGY=
 github.com/golang/protobuf v1.2.0 h1:P3YflyNX/ehuJFLhxviNdFxQPkGK5cDcApsge1SqnvM=
 github.com/golang/protobuf v1.2.0/go.mod h1:6lQm79b+lXiMfvg/cZm0SGofjICqVBUtrP5yJMmIC1U=
 github.com/golang/sync v0.0.0-20180314180146-1d60e4601c6f/go.mod h1:YCHYtYb9c8Q7XgYVYjmJBPtFPKx5QvOcPxHZWjldabE=
-github.com/golang/sys v0.0.0-20180830151530-49385e6e1522 h1:CDDhxG2SXS2f8z05Ih1drrXwENJ7akKz4d1xNFq3lJM=
 github.com/golang/sys v0.0.0-20180830151530-49385e6e1522/go.mod h1:5JyrLPvD/ZdaYkT7IqKhsP5xt7aLjA99KXRtk4EIYDk=
-github.com/golang/text v0.3.0 h1:uI5zIUA9cg047ctlTptnVc0Ghjfurf2eZMFrod8R7v8=
 github.com/golang/text v0.3.0/go.mod h1:GUiq9pdJKRKKAZXiVgWFEvocYuREvC14NhI4OPgEjeE=
 github.com/gopherjs/gopherjs v0.0.0-20181103185306-d547d1d9531e h1:JKmoR8x90Iww1ks85zJ1lfDGgIiMDuIptTOhJq+zKyg=
 github.com/gopherjs/gopherjs v0.0.0-20181103185306-d547d1d9531e/go.mod h1:wJfORRmW1u3UXTncJ5qlYoELFm8eSnnEO6hX4iZ3EWY=
