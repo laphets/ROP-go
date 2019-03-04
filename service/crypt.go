@@ -1,15 +1,15 @@
 package service
 
 import (
-	"encoding/base64"
+	"bytes"
 	"crypto/aes"
 	"crypto/cipher"
-	"strings"
-	"bytes"
-	"io"
 	"crypto/rand"
+	"encoding/hex"
 	"errors"
 	"github.com/spf13/viper"
+	"io"
+	"strings"
 )
 
 func addBase64Padding(value string) string {
@@ -58,8 +58,10 @@ func Encrypt(text string) (string, error) {
 
 	cfb := cipher.NewCFBEncrypter(block, iv)
 	cfb.XORKeyStream(ciphertext[aes.BlockSize:], []byte(msg))
-	finalMsg := removeBase64Padding(base64.URLEncoding.EncodeToString(ciphertext))
-	return finalMsg, nil
+
+	finalHex := hex.EncodeToString(ciphertext)
+	//finalMsg := removeBase64Padding(base64.URLEncoding.EncodeToString(ciphertext))
+	return finalHex, nil
 }
 
 func Decrypt(text string) (string, error) {
@@ -69,7 +71,9 @@ func Decrypt(text string) (string, error) {
 		return "", err
 	}
 
-	decodedMsg, err := base64.URLEncoding.DecodeString(addBase64Padding(text))
+	//decodedMsg, err := base64.URLEncoding.DecodeString(addBase64Padding(text))
+	decodedMsg, err := hex.DecodeString(text)
+
 	if err != nil {
 		return "", err
 	}
