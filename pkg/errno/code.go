@@ -31,7 +31,7 @@ var (
 	// user errors
 	ErrUserNotFound 	= &Errno{Code: 20102, Message: "The user was not found."}
 	ErrPasswordWrong 	= &Errno{Code: 20103, Message: "Password is wrong."}
-	ErrPasswordNotSet 	= &Errno{Code: 20103, Message: "Password is not set."}
+	ErrPasswordNotSet 	= &Errno{Code: 20104, Message: "Password is not set."}
 
 
 
